@@ -1,0 +1,189 @@
+﻿@page "/EditEvent/{ID:int}"
+
+
+@using Radzen
+@inject NavigationManager navMan
+@inject IEventService eventService
+
+
+<h3>Update Event</h3>
+
+
+<div class="form-container">
+    <form action="/submit" method="post">
+        <div class="input-container">
+            <label for="name">Event Name:</label>
+            <input type="text" id="name" @bind-value="eventModel.EventName" name="event_name" required>
+        </div>
+        <div class="input-container">
+            <label for="date">Date:</label>
+            <input type="date" id="date" @bind-value="eventModel.EventDate" name="date" required>
+        </div>
+        <div class="input-container">
+            <label for="description">Description:</label>
+            <input id="description" type="text" @bind-value="eventModel.EventDescription" name="event_description" required></input>
+        </div>
+        <div class="input-container">
+            <label for="venue">Venue:</label>
+            <input id="venue" @bind-value="eventModel.VenueId" name="event_venue" required></input>
+        </div>
+        <div class="input-container">
+            <label for="type">Type:</label>
+            <select>
+                <option value="@eventModel.EventTypeId">@eventType</option>
+            </select>
+            <input class="b-1" type="text" id="type" @bind-value="eventModel.EventTypeId"  name="event_type" required>
+        </div>
+        <button class="btn btn-primary btn-ee" type="submit">Update Event</button>
+    </form>
+</div>
+@code {
+    private bool _hidePosition;
+    private bool _loading;
+    private List<Event> events = new List<Event>();
+    [Parameter]
+    public int ID { get; set; } 
+    public Event eventModel { get; set; } = new Event();
+    private EventType eventType = new();
+    private int ETypeId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Elements = await httpClient.GetFromJsonAsync<List<Element>>("webapi/periodictable");
+
+        await GetEventById();
+    }
+
+    private async Task OnEventTypeChange(ChangeEventArgs e)
+    {
+        try
+        {
+            if (e.Value != null)
+            {
+                //eventType =
+                ETypeId = Int32.Parse(e.Value.ToString());
+
+
+            }
+            // venueList = venueList.Where(x => x.EventTypeId.ToString().Equals(ETypeId));
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        await Task.CompletedTask;
+
+    }
+    private async Task GetEventById()
+    {
+        try
+        {
+            eventModel = await eventService.GetEventById(ID);
+        }
+        catch (Exception)
+        {
+            
+            throw;
+        }
+       
+        // events = await eventService.GetEvents();
+    }
+
+    private async Task UpdateEventOnClick(Event eventModel)
+    {
+        try
+        {
+            navMan.NavigateTo($"/EditEvent/{eventModel.EventId}");
+
+        }
+        catch (Exception ex)
+        {
+            // NotificationService.Notify(new NotificationMessage
+            //     {
+            //         Severity = NotificationSeverity.Error,
+            //         Summary = $"Error",
+            //         Detail = $"Unable to update Booking"
+            //     });
+        }
+    }
+}
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-k6RqeWeci5ZR/Lv4MR0sA0FfDOM9Z38gH5dQ0I6MK9Y1D/cLtHww5iEjaMUToTdeh1kD92r8un18PjGTeRv8g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+
+
+
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Adds space between form fields */
+        margin: 30px auto;
+        max-width: 500px; /* Controls the maximum width */
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #fff;
+    }
+
+    button {
+        background-color: #008CBA;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block; /* Allows for margin */
+        margin-top: 10px;
+    }
+
+        button:hover {
+            background-color: #005f7f;
+        }
+
+    .input-container {
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+        /* Style the label */
+        .input-container label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        /* Style the input field */
+        .input-container input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            /* Add focus styles */
+            .input-container input:focus {
+                border-color: #4CAF50; /* Green color for focus */
+                box-shadow: 0 0 8px rgba(76, 175, 80, 0.3); /* Subtle shadow effect */
+            }
+
+            /* Placeholder text style */
+            .input-container input::placeholder {
+                color: #888;
+            }
+
+            /* Add hover effect for better UX */
+            .input-container input:hover {
+                border-color: #888;
+            }
+</style>

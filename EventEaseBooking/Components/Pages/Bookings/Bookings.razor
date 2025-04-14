@@ -1,0 +1,348 @@
+﻿@page "/Bookings"
+@using EventEaseBooking.Components.Components
+@using Radzen
+@using Radzen.Blazor
+@inject NavigationManager navMan
+@inject IBookingService bookingService
+@inject IClientService clientService
+@inject IEventService eventService
+
+<PageTitle>Bookings</PageTitle>
+
+
+@if (showSpinnerModal)
+{
+    <SpinnerModal />
+}
+
+@if(showConfmodal)
+{
+    showSpinnerModal = false;
+    <ConfirmationDialog OnClose="OnConfirmationChange" Confirmed="OnConfirmationChange" />
+}
+
+
+
+<div class="" style="padding-left:10%; padding-right:10%; padding-bottom:10%;">
+    <div class="row">
+        <h1> Bookings</h1>
+        <br />
+
+
+    </div>
+    <div class="row m-4">
+
+        <table class="table table-container table-hover table-borderless">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Event</th>
+                    <th>Venue</th>
+                    <th>Client</th>
+                    <th>Status</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var booking in bookings)
+                {
+                    <tr>
+                        <td>@booking.BookingId</td>
+                        <td>@booking.BookingDate</td>
+                        <td>@booking.BookingTime</td>
+                        <td>@GetEventName(booking.EventId)</td>
+                        <td>@GetVenueName(booking.VenueId)</td>
+                        <td>@GetClientName(booking.ClientId)</td>
+                        <td>@booking.IsActive</td>
+                        <td><button class="btn-sm small" @onclick="async ()=>EditButtonClick(booking)">Edit</button></td>
+                        <td><button class=" delete-icon" @onclick="async ()=>DeleteButtonClick(booking)"><i class="fas fa-trash-alt" style="color:red"></i></button></td>
+
+
+                    </tr>
+
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <center>
+        <div class="d-grid gap-2 col-3">
+            <button class="btn btn-primary" @onclick="()=>NavToAddBooking()" style="color:#c6605d; background-color:lightpink; padding:10px; justify-content: center; align-items: center; gap: 8px; font-size: 20px; border-radius: 15px; border: none;">
+                Make booking
+            </button>
+        </div>
+    </center>
+</div>
+
+
+
+
+@code {
+    bool showSpinnerModal = false;
+    [Inject]
+    private Radzen.DialogService DialogService { get; set; }
+
+    [Inject]
+    private NotificationService NotificationService { get; set; }
+
+    private List<Venue> venues = new List<Venue>();
+    private List<Client> clients = new List<Client>();
+    private List<Event> events = new List<Event>();
+
+
+    private List<Booking> bookings = new List<Booking>();
+    private Venue? v = new Venue();
+    private Client c = new Client();
+    private Event e = new Event();
+    private Booking bookingModel = new ();
+    string? venue;
+
+    private int selectedRowNumber = -1;
+    private MudTable<Booking> mudTable;
+    private List<string> clickedEvents = new();
+    private ConfirmationDialog confirmationDialog;
+    bool showConfmodal = false;
+    bool success = false;
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        showSpinnerModal = true;
+        try
+        {
+            await GetVenues();
+            await Getbookings();
+            // await GetClients();
+            await GetEvents();
+
+            showSpinnerModal = false;
+        }
+        catch (Exception e)
+        {
+            throw new Exception($"Request Unsuccessful. {e}");
+            showSpinnerModal = false;
+
+        }
+        await base.OnInitializedAsync();
+    }
+
+    private string GetVenueName(int venueId)
+    {
+        // Find venue in the preloaded list
+        var venue = venues.FirstOrDefault(v => v.VenueId == venueId);
+        return venue?.VenueName ?? "Unknown Venue";
+    }
+
+    private string GetEventName(int eventId)
+    {
+        // Find venue in the preloaded list
+        var eventt = events.FirstOrDefault(v => v.EventId == eventId);
+        return eventt?.EventName ?? "Unknown Event";
+    }
+
+    private string GetClientName(int clientId)
+    {
+        // Find venue in the preloaded list
+        var client = clients.FirstOrDefault(c => c.ClientId == clientId);
+        return client?.ClientName ?? "Unknown Client";
+    }
+    private void HandleValidSubmit()
+    {
+        //Logger.LogInformation("HandleValidSubmit called");
+
+        // Process the valid form
+    }
+
+    public void NavToAddBooking()
+    {
+        navMan.NavigateTo("/AddBooking");
+    }
+
+    private async Task GetVenues()
+    {
+        try
+        {
+            venues =  await bookingService.GetVenues();
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+
+    }
+
+    private async Task GetClients()
+    {
+        try
+        {
+            clients = await clientService.GetClients();
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+
+    }
+
+
+    private async Task GetEvents()
+    {
+        try
+        {
+            events = await eventService.GetEvents();
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+
+    }
+    private async Task Getbookings()
+    {
+        try
+        {
+            bookings = await bookingService.GetBookings();
+            bookings = bookings.OrderByDescending(x => x.BookingDate).ToList();
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+    }
+
+
+    private void RowClickEvent(TableRowClickEventArgs<Booking> tableRowClickEventArgs)
+    {
+        clickedEvents.Add("Row has been clicked");
+    }
+
+    private string SelectedRowClassFunc(Booking booking, int rowNumber)
+    {
+        if (selectedRowNumber == rowNumber)
+        {
+            selectedRowNumber = -1;
+            clickedEvents.Add("Selected Row: None");
+            return string.Empty;
+        }
+        else if (mudTable.SelectedItem != null && mudTable.SelectedItem.Equals(booking))
+        {
+            selectedRowNumber = rowNumber;
+            clickedEvents.Add($"Selected Row: {rowNumber}");
+            return "selected";
+        }
+        else
+        {
+            return string.Empty;
+        }
+    }
+
+    private  void DeleteButtonClick(Booking booking)
+    {
+        // Show the dialog
+        // await confirmationDialog.Show();
+        bookingModel = booking;
+        showConfmodal = true;
+
+        // The rest of the logic will continue in OnConfirmationChange
+    }
+
+
+    private async Task OnConfirmationChange(bool confirmed)
+    {
+        if (confirmed)
+        {
+            // User clicked Yes - perform the action
+            await DeleteBooking(bookingModel);
+        }
+        else
+        {
+            // User clicked No - do nothing or handle cancellation
+        }
+    }
+    private async Task DeleteBooking(Booking booking)
+    {
+        showConfmodal = false;
+        showSpinnerModal = true;
+        try
+        { 
+            var deleteResult = await bookingService.DeleteBooking(booking.BookingId);
+
+            if (deleteResult)
+            {
+                // await DialogService.Confirm("Record Deleted");
+                ShowNotification(new NotificationMessage { Style = "position: absolute; inset-inline-start: -1000px;", Severity = NotificationSeverity.Success, Summary = "Item Deleted", Detail = "Successfully deleted booking", Duration = 4000 });
+                navMan.NavigateTo(navMan.Uri, forceLoad: true);
+            }
+            else
+            {
+                ShowNotification(new NotificationMessage { Style = "position: absolute; inset-inline-start: -1000px;", Severity = NotificationSeverity.Error, Summary = "Item Couldn't Be Deleted", Detail = "", Duration = 4000 });
+              
+            }
+            
+        }
+        catch (Exception ex)
+        {
+            NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = $"Error",
+                    Detail = $"Unable to delete Booking"
+                });
+        }
+    }
+
+
+    private  void EditButtonClick(Booking booking)
+    {
+        try
+        {
+            navMan.NavigateTo($"/EditBooking/{booking.BookingId}");
+
+               
+        }
+        catch (Exception ex)
+        {
+            NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = $"Error",
+                    Detail = $"Unable to update Booking"
+                });
+        }
+    }
+
+
+
+
+
+    void ShowNotification(NotificationMessage message)
+    {
+        NotificationService.Notify(message);
+
+    }
+
+
+    void ShowNotificationWithCustomContent()
+    {
+        NotificationService.Notify(new NotificationMessage
+            {
+                Severity = NotificationSeverity.Warning,
+                Duration = 40000,
+                SummaryContent = ns =>@<RadzenText TextStyle="TextStyle.H6">Custom summary: <br /> @DateTime.Now</RadzenText>,
+        DetailContent = ns => @<RadzenButton Text="Clear" Click="@(args => ns.Messages.Clear())" />
+        });
+    }
+}

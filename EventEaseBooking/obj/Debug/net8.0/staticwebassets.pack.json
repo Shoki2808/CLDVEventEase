@@ -1,0 +1,105 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EventEaseBooking.bundle.scp.css",
+      "PackagePath": "staticwebassets\\EventEaseBooking.5i441dr0h3.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\BeachWedding.avif",
+      "PackagePath": "staticwebassets\\Images\\BeachWedding.avif"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\EELogo.jpg",
+      "PackagePath": "staticwebassets\\Images\\EELogo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\EELogoCrop.jpg",
+      "PackagePath": "staticwebassets\\Images\\EELogoCrop.jpg"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\Event Ease.png",
+      "PackagePath": "staticwebassets\\Images\\Event Ease.png"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\FestivalVenue.jpg",
+      "PackagePath": "staticwebassets\\Images\\FestivalVenue.jpg"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\GalaVenue.jpg",
+      "PackagePath": "staticwebassets\\Images\\GalaVenue.jpg"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\Home\\Wedding114.jpg",
+      "PackagePath": "staticwebassets\\Images\\Home\\Wedding114.jpg"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\Home\\aU5BOXtgL31u8QHLQzej.jpg",
+      "PackagePath": "staticwebassets\\Images\\Home\\aU5BOXtgL31u8QHLQzej.jpg"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\Home\\bw.jpg",
+      "PackagePath": "staticwebassets\\Images\\Home\\bw.jpg"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\Home\\invite.jpg",
+      "PackagePath": "staticwebassets\\Images\\Home\\invite.jpg"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\Home\\posumJIv6VhHVWY5qJZa.jpg",
+      "PackagePath": "staticwebassets\\Images\\Home\\posumJIv6VhHVWY5qJZa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\Home\\rings.jpg",
+      "PackagePath": "staticwebassets\\Images\\Home\\rings.jpg"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\Home\\sjwS9ZMn5izuU8XkBJAu.jpg",
+      "PackagePath": "staticwebassets\\Images\\Home\\sjwS9ZMn5izuU8XkBJAu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\Home\\w7fXnz40I8gLTiq1E4ob.webp",
+      "PackagePath": "staticwebassets\\Images\\Home\\w7fXnz40I8gLTiq1E4ob.webp"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\Images\\Wedding.jpg",
+      "PackagePath": "staticwebassets\\Images\\Wedding.jpg"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\RanthoLR\\source\\repos\\CLDVGit\\Shoki2808\\CLDVEventEase\\EventEaseBooking\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EventEaseBooking.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EventEaseBooking.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.EventEaseBooking.props",
+      "PackagePath": "build\\EventEaseBooking.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EventEaseBooking.props",
+      "PackagePath": "buildMultiTargeting\\EventEaseBooking.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.EventEaseBooking.props",
+      "PackagePath": "buildTransitive\\EventEaseBooking.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,57 @@
+﻿@page "/Venues"
+
+@inject IBookingService bookingService
+
+<center>
+    <div class="row mt-3 justify-content-between">
+        <div class="col-sm-auto">
+            <h3 class="headings">Venues</h3>
+        </div>
+    </div>
+</center>
+
+<ul>
+    @foreach (var venue in venues)
+    {
+        <li>@venue.VenueName (@venue.Location) - Capacity: @venue.Capacity</li>
+    }
+</ul>
+
+<br/>
+<div class="row pt-0 mt-0">
+    <div class="col-xl-4">
+        <BlogCard image="./images/wedding.jpg" label="Wedding" heading="A perfect place to say your 'I do's'" text="Nestled in a picturesque location, our wedding venue is the perfect backdrop for your love story. With romantic gardens, elegant interiors, and breathtaking views, every moment will feel like a fairytale. Whether you're planning an intimate ceremony or a grand celebration, we offer a beautiful, customizable space to make your wedding day truly unforgettable.
+
+Let us help you create the wedding of your dreams — because every love story deserves a magical beginning. 💖" actionButtonText="View More " actionButtonEndpoint="/"></BlogCard>
+    </div>
+    <div class="col-xl-4">
+        <BlogCard image="./images/festivalvenue.jpg" label="Festival" heading="Ultimate Festival Playground" text="Welcome to the heart of excitement and celebration! Our festival venue is the perfect space to bring your wildest dreams to life. From live music to art installations, food trucks to colorful performances — everything you need for an unforgettable festival experience is right here. With plenty of open space, vibrant energy, and a location that’s perfect for creating memories, our venue sets the stage for an event like no other.
+
+Get ready to dance, explore, and experience the magic of a festival that will leave you talking about it for years to come. Let's make every moment count! ✨" actionButtonText="View More " actionButtonEndpoint="/"></BlogCard>
+    </div>
+    <div class="col-xl-4">
+        <BlogCard image="./images/galavenue.jpg" label="Corporate" heading="Where corporate meets celebration" text="Our corporate social event venue offers the perfect blend of sophistication and relaxation. Designed to foster networking, collaboration, and enjoyment, it’s ideal for company parties, team-building events, or any occasion that calls for a mix of business and pleasure. With versatile spaces, modern amenities, and a stylish atmosphere, we ensure your event leaves a lasting impression.
+
+Let us help you create an event that brings colleagues together, sparks meaningful connections, and celebrates success in a setting that’s both professional and memorable." actionButtonText="View More " actionButtonEndpoint="/"></BlogCard>
+    </div>
+</div>
+
+@code {
+    public List<Venue> venues = new();
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            // venues =  bookingService.GetVenues();
+        }
+        catch (Exception)
+        {
+            
+            throw;
+        }
+        await base.OnInitializedAsync();
+    }
+
+}

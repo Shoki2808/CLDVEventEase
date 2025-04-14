@@ -1,0 +1,27 @@
+﻿<div class="card content-box">
+    <img class="card-img-top" src="@image" style="object-fit: scale-down;" alt="Card image cap">
+    <div class="card-body">
+        @* <label class="blog-label" style="position:relative;top:-30px;">@label</label> *@
+
+        <div class="row overflow-auto" style="height:200px;">
+            <h5 class="card-title">@heading</h5>
+            <p class="card-text">@text</p>
+        </div>
+
+        <div style="float: right">
+            <button class="blog-btn-tertiary">
+                <a href="@actionButtonEndpoint" target="blank"><h6>@actionButtonText <span class="oi oi-arrow-right"></span> </h6></a>
+
+            </button>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string image { get; set; }
+    [Parameter] public string label { get; set; }
+    [Parameter] public string heading { get; set; }
+    [Parameter] public string text { get; set; }
+    [Parameter] public string actionButtonText { get; set; }
+    [Parameter] public string actionButtonEndpoint { get; set; }
+}

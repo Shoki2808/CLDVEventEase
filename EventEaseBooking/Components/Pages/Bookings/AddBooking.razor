@@ -1,0 +1,317 @@
+﻿@page "/AddBooking"
+
+@inject NavigationManager navMan
+@inject IBookingService bookingService
+@inject IEventService eventService
+@inject IClientService clientService
+
+
+<PageTitle>Bookings</PageTitle>
+
+
+
+<div class="row" style="padding-left: 20%; padding-right:20%; padding-bottom:10%; ">
+
+    <div>
+        <h1 style="padding-top:10px; padding-bottom:10px">Add New Booking</h1>
+    </div>
+
+
+    <div class="card mt-2 mb-4" style="box-shadow: 5px 5px 5px 5px #e3dede;">
+        <div class="row justify-content-center mb-3" style=" padding-left: 10%; padding-right:10%; ">
+            <div class="row g-3">
+
+                <h3 class="p-2 mt-2 mb-2">Event Information</h3>
+                <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Event Date</label>
+                    <input type="date" class="form-control" id="date" @bind="eventModel.EventDate" />
+                </div>
+                <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Event Name</label>
+                    <input type="text" class="form-control" id="date" @bind="eventModel.EventName" />
+                </div>
+                <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Event Description</label>
+                    <input type="text" class="form-control" id="date" @bind="eventModel.EventDescription" />
+                </div>
+                <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Event Type</label>
+                    <select type="etype" class="form-control" id="venue" @onchange="OnEventTypeChange">
+                        @foreach (var type in EventTypeList)
+                        {
+                            <option value="@type.EventTypeId">@type.EventTypeName</option>
+                        }
+
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="card mt-2 mb-4" style="box-shadow: 5px 5px 5px 5px #e3dede;">
+        <div class="row justify-content-center mb-3" style=" padding-left: 10%; padding-right:10%; ">
+            <div class="row g-3">
+
+                <h3 class="p-2 mt-2 mb-2">Client Information</h3>
+                <div class="col-md-12">
+                    <label for="clientname" class="form-label">Client Name</label>
+                    <input type="text" class="form-control" id="name" @bind="clientModel.ClientName" />
+                </div>
+                <div class="col-md-12">
+                    <label for="clientcontact" class="form-label">Client Contact Details</label>
+                    <input type="number" class="form-control" id="conbtact" @bind="clientModel.ContactDetails" />
+                </div>
+                <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Client Email Address</label>
+                    <input type="email" class="form-control" id="inputEmail4" @bind="clientModel.ClientEmail" />
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-2 mb-4" style="box-shadow: 5px 5px 5px 5px #e3dede;">
+        <div class="row justify-content-center mb-3" style=" padding-left: 10%; padding-right:10%; ">
+            <div class="row g-3">
+
+                <h3 class="p-2 mt-2 mb-2">Venue Information</h3>
+                <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Select Venue</label>
+                    <select type="email" class="form-control" id="venue" @onchange="OnVenueChange" >
+                        <option selected value="">Select Venue</option>
+
+                        @foreach(var ven in venueList)
+                        {
+                            <option value="@ven.VenueId">@ven.VenueName</option>
+                        }
+
+                    </select>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <center>
+
+        @*             <EditForm Model="bookingViewModel" OnValidSubmit="HandleValidSubmit">
+            <div class="row justify-content-center mb-3">
+            <div class="col-10">
+            <div class="row g-3">
+            <div class="col-md-12">
+            <label for="inputEmail4" class="form-label">Booking Date</label>
+            <InputDate type="date" class="form-control" id="date" @bind-Value="bookingViewModel.bookingModel.BookingDate" />
+            <ValidationMessage For="@(() => bookingViewModel.bookingModel.BookingDate)" />
+            </div>
+            <div class="col-md-12">
+            <label for="clientname" class="form-label">Client Name</label>
+            <InputText type="text" class="form-control" id="name" @bind-Value="bookingViewModel.clientModel.ClientName" />
+            <ValidationMessage For="@(()=> bookingViewModel.clientModel.ClientName)" />
+            </div>
+            <div class="col-md-12">
+            <label for="inputEmail4" class="form-label">Client Email Address</label>
+            <InputText type="email" class="form-control" id="inputEmail4" @bind-Value="bookingViewModel.clientModel.EmailAddress" />
+            <ValidationMessage For="@(() => bookingViewModel.clientModel.EmailAddress)" />
+            </div>
+            <div class="col-md-12">
+            <label for="inputEmail4" class="form-label">Select Venue</label>
+            <MudSelect type="email" class="form-control" id="venue" @bind-Value="bookingViewModel.bookingModel.VenueId">
+            @foreach(var ven in venueList)
+            {
+            <MudSelectItem Value="@ven.VenueId">@ven.VenueName</MudSelectItem>
+            }
+
+            </MudSelect>
+
+            <ValidationMessage For="@(() => bookingViewModel.bookingModel.VenueId)" />
+            </div>
+            <div class="col-md-12">
+            <DataAnnotationsValidator />
+            <Microsoft.AspNetCore.Components.Forms.ValidationSummary />
+            @*  <p>@PageMessage</p>
+            </div>
+            </div>
+            </div>
+
+            </div>
+
+
+
+            </EditForm> *@
+
+    </center>
+
+    <div class="row col-12 mb-5 mt-3 ">
+        <div class="col-6"></div>
+        <div class="d-grid col-3 gap-2 mx-auto">
+            <button class="btn btn-primary "@onclick="()=> CancelBtnClick()" style="color:white; background-color:black; padding:10px; justify-content: center; align-items: center; gap: 8px; font-size: 20px; border-radius: 15px; border: none;">
+                Cancel
+            </button>
+
+
+        </div>
+        <div class="d-grid col-3 gap-2 mx-auto ">
+         
+            <button class="btn btn-primary" @onclick="() => SubmitBooking()" style="display: inline-flex; padding:10px; justify-content: center; align-items: center; gap: 8px; font-size: 20px; border-radius: 15px; border: none; color:#c6605d; background-color:lightpink;;">
+                Submit booking
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+@code {
+    private Booking bookingModel = new Booking();
+    private Event eventModel = new Event();
+    private Venue venueModel = new();
+    private Client clientModel = new();
+    private List<Venue> venueList = new List<Venue>();
+    private List<EventType> EventTypeList = new List<EventType>();
+    private int ETypeId;
+    private EventType eventType = new();
+    DateTime CurrentDate = DateTime.Now;
+    private Event eventResult = new Event();
+    private Client clientResult = new Client();
+    private Booking bookingResult = new Booking();
+
+    bool showSuccess = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+
+            await GetVenues();
+            await GetVEventTypes();
+
+            bookingModel.BookingDate = DateOnly.FromDateTime(CurrentDate);
+            bookingModel.BookingTime = TimeOnly.FromDateTime(CurrentDate);
+            eventModel.EventDate = DateOnly.FromDateTime(CurrentDate);
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        await base.OnInitializedAsync();
+    }
+
+
+    private async Task OnEventTypeChange(ChangeEventArgs e)
+    {
+        try
+        {
+            if (e.Value != null)
+            {
+                //eventType = 
+                ETypeId = Int32.Parse(e.Value.ToString());
+
+
+            }
+            // venueList = venueList.Where(x => x.EventTypeId.ToString().Equals(ETypeId));
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        await Task.CompletedTask;
+
+    }
+
+    private async Task OnVenueChange(ChangeEventArgs e)
+    {
+        try
+        {
+            if (e.Value != null)
+            {
+                int Venue = Int32.Parse(e.Value.ToString());
+                bookingModel.VenueId = Venue;
+                eventModel.VenueId = Venue;
+            }
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        await Task.CompletedTask;
+        //bookingModel.VenueId = Venue.;
+
+    }
+
+    private async Task GetVenues()
+    {
+        try
+        {
+            venueList = await bookingService.GetVenues();
+        }
+        catch (Exception e)
+        {
+            var ex = e.InnerException;
+            throw;
+        }
+
+    }
+
+    private async Task GetVEventTypes()
+    {
+        try
+        {
+            EventTypeList = await eventService.GetEventTypes();
+        }
+        catch (Exception e)
+        {
+            var ex = e.InnerException;
+            throw;
+        }
+
+    }
+
+    private void CancelBtnClick()
+    {
+        navMan.NavigateTo("/Bookings");
+    }
+    private async Task SubmitBooking()
+    {
+
+
+        try
+        {   
+            clientModel.Password = $"({clientModel.ClientName}2585485)";
+            clientModel.EventName = eventModel.EventName;
+            clientModel.EventId = 1;
+            clientModel.BookingId = 10;
+            clientModel.VenueId = 5;
+
+            clientResult = await clientService.AddClient(clientModel);
+
+            eventModel.EventTypeId = ETypeId;
+            eventModel.VenueId = bookingModel.VenueId;
+            eventResult = await eventService.AddEvent(eventModel);
+
+            bookingModel.ClientId = clientResult.ClientId;
+            bookingModel.EventId = eventResult.EventId;
+
+            bookingResult = await bookingService.CreateBooking(bookingModel);
+            if(bookingResult != null)
+            {
+                showSuccess = true;
+
+                 navMan.NavigateTo("/Bookings");
+            }
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+        // return result.ToString();
+    }
+}

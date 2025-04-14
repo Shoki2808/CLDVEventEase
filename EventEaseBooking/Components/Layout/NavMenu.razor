@@ -1,0 +1,97 @@
+﻿
+
+<div class="">
+    <div class="top-row navbar">
+        <div class=" ">
+            <div class="navbar-brand">
+                <a class="navbar-brand" href=""> <span class="row align-content-center"> <img class="logo"  src="./images/eelogocrop.jpg" /></span></a>
+
+            </div>
+        </div>
+
+
+        <div class="">
+            @*     <img src="./eelogocrop.jpg" alt="Event Booking Logo" class="logo" /> *@
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/Bookings">Bookings</a></li>
+                <li><a href="/Venues">Venues</a></li>
+                <li><a href="/Events">Events</a></li>
+            </ul>
+        </div>
+
+        @* 
+    <div class="nav-scrollable" @onclick="ToggleNavMenu">
+        <nav class="flex-column">
+
+            <div class="nav-item">
+
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                    Home
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-item" href="/Bookings">
+                    <i class="fas fa-book"></i> Bookings
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-item" href="/Venues">
+                    <i class="fas fa-home"></i> Venues
+                </NavLink>
+            </div>
+            <div class="nav-item px-3">
+                <NavLink class="nav-item" href="/Events">
+                    <i class="fas fa-calendar-alt"></i> Events
+                </NavLink>
+            </div>
+
+            <div class="nav-item px-3 mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <span class="oi oi-star" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-auto">
+                        <span class="oi oi-chat" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-auto">
+                        <span class="oi oi-cog" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-auto">
+                        <span class="oi oi-bell" aria-hidden="true"></span>
+                    </div>
+
+                </div>
+            </div>
+            <hr />
+            <div class="nav-item px-3" style="">
+                <NavLink class="nav-link" href="avatar">
+                    <span class="oi oi-person" aria-hidden="true"></span> <h6>Jane Doe</h6>
+                </NavLink>
+            </div>
+        </nav>
+    </div> *@
+        @* 
+<div class="ps-3 pt-4 navbar ">
+    <div class="navbar-container-fluid">
+        <a class="navbar-brand" href=""> <span style="border-radius: 20px;" class="row align-content-center"> <img style="border-radius: 20px; height:60px" src="./images/eelogocrop.jpg" /></span></a>
+
+    </div>
+</div> *@
+    </div>
+</div>
+
+
+
+
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

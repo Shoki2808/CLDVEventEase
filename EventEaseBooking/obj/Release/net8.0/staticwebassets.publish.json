@@ -1,0 +1,5996 @@
+{
+  "Version": 1,
+  "Hash": "GbvY4d0/TWZIRfoN+QBVIHN2Y1T8E1Flj9xrYoQvPV4=",
+  "Source": "EventEaseBooking",
+  "BasePath": "_content/EventEaseBooking",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EventEaseBooking\\wwwroot",
+      "Source": "EventEaseBooking",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hmu6kx9mgf",
+      "Integrity": "d1ee8m8CKXHLkW0DDwn00o/ghDNhscMVl/ei7IzThfU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tspksaymx7",
+      "Integrity": "Y5zCtrV6/XngfIAwnKZESn//G3w6zwlrDewTKl6fojQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\dark.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/dark.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6jjhky0utv",
+      "Integrity": "3qaU5Qf3m+6YvdqrEJG1rVIUkUwltxqk4xKVf1bVNUo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\dark.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\dark-base.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/dark-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dq5zpyuojf",
+      "Integrity": "xWjcnO7tDmh1ml6yLIhjuYUCEF3sEm2ydPRWBXd/QKw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\dark-base.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\dark-wcag.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/dark-wcag.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f9yvf3g7j5",
+      "Integrity": "M9oCY0HEHaFPTMj7CLTxNBT7/8jUvcI3/3q27/kphek=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\dark-wcag.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\default.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/default.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "h3vymbwtp6",
+      "Integrity": "7fORUpdOMIYb4HQJqAGQrvAHRvQMA1X/BZ4ovWVEU9Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\default.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\default-base.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/default-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g20vcss5zl",
+      "Integrity": "6HFYTCZVdz758ysJNkvJ5qBJtqWSi91t4m0D0abdT7E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\default-base.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\default-wcag.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/default-wcag.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "796b73bq82",
+      "Integrity": "lYiMLG73UrqjeD3Xr0zwkygnPDSAQXeAo1554Yjqjkc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\default-wcag.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/humanistic.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zrurmql8p1",
+      "Integrity": "j6LH4+AGvB4vGR4H6fZN92328TS2q0CUU93trCPHGsQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-base.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/humanistic-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ovaf211bhy",
+      "Integrity": "1JrtdcSOh2YiO6Os6uJCn3wet9p14y0CyxjphGmzHhs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-base.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-dark.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/humanistic-dark.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "l33xr92ka6",
+      "Integrity": "D5MHqlKaEeTh/QJ/+M3z6aO8XJ3QupwvuQ7HCLby9RQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-dark.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-dark-base.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/humanistic-dark-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8byky7demp",
+      "Integrity": "tBhm2s/GXqEG5m1yiGgm7pB0SR1bHGJGcXH55NuvGEY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-dark-base.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-dark-wcag.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/humanistic-dark-wcag.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "a5szytxnku",
+      "Integrity": "wsCFo85Tm++Hir55ycJcA850vMHr3ejT4YmaO32HaNc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-dark-wcag.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-wcag.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/humanistic-wcag.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x6merli1rk",
+      "Integrity": "J8kJYxpBFMrMjHMBSdDlq1lYqyntxOrDZ8AW5FrxH8U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-wcag.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/material.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3fdvyk10t0",
+      "Integrity": "r5eOcj3VAd8z54w7OBnbnBo+BSO3Ytv18eZ+EPO3O68=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-base.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/material-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bundi066hm",
+      "Integrity": "8+tvfsaPMeU/HiAO3mw5I1oka/hdvwej7H1OmnsaPwc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-base.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-dark.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/material-dark.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gnohqi5463",
+      "Integrity": "9DbzoROrVKa1zV8WB3GdITLEOe7mk9ehW44c17IkKbs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-dark.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-dark-base.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/material-dark-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r3t0ybqhl6",
+      "Integrity": "V+Gj1H7AnqB1o9DdrQRB/lL1+uqWFaJXX/Xi5HVjXe4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-dark-base.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-dark-wcag.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/material-dark-wcag.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "22pb44itlf",
+      "Integrity": "mscmBJFsTrAe0H/SoknylPnukiQX2yfQ/zSnbR4B75k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-dark-wcag.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-wcag.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/material-wcag.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "pblx1qaqft",
+      "Integrity": "y6x9nQqkv3mW+Dvmm6Pvh+h0ixHfY0RLzrX6ZlktoG4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-wcag.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/software.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e7902n8cu7",
+      "Integrity": "mqyFaPa4MTVKOrUSpP4JItB0rNzYlwbIogKXvtu49xo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-base.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/software-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t102sfmwf0",
+      "Integrity": "wQSB1k9zEeItD4LdpTUielZCOAVBlSac1oECeHaLbqI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-base.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-dark.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/software-dark.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ideg9jzzep",
+      "Integrity": "xnGQMz4e9qAB/KtsO4t04l/lFsC7gFgd/MgMwxd3q2M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-dark.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-dark-base.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/software-dark-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ag7o50955q",
+      "Integrity": "ujA90Bq0F/QSh1ffnw3ev7nNg/1KPW5aulXbd9xKdm0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-dark-base.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-dark-wcag.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/software-dark-wcag.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "557e8lceon",
+      "Integrity": "VyhJgq8po3mud6FSP2a9ENksqEZN5jW2kGxLQC+F154=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-dark-wcag.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-wcag.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/software-wcag.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9fpk6led9e",
+      "Integrity": "tRcVAq9DGc0nyvTuxUpiBTY8PaxnC6deHLSE8Ri1PMg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-wcag.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/standard.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "u1nfwtusg4",
+      "Integrity": "crZ20WoGvNttYzhC1Gqvh4K9cqRP+AgsORNbvqmWg1o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-base.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/standard-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kqjszwe5tt",
+      "Integrity": "FAp7hB0EIa/WS12wZmH5E8RZsjcD4/S3IoUiucpNsWQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-base.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-dark.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/standard-dark.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3dma2ac9ok",
+      "Integrity": "tzniTDQLy+s3V5n1fk4nFbR0kik10nw+fim7uuxyFcM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-dark.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-dark-base.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/standard-dark-base.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kouv3o9d99",
+      "Integrity": "7D8P4GXfe36mw3yTdB2/hYeOw5I0e2aY0FXv+xW/qcw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-dark-base.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-dark-wcag.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/standard-dark-wcag.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7bt2cgjiuc",
+      "Integrity": "HYNTnwNf3xj899KPdiKwmD1e5t3XRg9VaQgB1ZOvKeI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-dark-wcag.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-wcag.css",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "css/standard-wcag.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kp0ueqs315",
+      "Integrity": "GFU2mt0A9T8j9YMwMQqIUmdziKNDuPppDCn2o37LV2E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-wcag.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\MaterialSymbolsOutlined.woff2",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "fonts/MaterialSymbolsOutlined.woff2",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tf0jku5d4p",
+      "Integrity": "+eSpwuS0Mx0DVjyuFo3DoQXiI+Mp+4I1MtdWSbDcZK4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\MaterialSymbolsOutlined.woff2"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\RobotoFlex.woff2",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "fonts/RobotoFlex.woff2",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tdgcpklreb",
+      "Integrity": "D4n6QkbzuJDYChkHTPMXLxJlSC/5uucOpe2kU+JCJRs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\RobotoFlex.woff2"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\SourceSans3VF-Italic.ttf.woff2",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "fonts/SourceSans3VF-Italic.ttf.woff2",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sw3iuqo2hf",
+      "Integrity": "tJWavAVpOS+HxsasYS+Q4/4BBNKDckGJt9i29hrzR9M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\SourceSans3VF-Italic.ttf.woff2"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\SourceSans3VF-Upright.ttf.woff2",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "fonts/SourceSans3VF-Upright.ttf.woff2",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nqmp3d2aoy",
+      "Integrity": "XxZWb3pA05szmtJr4VH6Whqx8MJXTHouYZdlWEoay9g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\SourceSans3VF-Upright.ttf.woff2"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\Radzen.Blazor.js",
+      "SourceId": "Radzen.Blazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\",
+      "BasePath": "_content/Radzen.Blazor",
+      "RelativePath": "Radzen.Blazor.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dtys3jdja3",
+      "Integrity": "QT60B4Wdh8UNI2Jhr/xjAzFoOIwQ+/DyQF/jE5V8jX8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\Radzen.Blazor.js"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\obj\\Release\\net8.0\\scopedcss\\bundle\\EventEaseBooking.styles.css",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\obj\\Release\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "EventEaseBooking#[.{fingerprint}]?.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "5i441dr0h3",
+      "Integrity": "zZQKsW8lG8kopcUix4JHZxHh4mX8hSKS8uq8xGbyqRw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\obj\\Release\\net8.0\\scopedcss\\bundle\\EventEaseBooking.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\EventEaseBooking.bundle.scp.css",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "EventEaseBooking#[.{fingerprint}]!.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "5i441dr0h3",
+      "Integrity": "zZQKsW8lG8kopcUix4JHZxHh4mX8hSKS8uq8xGbyqRw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\EventEaseBooking.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\app.css",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "app#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yqs3nyaqnl",
+      "Integrity": "tuwhZHNRAOm+BGkduh0tMQM94o/TULy6T72Fa/lsuB0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bpk8xqwxhs",
+      "Integrity": "z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8inm30yfxf",
+      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\favicon.png",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\BeachWedding.avif",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/BeachWedding#[.{fingerprint}]?.avif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lnwsc215b7",
+      "Integrity": "r0cFVp97EUviXsMAGE6sgu7JmvGeVH89ppE4pmOZYKU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\BeachWedding.avif"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\EELogo.jpg",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/EELogo#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "335ig5qk57",
+      "Integrity": "wTGetLC87hmoN+IPV/l0e7QZ0XxY9903/llLfjT4d4E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\EELogo.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\EELogoCrop.jpg",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/EELogoCrop#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "b4i8rni7y2",
+      "Integrity": "u6R7cyetI4k04ZuLoqWaOaASZ+kqHRy7kV5prgDS32o=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\EELogoCrop.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Event Ease.png",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/Event Ease#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t8s5flylkk",
+      "Integrity": "w578TxyCoaWX+140fAK1ceye2rjTw7indBrZUdI6n0U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Event Ease.png"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\FestivalVenue.jpg",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/FestivalVenue#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ldzj3c3702",
+      "Integrity": "2byz21w2VEIm+eW8kZKJoS1dKPC1bhJeUZDKNP2rKEc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\FestivalVenue.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\GalaVenue.jpg",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/GalaVenue#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "jcjo3ej1ro",
+      "Integrity": "DT2F5iNNlTq60fT4muTyScEUGm2MM/Jx+66ke5GO0Wg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\GalaVenue.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\aU5BOXtgL31u8QHLQzej.jpg",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/Home/aU5BOXtgL31u8QHLQzej#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wbrpfnn6fh",
+      "Integrity": "ZI6la7HOpAfmMlEKO2bB+maH3ou7nwGFGlNlV1FLx8Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Home\\aU5BOXtgL31u8QHLQzej.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\bw.jpg",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/Home/bw#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4c8eajafar",
+      "Integrity": "tPfWoklowtMLf73LwxWoSWyaEA8W55JfbG1Nomm5T64=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Home\\bw.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\invite.jpg",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/Home/invite#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ap86hm2tck",
+      "Integrity": "jpqJYEhgjgdw8B6LJKbIPkSWBI1EDT13pbe1Gog69z0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Home\\invite.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\posumJIv6VhHVWY5qJZa.jpg",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/Home/posumJIv6VhHVWY5qJZa#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9vrehnmhns",
+      "Integrity": "lZEH0K6+Z1lmcUTnKsecJ6D+bnFZdQLM+08Tdjl71Pc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Home\\posumJIv6VhHVWY5qJZa.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\rings.jpg",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/Home/rings#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ymy5j4di1r",
+      "Integrity": "mhFnWc3NTO0cCFPY1wC6CnPEigY2LD4aUcXvxVVUUZQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Home\\rings.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\sjwS9ZMn5izuU8XkBJAu.jpg",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/Home/sjwS9ZMn5izuU8XkBJAu#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "l0hir3dhmi",
+      "Integrity": "pR1V2J4EsS8om94ho0fCaRg70R6EfxAlD9RHXQB/Ebo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Home\\sjwS9ZMn5izuU8XkBJAu.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\w7fXnz40I8gLTiq1E4ob.webp",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/Home/w7fXnz40I8gLTiq1E4ob#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s8e7stihu1",
+      "Integrity": "JCwVLvbvRmaxqjhP7W79Qmru6t/WypYvahPIJ9sR1lI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Home\\w7fXnz40I8gLTiq1E4ob.webp"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\Wedding114.jpg",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/Home/Wedding114#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hwc47i882l",
+      "Integrity": "UYn2SezDuJN0lFvyD+JoIS44KvjtHPm/pAAQQkOd8N0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Home\\Wedding114.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Wedding.jpg",
+      "SourceId": "EventEaseBooking",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\",
+      "BasePath": "_content/EventEaseBooking",
+      "RelativePath": "Images/Wedding#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "q56ehup5kj",
+      "Integrity": "rs88yNojtKBqx/G2wilTSRle/M2jhpIwDQj261v6u1I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Wedding.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "_content/MudBlazor/MudBlazor.min.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "595896"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d1ee8m8CKXHLkW0DDwn00o/ghDNhscMVl/ei7IzThfU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Feb 2025 18:04:24 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-d1ee8m8CKXHLkW0DDwn00o/ghDNhscMVl/ei7IzThfU="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MudBlazor/MudBlazor.min.hmu6kx9mgf.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "595896"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d1ee8m8CKXHLkW0DDwn00o/ghDNhscMVl/ei7IzThfU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Feb 2025 18:04:24 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hmu6kx9mgf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-d1ee8m8CKXHLkW0DDwn00o/ghDNhscMVl/ei7IzThfU="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/MudBlazor/MudBlazor.min.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/MudBlazor/MudBlazor.min.js",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "55250"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y5zCtrV6/XngfIAwnKZESn//G3w6zwlrDewTKl6fojQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Feb 2025 18:04:24 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y5zCtrV6/XngfIAwnKZESn//G3w6zwlrDewTKl6fojQ="
+        }
+      ]
+    },
+    {
+      "Route": "_content/MudBlazor/MudBlazor.min.tspksaymx7.js",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\mudblazor\\8.3.0\\staticwebassets\\MudBlazor.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "55250"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Y5zCtrV6/XngfIAwnKZESn//G3w6zwlrDewTKl6fojQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 23 Feb 2025 18:04:24 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tspksaymx7"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Y5zCtrV6/XngfIAwnKZESn//G3w6zwlrDewTKl6fojQ="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/MudBlazor/MudBlazor.min.js"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/dark.6jjhky0utv.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "650220"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3qaU5Qf3m+6YvdqrEJG1rVIUkUwltxqk4xKVf1bVNUo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:05 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6jjhky0utv"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3qaU5Qf3m+6YvdqrEJG1rVIUkUwltxqk4xKVf1bVNUo="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/dark.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/dark.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "650220"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3qaU5Qf3m+6YvdqrEJG1rVIUkUwltxqk4xKVf1bVNUo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:05 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-3qaU5Qf3m+6YvdqrEJG1rVIUkUwltxqk4xKVf1bVNUo="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/dark-base.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "647386"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xWjcnO7tDmh1ml6yLIhjuYUCEF3sEm2ydPRWBXd/QKw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:05 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xWjcnO7tDmh1ml6yLIhjuYUCEF3sEm2ydPRWBXd/QKw="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/dark-base.dq5zpyuojf.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "647386"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xWjcnO7tDmh1ml6yLIhjuYUCEF3sEm2ydPRWBXd/QKw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:05 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dq5zpyuojf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xWjcnO7tDmh1ml6yLIhjuYUCEF3sEm2ydPRWBXd/QKw="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/dark-base.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/dark-wcag.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2648"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M9oCY0HEHaFPTMj7CLTxNBT7/8jUvcI3/3q27/kphek=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:05 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-M9oCY0HEHaFPTMj7CLTxNBT7/8jUvcI3/3q27/kphek="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/dark-wcag.f9yvf3g7j5.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2648"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"M9oCY0HEHaFPTMj7CLTxNBT7/8jUvcI3/3q27/kphek=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:05 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f9yvf3g7j5"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-M9oCY0HEHaFPTMj7CLTxNBT7/8jUvcI3/3q27/kphek="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/dark-wcag.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/default.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\default.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "649898"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7fORUpdOMIYb4HQJqAGQrvAHRvQMA1X/BZ4ovWVEU9Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7fORUpdOMIYb4HQJqAGQrvAHRvQMA1X/BZ4ovWVEU9Q="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/default.h3vymbwtp6.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\default.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "649898"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7fORUpdOMIYb4HQJqAGQrvAHRvQMA1X/BZ4ovWVEU9Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "h3vymbwtp6"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7fORUpdOMIYb4HQJqAGQrvAHRvQMA1X/BZ4ovWVEU9Q="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/default.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/default-base.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\default-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "647057"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6HFYTCZVdz758ysJNkvJ5qBJtqWSi91t4m0D0abdT7E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6HFYTCZVdz758ysJNkvJ5qBJtqWSi91t4m0D0abdT7E="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/default-base.g20vcss5zl.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\default-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "647057"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6HFYTCZVdz758ysJNkvJ5qBJtqWSi91t4m0D0abdT7E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g20vcss5zl"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6HFYTCZVdz758ysJNkvJ5qBJtqWSi91t4m0D0abdT7E="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/default-base.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/default-wcag.796b73bq82.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\default-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2589"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lYiMLG73UrqjeD3Xr0zwkygnPDSAQXeAo1554Yjqjkc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "796b73bq82"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lYiMLG73UrqjeD3Xr0zwkygnPDSAQXeAo1554Yjqjkc="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/default-wcag.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/default-wcag.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\default-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2589"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lYiMLG73UrqjeD3Xr0zwkygnPDSAQXeAo1554Yjqjkc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:06 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lYiMLG73UrqjeD3Xr0zwkygnPDSAQXeAo1554Yjqjkc="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "649839"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j6LH4+AGvB4vGR4H6fZN92328TS2q0CUU93trCPHGsQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:12 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-j6LH4+AGvB4vGR4H6fZN92328TS2q0CUU93trCPHGsQ="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic.zrurmql8p1.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "649839"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j6LH4+AGvB4vGR4H6fZN92328TS2q0CUU93trCPHGsQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:12 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zrurmql8p1"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-j6LH4+AGvB4vGR4H6fZN92328TS2q0CUU93trCPHGsQ="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/humanistic.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-base.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "670435"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1JrtdcSOh2YiO6Os6uJCn3wet9p14y0CyxjphGmzHhs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 14:48:50 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1JrtdcSOh2YiO6Os6uJCn3wet9p14y0CyxjphGmzHhs="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-base.ovaf211bhy.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "670435"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1JrtdcSOh2YiO6Os6uJCn3wet9p14y0CyxjphGmzHhs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 29 Mar 2025 14:48:50 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ovaf211bhy"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1JrtdcSOh2YiO6Os6uJCn3wet9p14y0CyxjphGmzHhs="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/humanistic-base.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-dark.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "650167"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D5MHqlKaEeTh/QJ/+M3z6aO8XJ3QupwvuQ7HCLby9RQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:10 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D5MHqlKaEeTh/QJ/+M3z6aO8XJ3QupwvuQ7HCLby9RQ="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-dark.l33xr92ka6.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "650167"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D5MHqlKaEeTh/QJ/+M3z6aO8XJ3QupwvuQ7HCLby9RQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:10 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l33xr92ka6"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D5MHqlKaEeTh/QJ/+M3z6aO8XJ3QupwvuQ7HCLby9RQ="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/humanistic-dark.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-dark-base.8byky7demp.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "647326"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tBhm2s/GXqEG5m1yiGgm7pB0SR1bHGJGcXH55NuvGEY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:10 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8byky7demp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tBhm2s/GXqEG5m1yiGgm7pB0SR1bHGJGcXH55NuvGEY="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/humanistic-dark-base.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-dark-base.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "647326"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tBhm2s/GXqEG5m1yiGgm7pB0SR1bHGJGcXH55NuvGEY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:10 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tBhm2s/GXqEG5m1yiGgm7pB0SR1bHGJGcXH55NuvGEY="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-dark-wcag.a5szytxnku.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2658"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wsCFo85Tm++Hir55ycJcA850vMHr3ejT4YmaO32HaNc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:10 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a5szytxnku"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wsCFo85Tm++Hir55ycJcA850vMHr3ejT4YmaO32HaNc="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/humanistic-dark-wcag.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-dark-wcag.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2658"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wsCFo85Tm++Hir55ycJcA850vMHr3ejT4YmaO32HaNc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:10 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wsCFo85Tm++Hir55ycJcA850vMHr3ejT4YmaO32HaNc="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-wcag.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J8kJYxpBFMrMjHMBSdDlq1lYqyntxOrDZ8AW5FrxH8U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:10 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-J8kJYxpBFMrMjHMBSdDlq1lYqyntxOrDZ8AW5FrxH8U="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/humanistic-wcag.x6merli1rk.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\humanistic-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J8kJYxpBFMrMjHMBSdDlq1lYqyntxOrDZ8AW5FrxH8U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:10 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x6merli1rk"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-J8kJYxpBFMrMjHMBSdDlq1lYqyntxOrDZ8AW5FrxH8U="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/humanistic-wcag.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material.3fdvyk10t0.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "659027"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r5eOcj3VAd8z54w7OBnbnBo+BSO3Ytv18eZ+EPO3O68=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:21 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3fdvyk10t0"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r5eOcj3VAd8z54w7OBnbnBo+BSO3Ytv18eZ+EPO3O68="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/material.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "659027"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r5eOcj3VAd8z54w7OBnbnBo+BSO3Ytv18eZ+EPO3O68=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:21 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r5eOcj3VAd8z54w7OBnbnBo+BSO3Ytv18eZ+EPO3O68="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-base.bundi066hm.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "656186"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8+tvfsaPMeU/HiAO3mw5I1oka/hdvwej7H1OmnsaPwc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:14 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bundi066hm"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8+tvfsaPMeU/HiAO3mw5I1oka/hdvwej7H1OmnsaPwc="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/material-base.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-base.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "656186"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8+tvfsaPMeU/HiAO3mw5I1oka/hdvwej7H1OmnsaPwc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:14 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8+tvfsaPMeU/HiAO3mw5I1oka/hdvwej7H1OmnsaPwc="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-dark.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "658640"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9DbzoROrVKa1zV8WB3GdITLEOe7mk9ehW44c17IkKbs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:19 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9DbzoROrVKa1zV8WB3GdITLEOe7mk9ehW44c17IkKbs="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-dark.gnohqi5463.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "658640"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9DbzoROrVKa1zV8WB3GdITLEOe7mk9ehW44c17IkKbs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:19 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gnohqi5463"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9DbzoROrVKa1zV8WB3GdITLEOe7mk9ehW44c17IkKbs="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/material-dark.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-dark-base.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "655799"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V+Gj1H7AnqB1o9DdrQRB/lL1+uqWFaJXX/Xi5HVjXe4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-V+Gj1H7AnqB1o9DdrQRB/lL1+uqWFaJXX/Xi5HVjXe4="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-dark-base.r3t0ybqhl6.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "655799"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"V+Gj1H7AnqB1o9DdrQRB/lL1+uqWFaJXX/Xi5HVjXe4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r3t0ybqhl6"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-V+Gj1H7AnqB1o9DdrQRB/lL1+uqWFaJXX/Xi5HVjXe4="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/material-dark-base.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-dark-wcag.22pb44itlf.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2598"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mscmBJFsTrAe0H/SoknylPnukiQX2yfQ/zSnbR4B75k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "22pb44itlf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mscmBJFsTrAe0H/SoknylPnukiQX2yfQ/zSnbR4B75k="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/material-dark-wcag.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-dark-wcag.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2598"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mscmBJFsTrAe0H/SoknylPnukiQX2yfQ/zSnbR4B75k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:16 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mscmBJFsTrAe0H/SoknylPnukiQX2yfQ/zSnbR4B75k="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-wcag.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2590"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y6x9nQqkv3mW+Dvmm6Pvh+h0ixHfY0RLzrX6ZlktoG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:19 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-y6x9nQqkv3mW+Dvmm6Pvh+h0ixHfY0RLzrX6ZlktoG4="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/material-wcag.pblx1qaqft.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\material-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2590"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"y6x9nQqkv3mW+Dvmm6Pvh+h0ixHfY0RLzrX6ZlktoG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:19 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "pblx1qaqft"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-y6x9nQqkv3mW+Dvmm6Pvh+h0ixHfY0RLzrX6ZlktoG4="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/material-wcag.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "649897"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mqyFaPa4MTVKOrUSpP4JItB0rNzYlwbIogKXvtu49xo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:26 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mqyFaPa4MTVKOrUSpP4JItB0rNzYlwbIogKXvtu49xo="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software.e7902n8cu7.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "649897"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mqyFaPa4MTVKOrUSpP4JItB0rNzYlwbIogKXvtu49xo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:26 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e7902n8cu7"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mqyFaPa4MTVKOrUSpP4JItB0rNzYlwbIogKXvtu49xo="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/software.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-base.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "647056"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wQSB1k9zEeItD4LdpTUielZCOAVBlSac1oECeHaLbqI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:23 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wQSB1k9zEeItD4LdpTUielZCOAVBlSac1oECeHaLbqI="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-base.t102sfmwf0.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "647056"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wQSB1k9zEeItD4LdpTUielZCOAVBlSac1oECeHaLbqI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:23 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t102sfmwf0"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wQSB1k9zEeItD4LdpTUielZCOAVBlSac1oECeHaLbqI="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/software-base.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-dark.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "650196"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xnGQMz4e9qAB/KtsO4t04l/lFsC7gFgd/MgMwxd3q2M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:25 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xnGQMz4e9qAB/KtsO4t04l/lFsC7gFgd/MgMwxd3q2M="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-dark.ideg9jzzep.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "650196"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xnGQMz4e9qAB/KtsO4t04l/lFsC7gFgd/MgMwxd3q2M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:25 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ideg9jzzep"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xnGQMz4e9qAB/KtsO4t04l/lFsC7gFgd/MgMwxd3q2M="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/software-dark.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-dark-base.ag7o50955q.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "647355"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ujA90Bq0F/QSh1ffnw3ev7nNg/1KPW5aulXbd9xKdm0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:24 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ag7o50955q"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ujA90Bq0F/QSh1ffnw3ev7nNg/1KPW5aulXbd9xKdm0="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/software-dark-base.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-dark-base.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "647355"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ujA90Bq0F/QSh1ffnw3ev7nNg/1KPW5aulXbd9xKdm0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:24 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ujA90Bq0F/QSh1ffnw3ev7nNg/1KPW5aulXbd9xKdm0="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-dark-wcag.557e8lceon.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VyhJgq8po3mud6FSP2a9ENksqEZN5jW2kGxLQC+F154=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:24 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "557e8lceon"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VyhJgq8po3mud6FSP2a9ENksqEZN5jW2kGxLQC+F154="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/software-dark-wcag.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-dark-wcag.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2655"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VyhJgq8po3mud6FSP2a9ENksqEZN5jW2kGxLQC+F154=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:24 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VyhJgq8po3mud6FSP2a9ENksqEZN5jW2kGxLQC+F154="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-wcag.9fpk6led9e.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2650"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tRcVAq9DGc0nyvTuxUpiBTY8PaxnC6deHLSE8Ri1PMg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:25 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9fpk6led9e"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tRcVAq9DGc0nyvTuxUpiBTY8PaxnC6deHLSE8Ri1PMg="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/software-wcag.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/software-wcag.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\software-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2650"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tRcVAq9DGc0nyvTuxUpiBTY8PaxnC6deHLSE8Ri1PMg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:25 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tRcVAq9DGc0nyvTuxUpiBTY8PaxnC6deHLSE8Ri1PMg="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "656379"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"crZ20WoGvNttYzhC1Gqvh4K9cqRP+AgsORNbvqmWg1o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-crZ20WoGvNttYzhC1Gqvh4K9cqRP+AgsORNbvqmWg1o="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard.u1nfwtusg4.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "656379"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"crZ20WoGvNttYzhC1Gqvh4K9cqRP+AgsORNbvqmWg1o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:30 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "u1nfwtusg4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-crZ20WoGvNttYzhC1Gqvh4K9cqRP+AgsORNbvqmWg1o="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/standard.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-base.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "653538"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FAp7hB0EIa/WS12wZmH5E8RZsjcD4/S3IoUiucpNsWQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FAp7hB0EIa/WS12wZmH5E8RZsjcD4/S3IoUiucpNsWQ="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-base.kqjszwe5tt.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "653538"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FAp7hB0EIa/WS12wZmH5E8RZsjcD4/S3IoUiucpNsWQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kqjszwe5tt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FAp7hB0EIa/WS12wZmH5E8RZsjcD4/S3IoUiucpNsWQ="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/standard-base.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-dark.3dma2ac9ok.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "655985"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tzniTDQLy+s3V5n1fk4nFbR0kik10nw+fim7uuxyFcM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:29 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3dma2ac9ok"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tzniTDQLy+s3V5n1fk4nFbR0kik10nw+fim7uuxyFcM="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/standard-dark.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-dark.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-dark.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "655985"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tzniTDQLy+s3V5n1fk4nFbR0kik10nw+fim7uuxyFcM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:29 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tzniTDQLy+s3V5n1fk4nFbR0kik10nw+fim7uuxyFcM="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-dark-base.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "653144"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7D8P4GXfe36mw3yTdB2/hYeOw5I0e2aY0FXv+xW/qcw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:28 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7D8P4GXfe36mw3yTdB2/hYeOw5I0e2aY0FXv+xW/qcw="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-dark-base.kouv3o9d99.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-dark-base.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "653144"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7D8P4GXfe36mw3yTdB2/hYeOw5I0e2aY0FXv+xW/qcw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:28 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kouv3o9d99"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7D8P4GXfe36mw3yTdB2/hYeOw5I0e2aY0FXv+xW/qcw="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/standard-dark-base.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-dark-wcag.7bt2cgjiuc.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2596"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HYNTnwNf3xj899KPdiKwmD1e5t3XRg9VaQgB1ZOvKeI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:28 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7bt2cgjiuc"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HYNTnwNf3xj899KPdiKwmD1e5t3XRg9VaQgB1ZOvKeI="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/standard-dark-wcag.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-dark-wcag.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-dark-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2596"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HYNTnwNf3xj899KPdiKwmD1e5t3XRg9VaQgB1ZOvKeI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:28 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HYNTnwNf3xj899KPdiKwmD1e5t3XRg9VaQgB1ZOvKeI="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-wcag.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GFU2mt0A9T8j9YMwMQqIUmdziKNDuPppDCn2o37LV2E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:29 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GFU2mt0A9T8j9YMwMQqIUmdziKNDuPppDCn2o37LV2E="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/css/standard-wcag.kp0ueqs315.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\css\\standard-wcag.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GFU2mt0A9T8j9YMwMQqIUmdziKNDuPppDCn2o37LV2E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 12:25:29 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kp0ueqs315"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GFU2mt0A9T8j9YMwMQqIUmdziKNDuPppDCn2o37LV2E="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/css/standard-wcag.css"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/fonts/MaterialSymbolsOutlined.tf0jku5d4p.woff2",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\MaterialSymbolsOutlined.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "973704"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+eSpwuS0Mx0DVjyuFo3DoQXiI+Mp+4I1MtdWSbDcZK4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 12:06:35 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tf0jku5d4p"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+eSpwuS0Mx0DVjyuFo3DoQXiI+Mp+4I1MtdWSbDcZK4="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/fonts/MaterialSymbolsOutlined.woff2"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/fonts/MaterialSymbolsOutlined.woff2",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\MaterialSymbolsOutlined.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "973704"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+eSpwuS0Mx0DVjyuFo3DoQXiI+Mp+4I1MtdWSbDcZK4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Mar 2025 12:06:35 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+eSpwuS0Mx0DVjyuFo3DoQXiI+Mp+4I1MtdWSbDcZK4="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/fonts/RobotoFlex.tdgcpklreb.woff2",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\RobotoFlex.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "747316"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D4n6QkbzuJDYChkHTPMXLxJlSC/5uucOpe2kU+JCJRs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 Aug 2024 15:22:59 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tdgcpklreb"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D4n6QkbzuJDYChkHTPMXLxJlSC/5uucOpe2kU+JCJRs="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/fonts/RobotoFlex.woff2"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/fonts/RobotoFlex.woff2",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\RobotoFlex.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "747316"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D4n6QkbzuJDYChkHTPMXLxJlSC/5uucOpe2kU+JCJRs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 Aug 2024 15:22:59 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D4n6QkbzuJDYChkHTPMXLxJlSC/5uucOpe2kU+JCJRs="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/fonts/SourceSans3VF-Italic.ttf.sw3iuqo2hf.woff2",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\SourceSans3VF-Italic.ttf.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "137996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tJWavAVpOS+HxsasYS+Q4/4BBNKDckGJt9i29hrzR9M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 Aug 2024 15:22:59 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sw3iuqo2hf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tJWavAVpOS+HxsasYS+Q4/4BBNKDckGJt9i29hrzR9M="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/fonts/SourceSans3VF-Italic.ttf.woff2"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/fonts/SourceSans3VF-Italic.ttf.woff2",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\SourceSans3VF-Italic.ttf.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "137996"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tJWavAVpOS+HxsasYS+Q4/4BBNKDckGJt9i29hrzR9M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 Aug 2024 15:22:59 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tJWavAVpOS+HxsasYS+Q4/4BBNKDckGJt9i29hrzR9M="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/fonts/SourceSans3VF-Upright.ttf.nqmp3d2aoy.woff2",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\SourceSans3VF-Upright.ttf.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "170188"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XxZWb3pA05szmtJr4VH6Whqx8MJXTHouYZdlWEoay9g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 Aug 2024 15:22:59 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nqmp3d2aoy"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XxZWb3pA05szmtJr4VH6Whqx8MJXTHouYZdlWEoay9g="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/fonts/SourceSans3VF-Upright.ttf.woff2"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/fonts/SourceSans3VF-Upright.ttf.woff2",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\fonts\\SourceSans3VF-Upright.ttf.woff2",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "170188"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "font/woff2"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XxZWb3pA05szmtJr4VH6Whqx8MJXTHouYZdlWEoay9g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 01 Aug 2024 15:22:59 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XxZWb3pA05szmtJr4VH6Whqx8MJXTHouYZdlWEoay9g="
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/Radzen.Blazor.dtys3jdja3.js",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\Radzen.Blazor.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "91280"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QT60B4Wdh8UNI2Jhr/xjAzFoOIwQ+/DyQF/jE5V8jX8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 26 Mar 2025 06:59:21 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dtys3jdja3"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QT60B4Wdh8UNI2Jhr/xjAzFoOIwQ+/DyQF/jE5V8jX8="
+        },
+        {
+          "Name": "label",
+          "Value": "_content/Radzen.Blazor/Radzen.Blazor.js"
+        }
+      ]
+    },
+    {
+      "Route": "_content/Radzen.Blazor/Radzen.Blazor.js",
+      "AssetFile": "C:\\Users\\RanthoLR\\.nuget\\packages\\radzen.blazor\\6.4.0\\staticwebassets\\Radzen.Blazor.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "91280"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QT60B4Wdh8UNI2Jhr/xjAzFoOIwQ+/DyQF/jE5V8jX8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 26 Mar 2025 06:59:21 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-QT60B4Wdh8UNI2Jhr/xjAzFoOIwQ+/DyQF/jE5V8jX8="
+        }
+      ]
+    },
+    {
+      "Route": "app.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7116"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tuwhZHNRAOm+BGkduh0tMQM94o/TULy6T72Fa/lsuB0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 05 Apr 2025 21:56:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tuwhZHNRAOm+BGkduh0tMQM94o/TULy6T72Fa/lsuB0="
+        }
+      ]
+    },
+    {
+      "Route": "app.yqs3nyaqnl.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7116"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tuwhZHNRAOm+BGkduh0tMQM94o/TULy6T72Fa/lsuB0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 05 Apr 2025 21:56:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yqs3nyaqnl"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tuwhZHNRAOm+BGkduh0tMQM94o/TULy6T72Fa/lsuB0="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.bpk8xqwxhs.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 13:42:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bpk8xqwxhs"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 13:42:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 13:42:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8inm30yfxf"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 13:42:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "EventEaseBooking.5i441dr0h3.bundle.scp.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\EventEaseBooking.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10188"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zZQKsW8lG8kopcUix4JHZxHh4mX8hSKS8uq8xGbyqRw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 22:12:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5i441dr0h3"
+        },
+        {
+          "Name": "label",
+          "Value": "EventEaseBooking.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zZQKsW8lG8kopcUix4JHZxHh4mX8hSKS8uq8xGbyqRw="
+        }
+      ]
+    },
+    {
+      "Route": "EventEaseBooking.5i441dr0h3.styles.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\obj\\Release\\net8.0\\scopedcss\\bundle\\EventEaseBooking.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10188"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zZQKsW8lG8kopcUix4JHZxHh4mX8hSKS8uq8xGbyqRw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 22:12:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5i441dr0h3"
+        },
+        {
+          "Name": "label",
+          "Value": "EventEaseBooking.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zZQKsW8lG8kopcUix4JHZxHh4mX8hSKS8uq8xGbyqRw="
+        }
+      ]
+    },
+    {
+      "Route": "EventEaseBooking.bundle.scp.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\EventEaseBooking.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10188"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zZQKsW8lG8kopcUix4JHZxHh4mX8hSKS8uq8xGbyqRw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 22:12:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zZQKsW8lG8kopcUix4JHZxHh4mX8hSKS8uq8xGbyqRw="
+        }
+      ]
+    },
+    {
+      "Route": "EventEaseBooking.styles.css",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\obj\\Release\\net8.0\\scopedcss\\bundle\\EventEaseBooking.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10188"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zZQKsW8lG8kopcUix4JHZxHh4mX8hSKS8uq8xGbyqRw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 22:12:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zZQKsW8lG8kopcUix4JHZxHh4mX8hSKS8uq8xGbyqRw="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ifv42okdf2.png",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 13:42:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Mar 2025 13:42:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "Images/BeachWedding.avif",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\BeachWedding.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "62805"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r0cFVp97EUviXsMAGE6sgu7JmvGeVH89ppE4pmOZYKU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:07:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r0cFVp97EUviXsMAGE6sgu7JmvGeVH89ppE4pmOZYKU="
+        }
+      ]
+    },
+    {
+      "Route": "Images/BeachWedding.lnwsc215b7.avif",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\BeachWedding.avif",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "62805"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r0cFVp97EUviXsMAGE6sgu7JmvGeVH89ppE4pmOZYKU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:07:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lnwsc215b7"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/BeachWedding.avif"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r0cFVp97EUviXsMAGE6sgu7JmvGeVH89ppE4pmOZYKU="
+        }
+      ]
+    },
+    {
+      "Route": "Images/EELogo.335ig5qk57.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\EELogo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9887"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wTGetLC87hmoN+IPV/l0e7QZ0XxY9903/llLfjT4d4E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:05:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "335ig5qk57"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/EELogo.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wTGetLC87hmoN+IPV/l0e7QZ0XxY9903/llLfjT4d4E="
+        }
+      ]
+    },
+    {
+      "Route": "Images/EELogo.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\EELogo.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "9887"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wTGetLC87hmoN+IPV/l0e7QZ0XxY9903/llLfjT4d4E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:05:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wTGetLC87hmoN+IPV/l0e7QZ0XxY9903/llLfjT4d4E="
+        }
+      ]
+    },
+    {
+      "Route": "Images/EELogoCrop.b4i8rni7y2.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\EELogoCrop.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8979"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u6R7cyetI4k04ZuLoqWaOaASZ+kqHRy7kV5prgDS32o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:05:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b4i8rni7y2"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/EELogoCrop.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u6R7cyetI4k04ZuLoqWaOaASZ+kqHRy7kV5prgDS32o="
+        }
+      ]
+    },
+    {
+      "Route": "Images/EELogoCrop.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\EELogoCrop.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8979"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u6R7cyetI4k04ZuLoqWaOaASZ+kqHRy7kV5prgDS32o=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:05:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u6R7cyetI4k04ZuLoqWaOaASZ+kqHRy7kV5prgDS32o="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Event Ease.png",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Event Ease.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13885"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w578TxyCoaWX+140fAK1ceye2rjTw7indBrZUdI6n0U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:05:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-w578TxyCoaWX+140fAK1ceye2rjTw7indBrZUdI6n0U="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Event Ease.t8s5flylkk.png",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Event Ease.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13885"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"w578TxyCoaWX+140fAK1ceye2rjTw7indBrZUdI6n0U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:05:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t8s5flylkk"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/Event Ease.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-w578TxyCoaWX+140fAK1ceye2rjTw7indBrZUdI6n0U="
+        }
+      ]
+    },
+    {
+      "Route": "Images/FestivalVenue.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\FestivalVenue.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "164486"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2byz21w2VEIm+eW8kZKJoS1dKPC1bhJeUZDKNP2rKEc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:07:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2byz21w2VEIm+eW8kZKJoS1dKPC1bhJeUZDKNP2rKEc="
+        }
+      ]
+    },
+    {
+      "Route": "Images/FestivalVenue.ldzj3c3702.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\FestivalVenue.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "164486"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2byz21w2VEIm+eW8kZKJoS1dKPC1bhJeUZDKNP2rKEc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:07:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ldzj3c3702"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/FestivalVenue.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2byz21w2VEIm+eW8kZKJoS1dKPC1bhJeUZDKNP2rKEc="
+        }
+      ]
+    },
+    {
+      "Route": "Images/GalaVenue.jcjo3ej1ro.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\GalaVenue.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136394"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DT2F5iNNlTq60fT4muTyScEUGm2MM/Jx+66ke5GO0Wg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:07:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jcjo3ej1ro"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/GalaVenue.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DT2F5iNNlTq60fT4muTyScEUGm2MM/Jx+66ke5GO0Wg="
+        }
+      ]
+    },
+    {
+      "Route": "Images/GalaVenue.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\GalaVenue.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "136394"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DT2F5iNNlTq60fT4muTyScEUGm2MM/Jx+66ke5GO0Wg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:07:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DT2F5iNNlTq60fT4muTyScEUGm2MM/Jx+66ke5GO0Wg="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/aU5BOXtgL31u8QHLQzej.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\aU5BOXtgL31u8QHLQzej.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "257307"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZI6la7HOpAfmMlEKO2bB+maH3ou7nwGFGlNlV1FLx8Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZI6la7HOpAfmMlEKO2bB+maH3ou7nwGFGlNlV1FLx8Y="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/aU5BOXtgL31u8QHLQzej.wbrpfnn6fh.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\aU5BOXtgL31u8QHLQzej.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "257307"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZI6la7HOpAfmMlEKO2bB+maH3ou7nwGFGlNlV1FLx8Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wbrpfnn6fh"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/Home/aU5BOXtgL31u8QHLQzej.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZI6la7HOpAfmMlEKO2bB+maH3ou7nwGFGlNlV1FLx8Y="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/bw.4c8eajafar.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\bw.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "152071"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tPfWoklowtMLf73LwxWoSWyaEA8W55JfbG1Nomm5T64=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4c8eajafar"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/Home/bw.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tPfWoklowtMLf73LwxWoSWyaEA8W55JfbG1Nomm5T64="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/bw.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\bw.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "152071"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tPfWoklowtMLf73LwxWoSWyaEA8W55JfbG1Nomm5T64=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tPfWoklowtMLf73LwxWoSWyaEA8W55JfbG1Nomm5T64="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/invite.ap86hm2tck.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\invite.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "222045"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jpqJYEhgjgdw8B6LJKbIPkSWBI1EDT13pbe1Gog69z0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ap86hm2tck"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/Home/invite.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jpqJYEhgjgdw8B6LJKbIPkSWBI1EDT13pbe1Gog69z0="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/invite.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\invite.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "222045"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jpqJYEhgjgdw8B6LJKbIPkSWBI1EDT13pbe1Gog69z0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jpqJYEhgjgdw8B6LJKbIPkSWBI1EDT13pbe1Gog69z0="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/posumJIv6VhHVWY5qJZa.9vrehnmhns.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\posumJIv6VhHVWY5qJZa.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "442718"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lZEH0K6+Z1lmcUTnKsecJ6D+bnFZdQLM+08Tdjl71Pc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9vrehnmhns"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/Home/posumJIv6VhHVWY5qJZa.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lZEH0K6+Z1lmcUTnKsecJ6D+bnFZdQLM+08Tdjl71Pc="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/posumJIv6VhHVWY5qJZa.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\posumJIv6VhHVWY5qJZa.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "442718"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lZEH0K6+Z1lmcUTnKsecJ6D+bnFZdQLM+08Tdjl71Pc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lZEH0K6+Z1lmcUTnKsecJ6D+bnFZdQLM+08Tdjl71Pc="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/rings.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\rings.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "288831"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mhFnWc3NTO0cCFPY1wC6CnPEigY2LD4aUcXvxVVUUZQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mhFnWc3NTO0cCFPY1wC6CnPEigY2LD4aUcXvxVVUUZQ="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/rings.ymy5j4di1r.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\rings.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "288831"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mhFnWc3NTO0cCFPY1wC6CnPEigY2LD4aUcXvxVVUUZQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ymy5j4di1r"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/Home/rings.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mhFnWc3NTO0cCFPY1wC6CnPEigY2LD4aUcXvxVVUUZQ="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/sjwS9ZMn5izuU8XkBJAu.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\sjwS9ZMn5izuU8XkBJAu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "650036"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pR1V2J4EsS8om94ho0fCaRg70R6EfxAlD9RHXQB/Ebo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pR1V2J4EsS8om94ho0fCaRg70R6EfxAlD9RHXQB/Ebo="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/sjwS9ZMn5izuU8XkBJAu.l0hir3dhmi.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\sjwS9ZMn5izuU8XkBJAu.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "650036"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pR1V2J4EsS8om94ho0fCaRg70R6EfxAlD9RHXQB/Ebo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l0hir3dhmi"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/Home/sjwS9ZMn5izuU8XkBJAu.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pR1V2J4EsS8om94ho0fCaRg70R6EfxAlD9RHXQB/Ebo="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/w7fXnz40I8gLTiq1E4ob.s8e7stihu1.webp",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\w7fXnz40I8gLTiq1E4ob.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "547766"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JCwVLvbvRmaxqjhP7W79Qmru6t/WypYvahPIJ9sR1lI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s8e7stihu1"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/Home/w7fXnz40I8gLTiq1E4ob.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JCwVLvbvRmaxqjhP7W79Qmru6t/WypYvahPIJ9sR1lI="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/w7fXnz40I8gLTiq1E4ob.webp",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\w7fXnz40I8gLTiq1E4ob.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "547766"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JCwVLvbvRmaxqjhP7W79Qmru6t/WypYvahPIJ9sR1lI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JCwVLvbvRmaxqjhP7W79Qmru6t/WypYvahPIJ9sR1lI="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/Wedding114.hwc47i882l.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\Wedding114.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "484300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UYn2SezDuJN0lFvyD+JoIS44KvjtHPm/pAAQQkOd8N0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hwc47i882l"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/Home/Wedding114.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UYn2SezDuJN0lFvyD+JoIS44KvjtHPm/pAAQQkOd8N0="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Home/Wedding114.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Home\\Wedding114.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "484300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UYn2SezDuJN0lFvyD+JoIS44KvjtHPm/pAAQQkOd8N0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 02 Apr 2025 03:18:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UYn2SezDuJN0lFvyD+JoIS44KvjtHPm/pAAQQkOd8N0="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Wedding.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Wedding.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "157108"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rs88yNojtKBqx/G2wilTSRle/M2jhpIwDQj261v6u1I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:07:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-rs88yNojtKBqx/G2wilTSRle/M2jhpIwDQj261v6u1I="
+        }
+      ]
+    },
+    {
+      "Route": "Images/Wedding.q56ehup5kj.jpg",
+      "AssetFile": "C:\\Users\\RanthoLR\\source\\repos\\EventEase\\EventEaseBooking\\EventEaseBooking\\wwwroot\\Images\\Wedding.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "157108"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"rs88yNojtKBqx/G2wilTSRle/M2jhpIwDQj261v6u1I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 24 Mar 2025 15:07:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "q56ehup5kj"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/Wedding.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-rs88yNojtKBqx/G2wilTSRle/M2jhpIwDQj261v6u1I="
+        }
+      ]
+    }
+  ]
+}

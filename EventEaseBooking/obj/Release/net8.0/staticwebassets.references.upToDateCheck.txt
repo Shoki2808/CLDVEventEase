@@ -1,0 +1,4 @@
+C:\Users\RanthoLR\source\repos\EventEase\EventEaseBooking\EventEaseAPI\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\RanthoLR\source\repos\EventEase\EventEaseBooking\EventEaseAPI\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\RanthoLR\source\repos\EventEase\EventEaseBooking\EventEaseAPI\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\RanthoLR\source\repos\EventEase\EventEaseBooking\EventEaseAPI\obj\Release\net8.0\staticwebassets.build.json

@@ -1,0 +1,7 @@
+@EventEaseAPI_HostAddress = http://localhost:5096
+@EventEaseAPI_HostAddress = https://localhost:7096
+
+GET {{EventEaseAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,128 @@
+﻿@page "/"
+@using EventEaseBooking.Components.Layout
+@using Radzen.Blazor
+<PageTitle>Home</PageTitle>
+
+
+<div class="row">
+
+    <div class="col-7">
+        <center>
+            <div class="p-5 justify-content-center align-content-center">
+                <h1>Welcome to Event Ease Bookings</h1>
+                <br />
+                <h6>
+                    We’re excited to help you plan your next unforgettable event. Whether you're hosting a wedding, corporate gathering, concert, or any special occasion, we make it easy to find and book the perfect venue.
+
+                    Explore our wide selection of venues, discover exclusive deals, and secure your booking in just a few simple steps. Let’s bring your vision to life!
+
+                    Happy event planning!
+                </h6>
+            </div>
+
+        </center>
+    </div>
+    <div class="col-5 ">
+        <center>
+
+@*     <RadzenCarousel @ref=carousel Auto="true"  Style="height: auto; max-width: 400px;" Interval="2000">
+     
+
+           <RadzenCarouselItem>
+                            <RadzenImage Style="height: auto; max-width: 400px;" Path="./images/home/sjws9zmn5izuu8xkbjau.jpg" class="rz-h-100" />
+            </RadzenCarouselItem>
+             <RadzenCarouselItem>
+                            <RadzenImage Path="./images/home/aU5BOXtgL31u8QHLQzej.jpg" class="rz-h-100" />
+            </RadzenCarouselItem>>
+@*             <RadzenCarouselItem
+                <RadzenImage Path="images/gallery/7.jpg" class="rz-h-100" />
+            </RadzenCarouselItem>
+            <RadzenCarouselItem>
+                <RadzenImage Path="images/gallery/4.jpg" class="rz-h-100" />
+            </RadzenCarouselItem>
+            <RadzenCarouselItem>
+                <RadzenImage Path="images/gallery/5.jpg" class="rz-h-100" />
+            </RadzenCarouselItem>
+            <RadzenCarouselItem>
+                <RadzenImage Path="images/gallery/6.jpg" class="rz-h-100" />
+            </RadzenCarouselItem>
+            <RadzenCarouselItem>
+                <RadzenImage Path="images/gallery/1.jpg" class="rz-h-100" />
+            </RadzenCarouselItem>
+            <RadzenCarouselItem>
+                <RadzenImage Path="images/gallery/8.jpg" class="rz-h-100" />
+            </RadzenCarouselItem> 
+    
+    </RadzenCarousel> *@
+
+
+
+
+
+
+
+
+
+
+
+            <div class="d-flex" style="height:100%">
+                <img class="img-fluid" style="width:100%; max-width:400px; height:auto" src="./images/home/sjws9zmn5izuu8xkbjau.jpg" />
+            </div>
+
+            @* <MudCarousel Class="mud-width-full" Style="height:auto;" ShowArrows="@arrows" ShowBullets="@bullets" EnableSwipeGesture="@enableSwipeGesture" AutoCycle="@autocycle" TData="object"> *@
+  @*               @foreach(var image in ImgSrc)
+                {
+           
+                        <div class="d-flex" style="height:100%">
+                            <img class="img-fluid" style="width:100%; max-width:400px; height:auto" src="@image" />
+                        </div>
+                 
+                } *@
+
+               @* <MudCarouselItem Transition="transition">
+                    <div class="d-flex" style="height:100%">
+                        <img class="img-fluid" style="width:100%; max-width:400px; height:auto" src="./images/home/sjws9zmn5izuu8xkbjau.jpg" />
+                    </div>
+                </MudCarouselItem>
+                <MudCarouselItem Transition="transition">
+                    <div class="d-flex" style="height:100%">
+                        <img class="img-fluid" style="width:100%; max-width:400px; height:auto" src="./images/home/aU5BOXtgL31u8QHLQzej.jpg" />
+                    </div>
+                </MudCarouselItem>  
+            </MudCarousel>*@
+        </center>
+    </div>
+</div>
+
+
+@code {
+
+    RadzenCarousel carousel;
+    bool allowNavigation = true;
+    Variant variant = Variant.Text;
+    Radzen.ButtonStyle style = Radzen.ButtonStyle.Base;
+    Radzen.Shade shade = Radzen.Shade.Lighter;
+    Radzen.ButtonSize size = Radzen.ButtonSize.Large;
+
+
+    List<string> ImgSrc = new List<string>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            ImgSrc.Add("./images/home/posumJIv6VhHVWY5qJZa.jpg");
+            ImgSrc.Add("./images/home/sjws9zmn5izuu8xkbjau.jpg");
+            ImgSrc.Add("/images/home/aU5BOXtgL31u8QHLQzej.jpg");
+        }
+        catch (Exception)
+        {
+            
+            throw;
+        }
+        await base.OnInitializedAsync();
+    }
+
+}
+
+

@@ -1,0 +1,300 @@
+﻿@page "/Events"
+
+
+@using System.Net.Http.Json
+@using Radzen
+@inject NavigationManager navMan
+@inject IEventService eventService
+
+
+
+<PageTitle>Events</PageTitle>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-k6RqeWeci5ZR/Lv4MR0sA0FfDOM9Z38gH5dQ0I6MK9Y1D/cLtHww5iEjaMUToTdeh1kD92r8un18PjGTeRv8g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    .table-container {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    }
+
+    table {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    }
+
+    th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    }
+
+    th {
+    background-color: #4CAF50;
+    color: white;
+    }
+
+    h2 {
+    text-align: center;
+    }
+
+    .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between form fields */
+    margin: 30px auto;
+    max-width: 500px; /* Controls the maximum width */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    }
+
+    button {
+    background-color: #008CBA;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block; /* Allows for margin */
+    margin-top: 10px;
+    }
+
+    button:hover {
+    background-color: #005f7f;
+    }
+
+    .input-container {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    }
+
+    /* Style the label */
+    .input-container label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    }
+
+    /* Style the input field */
+    .input-container input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Add focus styles */
+    .input-container input:focus {
+    border-color: #4CAF50; /* Green color for focus */
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3); /* Subtle shadow effect */
+    }
+
+    /* Placeholder text style */
+    .input-container input::placeholder {
+    color: #888;
+    }
+
+    /* Add hover effect for better UX */
+    .input-container input:hover {
+    border-color: #888;
+    }
+</style>
+
+<br />
+
+<div class="row">
+    <div class="col-3">
+    </div>
+    <div class="col-6">
+        <center>
+            <h1>Events Management</h1>
+            <br />
+        </center>
+    </div>
+    <div class="col-3">
+    </div>
+</div>
+
+
+
+<div class="table-container">
+    <table>
+        <tr>
+            <th>Event Id</th>
+            <th>Event Name</th>
+            <th>Client Name</th>
+            <th>Date and Time</th>
+            <th>Description</th>
+            <th>Venue Name</th>
+            <th>Type</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var ev in events)
+        {
+            <tr>
+                <td>@ev.EventId</td>
+                <td>@ev.EventName</td>
+                <td>@ev.Clients</td>
+                <td>@ev.EventDate</td>
+                <td>@ev.EventDescription</td>
+                <td>@ev.VenueId</td>
+
+                <td>@ev.EventTypeId</td>
+                <td><button @onclick="()=>UpdateEventOnClick(ev)">Update</button></td>
+                <td>
+                    <button class="delete-icon">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td>1</td>
+            <td>Spring Concert</td>
+            <td>Divine</td>
+            <td>04/10/2025 7:00 PM</td>
+            <td>A musical evening featuring local artists.</td>
+            <td>City Park</td>
+            <td></td>
+            <td><button>Update</button></td>
+            <td>
+                <button class="delete-icon">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Art Exhibit</td>
+            <td>Keith</td>
+            <td>05/20/2025 6:00 PM</td>
+            <td>An exhibition showcasing new artists.</td>
+            <td>Art Gallery</td>
+            <td></td>
+            <td><button>Update</button></td>
+            <td>
+                <button class="delete-icon">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Stand Up Comedy</td>
+            <td>Loyiso Gola</td>
+            <td>05/20/2025 6:00 PM</td>
+            <td>Unlearning and Relearning.</td>
+            <td>Laugh Out Loud</td>
+            <td></td>
+            <td><button>Update</button></td>
+            <td>
+                <button class="delete-icon">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </td>
+        </tr>
+        @*         <tr>
+
+            <td>4</td>
+            <td>Mining Indaba Conference</td>
+            <td>Amour</td>
+            <td>06/15/2025 9:00 AM</td>
+            <td>Join industry leaders and innovators.</td>
+            <td>Convention Center</td>
+            <td></td>
+            <td><button>Update</button></td>
+            <td>
+                <button class="delete-icon">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </td>
+        </tr> *@
+
+
+
+    </table>
+</div>
+
+<h2>Add New Event</h2>
+
+<div class="form-container">
+    <form action="/submit" method="post">
+        <div class="input-container">
+            <label for="name">Event Name:</label>
+            <input type="text" id="name" name="event_name" required>
+        </div>
+        <div class="input-container">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div class="input-container">
+            <label for="description">Description:</label>
+            <textarea id="description" name="event_description" required></textarea>
+        </div>
+        <div class="input-container">
+            <label for="venue">Venue:</label>
+            <textarea id="venue" name="event_venue" required></textarea>
+        </div>
+        <div class="input-container">
+            <label for="type">Type:</label>
+            <input class="b-1" type="text" id="type" name="event_type" required>
+        </div>
+        <button type="submit">Add Event</button>
+    </form>
+</div>
+<footer id="footer" class="row footer bottom-0" style="bottom:auto">
+    <p>&copy; 2025 Eventease Booking App - All Rights Reserved</p>
+</footer>
+
+@code {
+    private bool _hidePosition;
+    private bool _loading;
+    private List<Event> events = new List<Event>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Elements = await httpClient.GetFromJsonAsync<List<Element>>("webapi/periodictable");
+
+        await GetEvents();
+    }
+
+
+    private async Task GetEvents()
+    {
+        events = await eventService.GetEvents();
+    }
+
+    private async Task UpdateEventOnClick(Event eventModel)
+    {
+        try
+        {
+            navMan.NavigateTo($"/EditEvent/{eventModel.EventId}");
+
+        }
+        catch (Exception ex)
+        {
+            // NotificationService.Notify(new NotificationMessage
+            //     {
+            //         Severity = NotificationSeverity.Error,
+            //         Summary = $"Error",
+            //         Detail = $"Unable to update Booking"
+            //     });
+        }
+    }
+}
+<i class="fas fa-trash" />
+<br />
+
+
+<br />
+

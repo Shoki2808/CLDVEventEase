@@ -1,0 +1,91 @@
+﻿@* @using Microsoft.AspNetCore.Components;
+
+
+<div class="@($"modal {(Show ? "d-block" : "d-none")}")" tabindex="-1" role="dialog" style="background-color: rgba(0,0,0,0.4)">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@Title</h5>
+                <button type="button" class="close" @onclick="Cancel">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @Message
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" @onclick="Cancel">@CancelText</button>
+                <button type="button" class="btn @ConfirmButtonClass" @onclick="Confirm">@ConfirmText</button>
+            </div>
+        </div>
+    </div>
+</div>
+@code {
+
+    [Parameter] public bool Show { get; set; }
+    [Parameter] public string Title { get; set; } = "Confirm";
+    [Parameter] public string Message { get; set; } = "Are you sure?";
+    [Parameter] public string ConfirmText { get; set; } = "Yes";
+    [Parameter] public string CancelText { get; set; } = "No";
+    [Parameter] public string ConfirmButtonClass { get; set; } = "btn-primary";
+    [Parameter] public EventCallback<bool> ConfirmationChanged { get; set; }
+
+    protected override Task OnInitializedAsync()
+    {
+        return base.OnInitializedAsync();
+    }
+    public async Task Confirm()
+    {
+        Show = false;
+        await ConfirmationChanged.InvokeAsync(true);
+    }
+
+    public async Task Cancel()
+    {
+        Show = false;
+        await ConfirmationChanged.InvokeAsync(false);
+    }
+    
+
+}
+ *@
+
+<div class="modal show fade" style="display: block" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="color:black">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Action</h5>
+                <button type="button" class="btn-close" @onclick="ModalClose">
+                </button>
+            </div>
+            <div class="modal-body">
+                @Message
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" @onclick="ContinueAction">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public EventCallback<bool> OnClose { get; set; }
+    [Parameter]
+    public EventCallback<bool> Confirmed { get; set; }
+    [Parameter]
+    public string? Message { get; set; }
+
+    public async void ModalClose()
+    {
+        await OnClose.InvokeAsync(false);
+    }
+
+    public async void ContinueAction()
+    {
+        await Confirmed.InvokeAsync(true);
+    }
+}
+
+
