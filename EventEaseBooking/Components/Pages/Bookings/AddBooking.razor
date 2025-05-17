@@ -16,8 +16,159 @@
         <h1 style="padding-top:10px; padding-bottom:10px">Add New Booking</h1>
     </div>
 
+    <RadzenStack class="rz-p-0 rz-p-md-12">
 
-    <div class="card mt-2 mb-4" style="box-shadow: 5px 5px 5px 5px #e3dede;">
+        <RadzenTemplateForm TItem="BookingViewModel" Data=@booking Submit=@SubmitBooking InvalidSubmit=@OnInvalidSubmit>
+            <RadzenFieldset >
+                <RadzenStack Gap="2rem" class="rz-p-4 rz-p-md-12">
+                    <div class="card mt-2 mb-4" style="box-shadow: 5px 5px 5px 5px #e3dede;">
+                        <div class="row justify-content-center mb-3" style=" padding-left: 10%; padding-right:10%; ">
+                            <div class="row g-3">
+                                <h3 class="p-2 mt-2 mb-2">Event Information</h3>
+
+                                <RadzenRow AlignItems="AlignItems.Center" RowGap="0.25rem">
+                                    <RadzenColumn Size="12" SizeMD="4" class="rz-text-align-start rz-text-align-md-end">
+                                        <RadzenLabel Text="Event Date" Component="booking.EventModel.EventDate" />
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenDatePicker style="display: block" Name="booking.EventModel.EventDate" @bind-Value=booking.EventModel.EventDate ShowCalendarWeek class="rz-w-100" />
+                                        <RadzenRequiredValidator Component="booking.EventModel.EventDate" Popup=@popup Style="position: absolute" />
+                                    </RadzenColumn>
+                                </RadzenRow>
+
+                                <RadzenRow AlignItems="AlignItems.Center" RowGap="0.25rem">
+                                    <RadzenColumn Size="12" SizeMD="4" class="rz-text-align-start rz-text-align-md-end">
+                                        <RadzenLabel Text="Event Name" Component="booking.EventModel.EventName" />
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenTextBox style="display: block" Name="booking.EventModel.EventName" @bind-Value=booking.EventModel.EventName />
+                                        <RadzenRequiredValidator Component="booking.EventModel.EventName" Popup=@popup Style="position: absolute" />
+                                    </RadzenColumn>
+                                </RadzenRow>
+
+                                <RadzenRow AlignItems="AlignItems.Center" RowGap="0.25rem">
+                                    <RadzenColumn Size="12" SizeMD="4" class="rz-text-align-start rz-text-align-md-end">
+                                        <RadzenLabel Text="Event Description" Component="booking.EventModel.EventDescription" />
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenTextBox style="display: block" Name="booking.EventModel.EventDescription" @bind-Value=booking.EventModel.EventDescription />
+                                        <RadzenRequiredValidator Component="booking.EventModel.EventDescription" Popup=@popup Style="position: absolute" />
+                                    </RadzenColumn>
+                                </RadzenRow>
+
+                                <RadzenRow AlignItems="AlignItems.Center" RowGap="0.25rem">
+                                    <RadzenColumn Size="12" SizeMD="4" class="rz-text-align-start rz-text-align-md-end">
+                                        <RadzenLabel Text="Select Event Type" Component="booking.EventModel.EventTypeId" />
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <select type="etype" class="form-control" id="booking.EventModel.EventTypeId" @onchange="OnEventTypeChange">
+                                            @foreach (var type in EventTypeList)
+                                            {
+                                                <option value="@type.EventTypeId">@type.EventTypeName</option>
+                                            }
+
+                                        </select>
+                @*                         <RadzenDropDown TValue="int" Value=@booking.EventModel.EventTypeId Data=@EventTypeList TextProperty="@nameof(EventType.EventTypeName)" Style="width: 100%; max-width: 400px;" Name="booking.EventModel.EventTypeId" />
+                                 
+                                        <RadzenDataAnnotationValidator Component="booking.EventModel.EventTypeId" Popup=@popup Style="position: absolute" /> *@
+                                    </RadzenColumn>
+                                </RadzenRow>
+                
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card mt-2 mb-4" style="box-shadow: 5px 5px 5px 5px #e3dede;">
+                        <div class="row justify-content-center mb-3" style=" padding-left: 10%; padding-right:10%; ">
+                            <div class="row g-3">
+                                <h3 class="p-2 mt-2 mb-2">Client Information</h3>
+                                <RadzenRow AlignItems="AlignItems.Center" RowGap="0.25rem">
+                                    <RadzenColumn Size="12" SizeMD="4" class="rz-text-align-start rz-text-align-md-end">
+                                        <RadzenLabel Text="Client Name" Component="booking.Client.ClientName" />
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenTextBox style="display: block" Name="booking.Client.ClientName" @bind-Value=booking.Client.ClientName />
+                                        <RadzenRequiredValidator Component="booking.Client.ClientName" Popup=@popup Style="position: absolute" />
+                                    </RadzenColumn>
+                                </RadzenRow>
+
+                                <RadzenRow AlignItems="AlignItems.Center" RowGap="0.25rem">
+                                    <RadzenColumn Size="12" SizeMD="4" class="rz-text-align-start rz-text-align-md-end">
+                                        <RadzenLabel Text="Client Contact Details" Component="booking.ClientModel.ClientName" />
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenTextBox style="display: block" Name="booking.Client.ContactDetails" @bind-Value=booking.Client.ContactDetails />
+                                        <RadzenRequiredValidator Component="booking.Client.ContactDetails" Popup=@popup Style="position: absolute" />
+                                    </RadzenColumn>
+                                </RadzenRow>
+
+                                <RadzenRow AlignItems="AlignItems.Center" RowGap="0.25rem">
+                                    <RadzenColumn Size="12" SizeMD="4" class="rz-text-align-start rz-text-align-md-end">
+                                        <RadzenLabel Text="Client Contact Details" Component="booking.ClientModel.ClientName" />
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <RadzenTextBox style="display: block" Name="booking.Client.ClientEmail" @bind-Value=booking.Client.ClientEmail />
+                                        <RadzenRequiredValidator Component="booking.Client.ClientEmail" Text="Email is required" Popup=@popup Style="position: absolute" />
+                                        <RadzenEmailValidator Component="booking.Client.ClientEmail" Text="Provide a valid email address" Popup=@popup Style="position: absolute" />
+                                       @*  <RadzenDataAnnotationValidator Component="booking.Client.ClientEmail" Popup=@popup Style="position: absolute" /> *@
+                                    </RadzenColumn>
+                                </RadzenRow>
+                             
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="card mt-2 mb-4" style="box-shadow: 5px 5px 5px 5px #e3dede;">
+                        <div class="row justify-content-center mb-3" style=" padding-left: 10%; padding-right:10%; ">
+                            <div class="row g-3">
+
+                                <h3 class="p-2 mt-2 mb-2">Venue Information</h3>
+
+                                <RadzenRow AlignItems="AlignItems.Center" RowGap="0.25rem">
+                                    <RadzenColumn Size="12" SizeMD="4" class="rz-text-align-start rz-text-align-md-end">
+                                        <RadzenLabel Text="Select Venue" Component="booking.EventModel.EventDescription" />
+                                    </RadzenColumn>
+                                    <RadzenColumn Size="12" SizeMD="8">
+                                        <select type="email" class="form-control" id="venue" @onchange="OnVenueChange">
+                                            <option selected value="">Select Venue</option>
+
+                                            @foreach (var ven in venueList)
+                                            {
+                                                <option value="@ven.VenueId">@ven.VenueName</option>
+                                            }
+
+                                        </select>
+                              @*           <RadzenDropDown TValue="string" Value=@booking.VenueModel.VenueId Data=@venueList TextProperty="@nameof(Venue.VenueName)" Style="width: 100%; max-width: 400px;" Name="booking.VenueModel.VenueId" />
+
+                                        <RadzenDataAnnotationValidator Component="booking.VenueModel.VenueId " Popup=@popup Style="position: absolute" /> *@
+                                    </RadzenColumn>
+                                </RadzenRow>
+   
+                            </div>
+                        </div>
+                    </div>
+
+                    <RadzenRow AlignItems="AlignItems.Center" class="rz-mt-4">
+                        <RadzenColumn Size="6" Offset="0" SizeMD="8" OffsetMD="4">
+                            <button class="btn btn-primary " @onclick="()=> CancelBtnClick()" style="color:white; background-color:black; padding:10px; justify-content: center; align-items: center; gap: 8px; font-size: 20px; border-radius: 15px; border: none;">
+                                Cancel
+                            </button>
+                            
+                        </RadzenColumn>
+                        <RadzenColumn Size="6" Offset="0" SizeMD="8" OffsetMD="4">
+                           
+                            <RadzenButton class="btn btn-primary" Style="display: inline-flex; padding:10px; justify-content: center; align-items: center; gap: 8px; font-size: 20px; border-radius: 15px; border: none; color:#c6605d; background-color:lightpink;" ButtonType="ButtonType.Submit" Text="Submit"></RadzenButton>
+                        </RadzenColumn>
+                    </RadzenRow>
+                </RadzenStack>
+            </RadzenFieldset>
+        </RadzenTemplateForm>
+    </RadzenStack>
+
+   @*  <div class="card mt-2 mb-4" style="box-shadow: 5px 5px 5px 5px #e3dede;">
         <div class="row justify-content-center mb-3" style=" padding-left: 10%; padding-right:10%; ">
             <div class="row g-3">
 
@@ -97,50 +248,6 @@
 
     <center>
 
-        @*             <EditForm Model="bookingViewModel" OnValidSubmit="HandleValidSubmit">
-            <div class="row justify-content-center mb-3">
-            <div class="col-10">
-            <div class="row g-3">
-            <div class="col-md-12">
-            <label for="inputEmail4" class="form-label">Booking Date</label>
-            <InputDate type="date" class="form-control" id="date" @bind-Value="bookingViewModel.bookingModel.BookingDate" />
-            <ValidationMessage For="@(() => bookingViewModel.bookingModel.BookingDate)" />
-            </div>
-            <div class="col-md-12">
-            <label for="clientname" class="form-label">Client Name</label>
-            <InputText type="text" class="form-control" id="name" @bind-Value="bookingViewModel.clientModel.ClientName" />
-            <ValidationMessage For="@(()=> bookingViewModel.clientModel.ClientName)" />
-            </div>
-            <div class="col-md-12">
-            <label for="inputEmail4" class="form-label">Client Email Address</label>
-            <InputText type="email" class="form-control" id="inputEmail4" @bind-Value="bookingViewModel.clientModel.EmailAddress" />
-            <ValidationMessage For="@(() => bookingViewModel.clientModel.EmailAddress)" />
-            </div>
-            <div class="col-md-12">
-            <label for="inputEmail4" class="form-label">Select Venue</label>
-            <MudSelect type="email" class="form-control" id="venue" @bind-Value="bookingViewModel.bookingModel.VenueId">
-            @foreach(var ven in venueList)
-            {
-            <MudSelectItem Value="@ven.VenueId">@ven.VenueName</MudSelectItem>
-            }
-
-            </MudSelect>
-
-            <ValidationMessage For="@(() => bookingViewModel.bookingModel.VenueId)" />
-            </div>
-            <div class="col-md-12">
-            <DataAnnotationsValidator />
-            <Microsoft.AspNetCore.Components.Forms.ValidationSummary />
-            @*  <p>@PageMessage</p>
-            </div>
-            </div>
-            </div>
-
-            </div>
-
-
-
-            </EditForm> *@
 
     </center>
 
@@ -154,20 +261,24 @@
 
         </div>
         <div class="d-grid col-3 gap-2 mx-auto ">
-         
-            <button class="btn btn-primary" @onclick="() => SubmitBooking()" style="display: inline-flex; padding:10px; justify-content: center; align-items: center; gap: 8px; font-size: 20px; border-radius: 15px; border: none; color:#c6605d; background-color:lightpink;;">
+
+            <button class="btn btn-primary" @onclick="() => SubmitBooking()" style="display: inline-flex; padding:10px; justify-content: center; align-items: center; gap: 8px; font-size: 20px; border-radius: 15px; border: none; color:#c6605d; background-color:lightpink;">
                 Submit booking
             </button>
         </div>
     </div>
-
+ *@
 </div>
 
 
 
 
 @code {
+
+    bool showSpinnerModal = false;
     private Booking bookingModel = new Booking();
+    private BookingViewModel booking = new BookingViewModel();
+
     private Event eventModel = new Event();
     private Venue venueModel = new();
     private Client clientModel = new();
@@ -182,17 +293,40 @@
 
     bool showSuccess = false;
 
+    // class Model
+    // {
+    //     [Required]
+    //     [StringLength(15, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long", MinimumLength = 4)]
+    //     public string Username { get; set; }
+
+
+    //     [Required]
+    //     [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long", MinimumLength = 6)]
+    //     [DataType(DataType.Password)]
+    //     [Display(Name = "Password")]
+    //     public string Password { get; set; }
+
+    //     [DataType(DataType.Password)]
+    //     [Display(Name = "Confirm password")]
+    //     [Compare("Password", ErrorMessage = "The password and confirmation password do not match")]
+    //     public string ConfirmPassword { get; set; }
+    // }
+
+    bool popup;
+
+   
+
     protected override async Task OnInitializedAsync()
     {
         try
         {
 
-            await GetVenues();
+            
             await GetVEventTypes();
-
-            bookingModel.BookingDate = DateOnly.FromDateTime(CurrentDate);
-            bookingModel.BookingTime = TimeOnly.FromDateTime(CurrentDate);
-            eventModel.EventDate = DateOnly.FromDateTime(CurrentDate);
+await GetVenues();
+            // bookingModel.BookingDate = DateOnly.FromDateTime(CurrentDate);
+            booking.BookingModel.BookingTime = TimeOnly.FromDateTime(CurrentDate);
+            booking.EventModel.EventDate = DateOnly.FromDateTime(CurrentDate);
         }
         catch (Exception)
         {
@@ -232,8 +366,8 @@
             if (e.Value != null)
             {
                 int Venue = Int32.Parse(e.Value.ToString());
-                bookingModel.VenueId = Venue;
-                eventModel.VenueId = Venue;
+                booking.BookingModel.VenueId = Venue;
+                booking.EventModel.VenueId = Venue;
             }
         }
         catch (Exception)
@@ -255,7 +389,12 @@
         catch (Exception e)
         {
             var ex = e.InnerException;
-            throw;
+            NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = $"Error",
+                    Detail = $"Unable to get Venues at this moment"
+                });
         }
 
     }
@@ -269,49 +408,88 @@
         catch (Exception e)
         {
             var ex = e.InnerException;
-            throw;
+            NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = $"Error",
+                    Detail = $"Unable to get Event Types at this moment"
+                });
         }
 
     }
 
     private void CancelBtnClick()
     {
+        NotificationService.Notify(new NotificationMessage
+            {
+                Severity = NotificationSeverity.Warning,
+                Summary = $"Error",
+                Detail = $"You have cancelled your Booking"
+            });
         navMan.NavigateTo("/Bookings");
     }
     private async Task SubmitBooking()
     {
+        showSpinnerModal = true;
 
 
         try
         {   
-            clientModel.Password = $"({clientModel.ClientName}2585485)";
-            clientModel.EventName = eventModel.EventName;
-            clientModel.EventId = 1;
-            clientModel.BookingId = 10;
-            clientModel.VenueId = 5;
+            // clientModel.Password = $"({clientModel.ClientName}2585485)";
+            // clientModel.EventName = eventModel.EventName;
+            // clientModel.EventId = 1;
+            // clientModel.BookingId = 10;
+            // clientModel.VenueId = 5;
 
-            clientResult = await clientService.AddClient(clientModel);
+            clientResult = await clientService.AddClient(booking.Client);
 
-            eventModel.EventTypeId = ETypeId;
-            eventModel.VenueId = bookingModel.VenueId;
-            eventResult = await eventService.AddEvent(eventModel);
+            booking.EventModel.EventTypeId = ETypeId;
+            booking.EventModel.VenueId = bookingModel.VenueId;
+            eventResult = await eventService.AddEvent(booking.EventModel);
 
-            bookingModel.ClientId = clientResult.ClientId;
-            bookingModel.EventId = eventResult.EventId;
+            booking.BookingModel.ClientId = clientResult.ClientId;
+            booking.BookingModel.EventId = eventResult.EventId;
 
-            bookingResult = await bookingService.CreateBooking(bookingModel);
+            bookingResult = await bookingService.CreateBooking(booking.BookingModel);
             if(bookingResult != null)
             {
                 showSuccess = true;
-
-                 navMan.NavigateTo("/Bookings");
+                NotificationService.Notify(new NotificationMessage
+                    {
+                        Severity = NotificationSeverity.Success,
+                        Summary = $"Success",
+                        Detail = $"Booking completed successfully"
+                    });
+                navMan.NavigateTo("/Bookings");
             }
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-
-            throw;
+            NotificationService.Notify(new NotificationMessage
+                {
+                    Severity = NotificationSeverity.Error,
+                    Summary = $"Error",
+                    Detail = $"Unable to add Booking, {ex}"
+                });
         }
         // return result.ToString();
+        showSpinnerModal = false;
+        NotificationService.Notify(new NotificationMessage
+            {
+                Severity = NotificationSeverity.Success,
+                Summary = $"Success",
+                Detail = $"Booking completed successfully"
+            });
+        navMan.NavigateTo("/Bookings");
+    }
+
+    void OnInvalidSubmit(FormInvalidSubmitEventArgs args)
+    {
+        NotificationService.Notify(new NotificationMessage
+            {
+                Severity = NotificationSeverity.Error,
+                Summary = $"Error",
+                Detail = $"Unable to add Booking. {args}"
+            });
     }
 }

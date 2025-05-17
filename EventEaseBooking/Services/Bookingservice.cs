@@ -4,6 +4,7 @@ using EventEaseBooking.Static;
 using Newtonsoft.Json;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 
 namespace EventEaseBooking.Services
@@ -11,12 +12,6 @@ namespace EventEaseBooking.Services
     public class Bookingservice : IBookingService
     {
         private readonly HttpClient httpClient = new HttpClient();
-
-        private List<Venue> Venues = new List<Venue>
-        {
-            new Venue { VenueId = 1, VenueName = "Main Hall", Location = "Downtown", Capacity = 200 },
-            new Venue { VenueId = 2, VenueName = "Small Hall", Location = "Uptown", Capacity = 50 },
-        };
 
 
         private List<Booking> Bookings = new List<Booking>();
@@ -91,7 +86,7 @@ namespace EventEaseBooking.Services
             Booking? result = new();
             try
             {
-                var url = "api/Booking/UpdateBooking";
+                var url = $"api/Booking/UpdateBooking/{bookingModel.BookingId}";
                 var request = new HttpRequestMessage(HttpMethod.Put, url);
                 request.Content = new StringContent(
                     JsonConvert.SerializeObject(bookingModel),
@@ -118,6 +113,56 @@ namespace EventEaseBooking.Services
             return result;
         }
 
+        //public async Task<Booking> UpdateBooking(Booking bookingModel)
+        //{
+        //    if (bookingModel == null)
+        //        throw new ArgumentNullException(nameof(bookingModel));
+
+        //    if (bookingModel.BookingId <= 0)
+        //        throw new ArgumentException("Booking ID must be valid.");
+
+        //    try
+        //    {
+        //        using (var client = new HttpClient())
+        //        {
+        //            client.BaseAddress = new Uri(Endpoints.BaseUrl);
+        //            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+        //            // Add auth token if needed
+        //            // client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+
+        //            var url = $"api/Booking/UpdateBooking/?id={bookingModel.BookingId}";
+        //            var jsonContent = JsonConvert.SerializeObject(bookingModel);
+
+        //            //// Log request (remove in production)
+        //            //Console.WriteLine($"Request JSON: {jsonContent}");
+
+        //            var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+        //            using (var response = await client.PutAsync(url, content))
+        //            {
+        //                if (!response.IsSuccessStatusCode)
+        //                {
+        //                    // Read error response
+        //                    var errorContent = await response.Content.ReadAsStringAsync();
+        //                    throw new Exception($"API Error: {response.StatusCode} - {errorContent}");
+        //                }
+
+        //                var responseData = await response.Content.ReadAsStringAsync();
+        //                return JsonConvert.DeserializeObject<Booking>(responseData)
+        //                    ?? throw new InvalidOperationException("API returned null booking.");
+        //            }
+        //        }
+        //    }
+        //    catch (HttpRequestException ex)
+        //    {
+        //        throw new Exception($"Network error: {ex.Message}", ex);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new Exception($"Failed to update booking: {ex.Message}", ex);
+        //    }
+        //}
 
         public async Task<List<Booking>> GetBookings()
         {

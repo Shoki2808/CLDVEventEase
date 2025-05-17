@@ -9,6 +9,13 @@
         </div>
     </div>
 </center>
+<center>
+    <div class="d-grid gap-2 col-3">
+        <button class="btn btn-primary" @onclick="()=>NavToAddVenue()" style="color:#c6605d; background-color:lightpink; padding:10px; justify-content: center; align-items: center; gap: 8px; font-size: 20px; border-radius: 15px; border: none;">
+            Create Venue
+        </button>
+    </div>
+</center>
 
 <ul>
     @foreach (var venue in venues)
@@ -52,6 +59,10 @@ Let us help you create an event that brings colleagues together, sparks meaningf
             throw;
         }
         await base.OnInitializedAsync();
+    }
+    public void NavToAddVenue()
+    {
+        NavigationManager.NavigateTo("/add-venue");
     }
 
 }

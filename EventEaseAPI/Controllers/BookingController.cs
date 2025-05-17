@@ -117,13 +117,13 @@ namespace EventEaseAPI.Controllers
 
         [HttpPut]
         [Route("UpdateBooking")]
-        public async Task<IActionResult> UpdateBooking(int id, [FromBody] Booking booking)
+        public async Task<ActionResult> UpdateBooking(int id, [FromBody] Booking booking)
         {
             try
             {
 
                 if (id != booking.BookingId)
-                {
+                {     
                     return BadRequest("Booking ID mismatch.");
                 }
                 else if (!await BookingExists(id))

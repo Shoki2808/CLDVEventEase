@@ -2,7 +2,8 @@
 @using EventEaseBooking.Components.Components
 @using Radzen
 @using Radzen.Blazor
-@inject NavigationManager navMan
+
+
 @inject IBookingService bookingService
 @inject IClientService clientService
 @inject IEventService eventService
@@ -23,90 +24,125 @@
 
 
 
-<div class="" style="padding-left:10%; padding-right:10%; padding-bottom:10%;">
-    <div class="row">
-        <h1> Bookings</h1>
-        <br />
 
 
-    </div>
-    <div class="row m-4">
 
-        <table class="table table-container table-hover table-borderless">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Event</th>
-                    <th>Venue</th>
-                    <th>Client</th>
-                    <th>Status</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+<div class="row">
+    <h1> Bookings</h1>
+    <br />
 
 
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var booking in bookings)
-                {
-                    <tr>
-                        <td>@booking.BookingId</td>
-                        <td>@booking.BookingDate</td>
-                        <td>@booking.BookingTime</td>
-                        <td>@GetEventName(booking.EventId)</td>
-                        <td>@GetVenueName(booking.VenueId)</td>
-                        <td>@GetClientName(booking.ClientId)</td>
-                        <td>@booking.IsActive</td>
-                        <td><button class="btn-sm small" @onclick="async ()=>EditButtonClick(booking)">Edit</button></td>
-                        <td><button class=" delete-icon" @onclick="async ()=>DeleteButtonClick(booking)"><i class="fas fa-trash-alt" style="color:red"></i></button></td>
-
-
-                    </tr>
-
-                }
-
-            </tbody>
-
-        </table>
-
-    </div>
-
-    <center>
-        <div class="d-grid gap-2 col-3">
-            <button class="btn btn-primary" @onclick="()=>NavToAddBooking()" style="color:#c6605d; background-color:lightpink; padding:10px; justify-content: center; align-items: center; gap: 8px; font-size: 20px; border-radius: 15px; border: none;">
-                Make booking
-            </button>
-        </div>
-    </center>
 </div>
+
+<center>
+    <div class="d-grid gap-2 col-3">
+        <button class="btn btn-primary" @onclick="()=>NavToAddBooking()" style="color:#c6605d; background-color:lightpink; padding:10px; justify-content: center; align-items: center; gap: 8px; font-size: 20px; border-radius: 15px; border: none;">
+            Make booking
+        </button>
+    </div>
+</center>
+<RadzenStack >
+
+    <RadzenCard Variant="Radzen.Variant.Outlined">
+
+        <RadzenStack Orientation="Radzen.Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="1.5rem;" Wrap="FlexWrap.Wrap">
+            <RadzenStack Orientation="Radzen.Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="0.5rem;">
+                <RadzenLabel Text="Logical filter operator:" Component="operator" />
+                <RadzenDropDown @bind-Value="@logicalFilterOperator" TextProperty="Text" ValueProperty="Value" Name="operator" Change=@(args => grid.Reload())
+                Data="@(Enum.GetValues(typeof(LogicalFilterOperator)).Cast<LogicalFilterOperator>().Select(t => new { Text = $"{t}", Value = t }))" />
+            </RadzenStack>
+            <RadzenStack Orientation="Radzen.Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="0.5rem;">
+                <RadzenLabel Text="Filter case sensitivity:" Component="caseSensitivity" />
+                <RadzenDropDown @bind-Value="@filterCaseSensitivity" TextProperty="Text" ValueProperty="Value" Name="caseSensitivity" Change=@(args => grid.Reload())
+                Data="@(Enum.GetValues(typeof(FilterCaseSensitivity)).Cast<FilterCaseSensitivity>().Select(t => new { Text = $"{t}", Value = t }))" />
+            </RadzenStack>
+        </RadzenStack>
+
+
+    </RadzenCard>
+
+
+    <RadzenDataGrid @ref=grid AllowFiltering="true" AllowColumnResize="true"
+    FilterMode="Radzen.FilterMode.Simple" PageSize="5" AllowPaging="true" AllowSorting="true" Data="@bookings" ColumnWidth="300px" FilterPopupRenderMode="Radzen.PopupRenderMode.OnDemand"
+    FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" LogicalFilterOperator="LogicalFilterOperator.And">
+        <Columns>
+            <RadzenDataGridColumn Property="@nameof(Booking.BookingId)" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="Radzen.TextAlign.Center" />
+            @*               <RadzenDataGridColumn Title="Photo" Sortable="false" Filterable="false" Width="200px">
+                <Template Context="data">
+                    <RadzenImage Path="@data.Photo" class="rz-gravatar" AlternateText="@(data.FirstName + " " + data.LastName)" />
+                </Template>
+            </RadzenDataGridColumn>  
+ *@            <RadzenDataGridColumn Property="@nameof(Booking.BookingDate)" Filterable="true" Title="BookingDate" FormatString="{0:d}" />
+            <RadzenDataGridColumn Property="@nameof(Booking.BookingTime)" Filterable="false" Title="BookingTime" FormatString="{0:t}" />
+            <RadzenDataGridColumn Property="@nameof(Booking.EventId)"  Filterable="true" Title="Event">
+                <Template Context="data">
+                    @GetEventName(data.EventId)
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn Property="@nameof(Booking.VenueId)" Filterable="true" Title="Venue" >
+                <Template Context="data">
+                    @GetVenueName(data.VenueId)
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn Property="@nameof(Booking.ClientId)" Filterable="true" Title="Client" >
+                <Template Context="data">
+                    @GetClientName(data.ClientId)
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn Property="@nameof(Booking.IsActive)" Filterable="true" Title="Status" />
+            <RadzenDataGridColumn Title="Edit" Frozen="true" Sortable="false" Filterable="false" Width="80px" TextAlign="TextAlign.Center">
+                <Template Context="data">
+                    <RadzenButton Click="()=>EditButtonClick(data)" class="btn btn-secondary " Text="Edit" />
+                </Template>
+            </RadzenDataGridColumn>
+            <RadzenDataGridColumn Title="Delete" Frozen="true" Sortable="false" Filterable="false" Width="80px" TextAlign="TextAlign.Center">
+                <Template Context="data">
+                    <RadzenButton Click="()=>DeleteButtonClick(data)" Style="color:none" Text="Delete"><i class="fas fa-trash-alt" style="color:red"></i></RadzenButton>
+                </Template>
+
+            </RadzenDataGridColumn>
+        </Columns>
+    </RadzenDataGrid>
+</RadzenStack>
+
+
+
 
 
 
 
 @code {
-    bool showSpinnerModal = false;
-    [Inject]
-    private Radzen.DialogService DialogService { get; set; }
 
-    [Inject]
-    private NotificationService NotificationService { get; set; }
+    bool showSpinnerModal = false;
+
+    // [Inject]
+    // private NotificationService NotificationService { get; set; }
+
+    // private Booking newBooking = new() { BookingDate = DateTime.Today, NumberOfTickets = 1 };
+
+
+
+    List<BookingViewModel> filteredList = new List<BookingViewModel>();
+    public EventCallback<string> onSearchChange { get; set; } = new EventCallback<string>();
+    bool showError = false;
+    private string Message = string.Empty;
 
     private List<Venue> venues = new List<Venue>();
     private List<Client> clients = new List<Client>();
     private List<Event> events = new List<Event>();
+    RadzenDataGrid<Booking> grid;
+    LogicalFilterOperator logicalFilterOperator = LogicalFilterOperator.And;
+    FilterCaseSensitivity filterCaseSensitivity = FilterCaseSensitivity.CaseInsensitive;
 
-
+    // public GlobalParam? globalParameters { get; set; } = new();
     private List<Booking> bookings = new List<Booking>();
-    private Venue? v = new Venue();
+    private Venue v = new Venue();
     private Client c = new Client();
     private Event e = new Event();
     private Booking bookingModel = new ();
     string? venue;
 
     private int selectedRowNumber = -1;
-    private MudTable<Booking> mudTable;
     private List<string> clickedEvents = new();
     private ConfirmationDialog confirmationDialog;
     bool showConfmodal = false;
@@ -116,6 +152,7 @@
 
     protected override async Task OnInitializedAsync()
     {
+        // employees = dbContext.Employees;
         showSpinnerModal = true;
         try
         {
@@ -124,7 +161,7 @@
             // await GetClients();
             await GetEvents();
 
-            showSpinnerModal = false;
+
         }
         catch (Exception e)
         {
@@ -133,28 +170,11 @@
 
         }
         await base.OnInitializedAsync();
+        showSpinnerModal = false;
     }
 
-    private string GetVenueName(int venueId)
-    {
-        // Find venue in the preloaded list
-        var venue = venues.FirstOrDefault(v => v.VenueId == venueId);
-        return venue?.VenueName ?? "Unknown Venue";
-    }
 
-    private string GetEventName(int eventId)
-    {
-        // Find venue in the preloaded list
-        var eventt = events.FirstOrDefault(v => v.EventId == eventId);
-        return eventt?.EventName ?? "Unknown Event";
-    }
 
-    private string GetClientName(int clientId)
-    {
-        // Find venue in the preloaded list
-        var client = clients.FirstOrDefault(c => c.ClientId == clientId);
-        return client?.ClientName ?? "Unknown Client";
-    }
     private void HandleValidSubmit()
     {
         //Logger.LogInformation("HandleValidSubmit called");
@@ -164,7 +184,7 @@
 
     public void NavToAddBooking()
     {
-        navMan.NavigateTo("/AddBooking");
+        NavigationManager.NavigateTo("/AddBooking");
     }
 
     private async Task GetVenues()
@@ -224,30 +244,30 @@
     }
 
 
-    private void RowClickEvent(TableRowClickEventArgs<Booking> tableRowClickEventArgs)
-    {
-        clickedEvents.Add("Row has been clicked");
-    }
+    // private void RowClickEvent(TableRowClickEventArgs<Booking> tableRowClickEventArgs)
+    // {
+    //     clickedEvents.Add("Row has been clicked");
+    // }
 
-    private string SelectedRowClassFunc(Booking booking, int rowNumber)
-    {
-        if (selectedRowNumber == rowNumber)
-        {
-            selectedRowNumber = -1;
-            clickedEvents.Add("Selected Row: None");
-            return string.Empty;
-        }
-        else if (mudTable.SelectedItem != null && mudTable.SelectedItem.Equals(booking))
-        {
-            selectedRowNumber = rowNumber;
-            clickedEvents.Add($"Selected Row: {rowNumber}");
-            return "selected";
-        }
-        else
-        {
-            return string.Empty;
-        }
-    }
+    // private string SelectedRowClassFunc(Booking booking, int rowNumber)
+    // {
+    //     if (selectedRowNumber == rowNumber)
+    //     {
+    //         selectedRowNumber = -1;
+    //         clickedEvents.Add("Selected Row: None");
+    //         return string.Empty;
+    //     }
+    //     else if (mudTable.SelectedItem != null && mudTable.SelectedItem.Equals(booking))
+    //     {
+    //         selectedRowNumber = rowNumber;
+    //         clickedEvents.Add($"Selected Row: {rowNumber}");
+    //         return "selected";
+    //     }
+    //     else
+    //     {
+    //         return string.Empty;
+    //     }
+    // }
 
     private  void DeleteButtonClick(Booking booking)
     {
@@ -284,14 +304,14 @@
             {
                 // await DialogService.Confirm("Record Deleted");
                 ShowNotification(new NotificationMessage { Style = "position: absolute; inset-inline-start: -1000px;", Severity = NotificationSeverity.Success, Summary = "Item Deleted", Detail = "Successfully deleted booking", Duration = 4000 });
-                navMan.NavigateTo(navMan.Uri, forceLoad: true);
+                NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
             }
             else
             {
                 ShowNotification(new NotificationMessage { Style = "position: absolute; inset-inline-start: -1000px;", Severity = NotificationSeverity.Error, Summary = "Item Couldn't Be Deleted", Detail = "", Duration = 4000 });
-              
+
             }
-            
+
         }
         catch (Exception ex)
         {
@@ -309,7 +329,8 @@
     {
         try
         {
-            navMan.NavigateTo($"/EditBooking/{booking.BookingId}");
+            globalParameters.bookingModel = booking;
+            NavigationManager.NavigateTo($"/EditBooking/{booking.BookingId}");
 
                
         }
@@ -325,6 +346,26 @@
     }
 
 
+    private string GetVenueName(int venueId)
+    {
+        // Find venue in the preloaded list
+        var venue = venues.FirstOrDefault(v => v.VenueId == venueId);
+        return venue?.VenueName ?? "Unknown Venue";
+    }
+
+    private string GetEventName(int eventId)
+    {
+        // Find venue in the preloaded list
+        var eventt = events.FirstOrDefault(v => v.EventId == eventId);
+        return eventt?.EventName ?? "Unknown Event";
+    }
+
+    private string GetClientName(int clientId)
+    {
+        // Find client in the preloaded list
+        var client = clients.FirstOrDefault(c => c.ClientId == clientId);
+        return client?.ClientName ?? "Unknown Client";
+    }
 
 
 

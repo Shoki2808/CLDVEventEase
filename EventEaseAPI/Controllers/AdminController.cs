@@ -1161,28 +1161,15 @@ namespace EventEaseAPI.Controllers
 
             try
             {
-                if (!ModelState.IsValid) return BadRequest(ModelState);
+                //if (!ModelState.IsValid) return BadRequest(ModelState);
 
-                var venueExists = await context.Venues.AnyAsync(v => v.VenueId == client.VenueId && v.IsActive);
-                var eventExists = await context.Events.AnyAsync(e => e.EventId == client.EventId && e.IsActive);
-                var bookingExists = await context.Bookings.AnyAsync(b => b.BookingId == client.BookingId);
+                //var bookingExists = await context.Bookings.AnyAsync(b => b.BookingId == client.BookingId);
 
-                if (!venueExists && !eventExists && !bookingExists)
-                {
-                    return BadRequest($"The Event ID ({client.EventId}), the Venue ID ({client.VenueId}) and The Client ID {client.BookingId} specified do not exist.");
-                }
-                else if (!venueExists)
-                {
-                    return BadRequest($"The specified venue with ID ({client.VenueId}) does not exist.");
-                }
-                else if (!eventExists)
-                {
-                    return BadRequest($"The specified Event with ID ({client.EventId}) does not exist.");
-                }
-                else if (!bookingExists)
-                {
-                    return BadRequest($"The specified Booking with ID ({client.BookingId}) does not exist.");
-                }
+        
+                //else if (!bookingExists)
+                //{
+                //    return BadRequest($"The specified Booking with ID ({client.BookingId}) does not exist.");
+                //}
 
                 client.IsActive = true;
                 context.Clients.Add(client);
@@ -1222,26 +1209,26 @@ namespace EventEaseAPI.Controllers
                 {
                     return NotFound($"No Active Clients found for ID: {id}");
                 }
-                var venueExists = await context.Venues.AnyAsync(v => v.VenueId == client.VenueId && v.IsActive);
-                var eventExists = await context.Events.AnyAsync(e => e.EventId == client.EventId && e.IsActive);
-                var bookingExists = await context.Bookings.AnyAsync(b => b.BookingId == client.BookingId);
+                //var venueExists = await context.Venues.AnyAsync(v => v.VenueId == client.VenueId && v.IsActive);
+                //var eventExists = await context.Events.AnyAsync(e => e.EventId == client.EventId && e.IsActive);
+                //var bookingExists = await context.Bookings.AnyAsync(b => b.BookingId == client.BookingId);
 
-                if (!venueExists && !eventExists && !bookingExists)
-                {
-                    return BadRequest($"The Event ID ({client.EventId}), the Venue ID ({client.VenueId}) and The Client ID {client.BookingId} specified do not exist.");
-                }
-                else if (!venueExists)
-                {
-                    return BadRequest($"The specified venue with ID ({client.VenueId}) does not exist.");
-                }
-                else if (!eventExists)
-                {
-                    return BadRequest($"The specified Event with ID ({client.EventId}) does not exist.");
-                }
-                else if (!bookingExists)
-                {
-                    return BadRequest($"The specified Booking with ID ({client.BookingId}) does not exist.");
-                }
+                //if (!venueExists && !eventExists && !bookingExists)
+                //{
+                //    return BadRequest($"The Event ID ({client.EventId}), the Venue ID ({client.VenueId}) and The Client ID {client.BookingId} specified do not exist.");
+                //}
+                //else if (!venueExists)
+                //{
+                //    return BadRequest($"The specified venue with ID ({client.VenueId}) does not exist.");
+                //}
+                //else if (!eventExists)
+                //{
+                //    return BadRequest($"The specified Event with ID ({client.EventId}) does not exist.");
+                //}
+                //else if (!bookingExists)
+                //{
+                //    return BadRequest($"The specified Booking with ID ({client.BookingId}) does not exist.");
+                //}
 
 
                 context.Entry(client).State = EntityState.Modified;

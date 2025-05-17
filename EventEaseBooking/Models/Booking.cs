@@ -4,7 +4,9 @@ public partial class Booking : BaseModel
 {
     public int BookingId { get; set; }
 
-    public DateOnly BookingDate { get; set; }
+    //public DateOnly BookingDate { get; set; }
+    public DateTime BookingDate { get; set; }
+
 
     public TimeOnly BookingTime { get; set; }
 
@@ -14,14 +16,16 @@ public partial class Booking : BaseModel
 
     public int ClientId { get; set; }
 
-    public virtual Client? Client { get; set; }
+    //public virtual Client? Client { get; set; }
 
 
-    public virtual ICollection<Client> Clients { get; set; } = new List<Client>();
+    //public virtual ICollection<Client> Clients { get; set; } = new List<Client>();
 
-    public virtual Event Event { get; set; } = null!;
+    //public virtual Event Event { get; set; } = null!;
 
-    public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
+    //public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
 
-    public virtual Venue Venue { get; set; } = null!;
+    //public virtual Venue Venue { get; set; } = null!;
+
+    //public string Status { get; set; } = "Confirmed"; // e.g., Confirmed, Cancelled, Pending
 }

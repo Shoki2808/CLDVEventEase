@@ -2,7 +2,7 @@
 
 public partial class Event : BaseModel
 {
-    public int EventId { get; set; }
+    public int EventId { get; set; } = 0;
 
     public string EventName { get; set; } = null!;
 

@@ -67,13 +67,13 @@ public partial class ApplicationDbContext : DbContext
 
             entity.Property(e => e.ClientId).HasColumnName("ClientID");
 
-            entity.HasOne(d => d.Client).WithMany(p => p.Bookings)
-                .HasForeignKey(d => d.ClientId)
-                .HasConstraintName("FK_Booking_Client");
+            //entity.HasOne(d => d.Client).WithMany(p => p.Bookings)
+            //    .HasForeignKey(d => d.ClientId)
+            //    .HasConstraintName("FK_Booking_Client");
 
-            entity.HasOne(d => d.Event).WithMany(p => p.Bookings)
-                .HasForeignKey(d => d.EventId)
-                .HasConstraintName("FK__Booking__EventId__656C112C");
+            //entity.HasOne(d => d.Event).WithMany(p => p.Bookings)
+            //    .HasForeignKey(d => d.EventId)
+            //    .HasConstraintName("FK__Booking__EventId__656C112C");
 
             entity.HasOne(d => d.Venue).WithMany(p => p.Bookings)
                 .HasForeignKey(d => d.VenueId)
@@ -98,26 +98,26 @@ public partial class ApplicationDbContext : DbContext
             entity.Property(e => e.ContactDetails)
                 .HasMaxLength(255)
                 .IsUnicode(false);
-            entity.Property(e => e.EventName)
-                .HasMaxLength(255)
-                .IsUnicode(false);
-            entity.Property(e => e.Password)
-                .HasMaxLength(255)
-                .IsUnicode(false);
+            //entity.Property(e => e.EventName)
+            //    .HasMaxLength(255)
+            //    .IsUnicode(false);
+            //entity.Property(e => e.Password)
+            //    .HasMaxLength(255)
+            //    .IsUnicode(false);
 
-            entity.HasOne(d => d.Booking).WithMany(p => p.Clients)
-                .HasForeignKey(d => d.BookingId)
-                .OnDelete(DeleteBehavior.SetNull)
-                .HasConstraintName("FK__Client__BookingI__6A30C649");
+            //entity.HasOne(d => d.Booking).WithMany(p => p.Clients)
+            //    .HasForeignKey(d => d.BookingId)
+            //    .OnDelete(DeleteBehavior.SetNull)
+            //    .HasConstraintName("FK__Client__BookingI__6A30C649");
 
-            entity.HasOne(d => d.Event).WithMany(p => p.Clients)
-                .HasForeignKey(d => d.EventId)
-                .HasConstraintName("FK__Client__EventId__6B24EA82");
+            //entity.HasOne(d => d.Event).WithMany(p => p.Clients)
+            //    .HasForeignKey(d => d.EventId)
+            //    .HasConstraintName("FK__Client__EventId__6B24EA82");
 
-            entity.HasOne(d => d.Venue).WithMany(p => p.Clients)
-                .HasForeignKey(d => d.VenueId)
-                .OnDelete(DeleteBehavior.SetNull)
-                .HasConstraintName("FK__Client__VenueId__6C190EBB");
+            //entity.HasOne(d => d.Venue).WithMany(p => p.Clients)
+            //    .HasForeignKey(d => d.VenueId)
+            //    .OnDelete(DeleteBehavior.SetNull)
+            //    .HasConstraintName("FK__Client__VenueId__6C190EBB");
         });
 
         modelBuilder.Entity<Event>(entity =>
@@ -132,10 +132,10 @@ public partial class ApplicationDbContext : DbContext
                 .IsUnicode(false);
             entity.Property(e => e.EventTypeId).HasColumnName("EventTypeID");
 
-            entity.HasOne(d => d.Venue).WithMany(p => p.Events)
-                .HasForeignKey(d => d.VenueId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Event__VenueId__619B8048");
+            //entity.HasOne(d => d.Venue).WithMany(p => p.Events)
+            //    .HasForeignKey(d => d.VenueId)
+            //    .OnDelete(DeleteBehavior.ClientSetNull)
+            //    .HasConstraintName("FK__Event__VenueId__619B8048");
         });
 
         modelBuilder.Entity<EventType>(entity =>

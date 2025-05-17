@@ -2,10 +2,12 @@
 @page "/EditBooking/{bookingId:int}"
 @using EventEaseBooking.Components.Components
 
+@inject GlobalParam globalParam
 
 @inject NavigationManager navMan
 @inject IBookingService bookingService
 @inject IEventService eventService
+@inject IVenueService venueService
 @inject IClientService clientService
 
 
@@ -17,7 +19,7 @@
     <SpinnerModal />
 }
 
-@if(showConfmodal)
+@if (showConfmodal)
 {
     showSpinnerModal = false;
     <ConfirmationDialog OnClose="OnConfirmationChange" Confirmed="OnConfirmationChange" />
@@ -27,7 +29,7 @@
 <div class="row" style="padding-left: 20%; padding-right:20%; padding-bottom:10%; ">
 
     <div>
-        <h1 style="padding-top:10px; padding-bottom:10px">Add New Booking</h1>
+        <h1 style="padding-top:10px; padding-bottom:10px">Edit Booking</h1>
     </div>
 
 
@@ -63,8 +65,6 @@
     </div>
 
 
-
-
     <div class="card mt-2 mb-4" style="box-shadow: 5px 5px 5px 5px #e3dede;">
         <div class="row justify-content-center mb-3" style=" padding-left: 10%; padding-right:10%; ">
             <div class="row g-3">
@@ -72,15 +72,15 @@
                 <h3 class="p-2 mt-2 mb-2">Client Information</h3>
                 <div class="col-md-12">
                     <label for="clientname" class="form-label">Client Name</label>
-                    <input type="text" class="form-control" id="name" @bind="clientModel.ClientName" />
+                    <input readonly type="text" class="form-control" id="name" @bind="clientModel.ClientName" />
                 </div>
                 <div class="col-md-12">
                     <label for="clientcontact" class="form-label">Client Contact Details</label>
-                    <input type="number" class="form-control" id="conbtact" @bind="clientModel.ContactDetails" />
+                    <input readonly type="number" class="form-control" id="conbtact" @bind="clientModel.ContactDetails" />
                 </div>
                 <div class="col-md-12">
                     <label for="inputEmail4" class="form-label">Client Email Address</label>
-                    <input type="email" class="form-control" id="inputEmail4" @bind="clientModel.ClientEmail" />
+                    <input readonly type="email" class="form-control" id="inputEmail4" @bind="clientModel.ClientEmail" />
 
                 </div>
             </div>
@@ -94,7 +94,7 @@
                 <h3 class="p-2 mt-2 mb-2">Venue Information</h3>
                 <div class="col-md-12">
                     <label for="inputEmail4" class="form-label">Select Venue</label>
-                    <select type="email" class="form-control" id="venue" @onchange="OnVenueChange">
+                    <select type="email" class="form-control" id="venue" @bind="venueModel.VenueName">
                         <option selected value="">Select Venue</option>
 
                         @foreach (var ven in venueList)
@@ -122,17 +122,8 @@
         </div>
         <div class="d-grid col-3 gap-2 mx-auto ">
 
-            <button class="btn btn-primary" @onclick="() => SubmitBooking()" style="display: inline-flex;
-    padding: 9px 32px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    font-size: 20px;
-    color: var(--charcoal-grey);
-    border-radius: 25px;
-    border: none;
-    background: rgba(0, 0, 0, 0.0);">
-                Submit booking
+            <button class="btn btn-primary" @onclick="() => UpdateBooking()" style="display: inline-flex; padding:10px; justify-content: center; align-items: center; gap: 8px; font-size: 20px; border-radius: 15px; border: none; color:#c6605d; background-color:lightpink;">
+                Update booking
             </button>
         </div>
     </div>
@@ -169,23 +160,30 @@
         showSpinnerModal = true;
         try
         {
+            bookingModel = globalParam.bookingModel;
             bookingModel = await bookingService.GetBookingById(bookingId);
             await GetVEventTypes();
             await GetVenues();
+            // await GetEventById(bookingModel.EventId);
+            // await GetClientById(bookingModel.ClientId);
+            // await GetVenueById(bookingModel.VenueId);
+
             await GetpropertiesBookingId();
-            bookingModel.BookingDate = DateOnly.FromDateTime(CurrentDate);
+            // bookingModel.BookingDate = DateOnly.FromDateTime(CurrentDate);
             bookingModel.BookingTime = TimeOnly.FromDateTime(CurrentDate);
             eventModel.EventDate = DateOnly.FromDateTime(CurrentDate);
-            StateHasChanged();
         }
         catch (Exception)
         {
 
             throw;
         }
-        showSpinnerModal = false;
+
         await base.OnInitializedAsync();
+        showSpinnerModal = false;
+
     }
+
 
 
     private async Task OnEventTypeChange(ChangeEventArgs e)
@@ -194,7 +192,7 @@
         {
             if (e.Value != null)
             {
-                //eventType = 
+                //eventType =
                 ETypeId = Int32.Parse(e.Value.ToString());
 
 
@@ -249,13 +247,13 @@
     {
         try
         {
-           // eventModel = await eventService.GetEventById(bookingModel.EventId);
-            // venueModel = await 
-
+            eventModel = await eventService.GetEventById(bookingModel.EventId);
+            // venueModel = await venueService.GetVenueById(bookingModel.VenueId);
+            clientModel = await clientService.GetClientById(bookingModel.ClientId);
         }
         catch (Exception)
         {
-            
+
             throw;
         }
     }
@@ -273,33 +271,72 @@
 
     }
 
+    private async Task<Event> GetEventById(int bookingIdd)
+    {
+        try
+        {
+            eventModel = await eventService.GetEventById(bookingIdd);
+            return eventModel;
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+
+    }
+
+    private async Task<Client> GetClientById(int id)
+    {
+        try
+        {
+            clientModel = await clientService.GetClientById(id);
+            return clientModel;
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+
+    }
+
     private void CancelBtnClick()
     {
         navMan.NavigateTo("/Bookings");
     }
 
-    private async Task SubmitBooking()
+    private async Task UpdateBooking()
     {
 
+        showSpinnerModal = true;
 
         try
-        {   
+        {
             // clientModel.Password = $"({clientModel.ClientName}2585485)";
             // clientModel.EventName = eventModel.EventName;
             // clientModel.EventId = 1;
             // clientModel.BookingId = 10;
             // clientModel.VenueId = 5;
 
-            // clientResult = await clientService.AddClient(clientModel);
+            //clientResult = await clientService.AddClient(clientModel);
 
             // eventModel.EventTypeId = ETypeId;
             // eventModel.VenueId = bookingModel.VenueId;
-            // eventResult = await eventService.AddEvent(eventModel);
+            eventResult = await eventService.UpdateEvent(eventModel);
 
             // bookingModel.ClientId = clientResult.ClientId;
             // bookingModel.EventId = eventResult.EventId;
-            
+
             var Result = await bookingService.UpdateBooking(bookingModel);
+            if(Result != null)
+            {
+                ShowSuccess();
+            }
+            else
+            {
+                ShowError();
+            }
 
         }
         catch (Exception)
@@ -308,7 +345,32 @@
             throw;
         }
         // return result.ToString();
+        showSpinnerModal = false; 
+
     }
+
+    private void ShowSuccess()
+    {
+        NotificationService.Notify(new NotificationMessage
+            {
+                Severity = NotificationSeverity.Success,
+                Summary = "Success!",
+                Detail = "Booking updated successfully",
+                Duration = 4000 // milliseconds
+            });
+    }
+
+    private void ShowError()
+    {
+        NotificationService.Notify(new NotificationMessage
+            {
+                Severity = NotificationSeverity.Error,
+                Summary = "Error!",
+                Detail = "Something went wrong. Couldn't update Booking",
+                Duration = 4000
+            });
+    }
+
 
     private async Task OnConfirmationChange(bool confirmed)
     {

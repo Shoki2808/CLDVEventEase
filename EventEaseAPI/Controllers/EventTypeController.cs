@@ -32,7 +32,7 @@ namespace EventEaseAPI.Controllers
             catch (Exception e)
             {
 
-                return StatusCode(500, $"An error occurred while fetching Venues.\n{e.Message}");
+                return StatusCode(500, $"An error occurred while fetching EventTypes.\n{e.Message}");
 
             }
 

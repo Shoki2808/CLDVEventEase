@@ -78,10 +78,10 @@ namespace EventEaseAPI.Controllers
 
                 var eventTypeExists = await context.EventTypes.AnyAsync(e => e.EventTypeId == venue.EventTypeId && e.IsActive);
 
-                if (!eventTypeExists)
-                {
-                    return BadRequest($"The specified event type with ID ({venue.EventTypeId}) does not exist.");
-                }
+                //if (!eventTypeExists)
+                //{
+                //    return BadRequest($"The specified event type with ID ({venue.EventTypeId}) does not exist.");
+                //}
 
                 venue.IsActive = true;
                 context.Venues.Add(venue);
@@ -111,7 +111,7 @@ namespace EventEaseAPI.Controllers
 
                 if (id != venue.VenueId)
                 {
-                    return BadRequest("Event ID mismatch.");
+                    return BadRequest("Venue ID mismatch.");
                 }
                 else if (!await VenueExists(id))
                 {

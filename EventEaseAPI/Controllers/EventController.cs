@@ -112,8 +112,9 @@ namespace EventEaseAPI.Controllers
 
         [HttpPut]
         [Route("UpdateEvent")]
-        public async Task<IActionResult> UpdateEvent(int id, Event eventItem)
+        public async Task<ActionResult> UpdateEvent(int id, [FromBody] Event eventItem)
         {
+            //bool? result = false;
             try
             {
 
@@ -148,7 +149,10 @@ namespace EventEaseAPI.Controllers
 
 
                 context.Entry(eventItem).State = EntityState.Modified;
-                await context.SaveChangesAsync();
+                if(await context.SaveChangesAsync() > 0)
+                {
+                    //result = true;
+                }
 
             }
             catch (DbUpdateConcurrencyException dbce)
@@ -160,7 +164,8 @@ namespace EventEaseAPI.Controllers
                 return StatusCode(500, $"An unxpcected error occurred.\n{e.Message}");
             }
 
-            return NoContent();
+                return CreatedAtAction(nameof(GetEventById), new { id = eventItem.EventId }, eventItem);
+
         }
 
         //Soft Delete

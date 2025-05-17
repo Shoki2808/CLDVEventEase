@@ -242,7 +242,7 @@ body {
 
 
 /*Spinner*/
-.spinner {
+/*.spinner {
     border: 16px solid silver;
     border-top: 16px solid #c6605d;
     border-radius: 50%;
@@ -254,18 +254,7 @@ body {
     position: absolute;
 }
 
-.greyOut {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 3px solid #c6605d;
-    border-radius: 50%;
-    border-top-color: #fff;
-    top: 50%;
-    left: 50%;
-    animation: spin 1s ease-in-out infinite;
-    -webkit-animation: spin 1s ease-in-out infinite;
-}
+
 
 @keyframes spin {
     0% {
@@ -281,7 +270,7 @@ body {
 .modal {
     background-color: rgba(0, 0, 0, 0.6);
 }
-
+*/
 .container {
     padding: 20px;
     background-color: #b6e2d3;
@@ -304,3 +293,94 @@ footer {
 h1, h2 {
     color: #d8a7b1;
 }
+
+
+
+
+
+/* Modal overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Spinner container */
+.spinner-container {
+    text-align: center;
+    color: white;
+}
+
+/* Spinner animation */
+.spinner {
+    width: 70px;
+    height: 70px;
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading text */
+.loading-text {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    position: relative;
+}
+
+    .loading-text:after {
+        content: '...';
+        position: absolute;
+        animation: dots 1.5s steps(5, end) infinite;
+    }
+
+@keyframes dots {
+    0%, 20% {
+        content: '.';
+    }
+
+    40% {
+        content: '..';
+    }
+
+    60%, 100% {
+        content: '...';
+    }
+}
+
+/* Optional: Add some pulsing effect to the whole modal */
+.modal-overlay {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    50% {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+
+
+

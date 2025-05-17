@@ -1,5 +1,6 @@
 ﻿@using System.Net.Http
 @using System.Net.Http.Json
+@using EventEaseBooking.Components.Pages
 @using Microsoft.AspNetCore.Components.Forms
 @using Microsoft.AspNetCore.Components.Routing
 @using Microsoft.AspNetCore.Components.Web
@@ -12,4 +13,18 @@
 @using EventEaseBooking.Interfaces
 @using EventEaseBooking.Models
 @using EventEaseBooking.Services
-@using MudBlazor
+@* @using MudBlazor *@
+@using Radzen
+@using Radzen.Blazor
+@using System.Text.Json
+@using System.ComponentModel.DataAnnotations
+
+@inject GlobalParam globalParameters
+@inject NotificationService NotificationService
+@inject IJSRuntime JSRuntime  
+    @inject NavigationManager NavigationManager 
+  @inject DialogService DialogService
+@inject TooltipService TooltipService
+
+  @inject ContextMenuService ContextMenuService
+
