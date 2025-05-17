@@ -55,6 +55,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/RanthoLR/source/repos/CLDVGit/Shoki2808/CLDVEventEase/EventEaseBooking/Components/Pages/Event/AddEvent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFdmVudFxBZGRFdmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/RanthoLR/source/repos/CLDVGit/Shoki2808/CLDVEventEase/EventEaseBooking/Components/Pages/Event/EditEvent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFdmVudFxFZGl0RXZlbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -67,8 +71,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/RanthoLR/source/repos/CLDVGit/Shoki2808/CLDVEventEase/EventEaseBooking/Components/Pages/Venue/AddVenue.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWZW51ZVxBZGRWZW51ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/RanthoLR/source/repos/CLDVGit/Shoki2808/CLDVEventEase/EventEaseBooking/Components/Pages/Venue/BlogCard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWZW51ZVxCbG9nQ2FyZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/RanthoLR/source/repos/CLDVGit/Shoki2808/CLDVEventEase/EventEaseBooking/Components/Pages/Venue/ManageVenue.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xWZW51ZVxNYW5hZ2VWZW51ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/RanthoLR/source/repos/CLDVGit/Shoki2808/CLDVEventEase/EventEaseBooking/Components/Pages/Venue/VCard.razor]
