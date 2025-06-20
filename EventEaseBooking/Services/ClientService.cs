@@ -73,5 +73,36 @@ namespace EventEaseBooking.Services
             }
             return result;
         }
+
+        public async Task<Client> GetClientById(int id)
+        {
+            Client? result = null;
+            try
+            {
+                var url = Endpoints.BaseUrl + $"api/Client/GetClientById/";
+                var request = new HttpRequestMessage(HttpMethod.Get, url);
+
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(Endpoints.BaseUrl);
+                client.DefaultRequestHeaders.Add("Accept", "application/json");
+
+                HttpResponseMessage response = await client.GetAsync(url + "?id=" + id);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseData = await response.Content.ReadAsStringAsync();
+                    result = JsonConvert.DeserializeObject<Client>(responseData);
+                }
+                //else if (response.StatusCode == HttpStatusCode.NotFound)
+                //{
+
+                //}
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Failed to fetch booking: {ex.Message}");
+            }
+            return result ?? throw new Exception("Booking data is null.");
+        }
     }
 }

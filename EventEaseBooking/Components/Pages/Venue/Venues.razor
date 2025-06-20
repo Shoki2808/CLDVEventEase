@@ -1,57 +1,187 @@
 ﻿@page "/Venues"
 
 @inject IBookingService bookingService
+@inject IVenueService venueService
 
-<center>
-    <div class="row mt-3 justify-content-between">
-        <div class="col-sm-auto">
-            <h3 class="headings">Venues</h3>
+@if (!showSpinnerModal)
+{
+    <RadzenStack Orientation="Radzen.Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="1.5rem;" Wrap="FlexWrap.Wrap">
+        <div class="row">
+            <h1> Venues</h1>
+            <br />
+
+
         </div>
-    </div>
-</center>
 
-<ul>
-    @foreach (var venue in venues)
-    {
-        <li>@venue.VenueName (@venue.Location) - Capacity: @venue.Capacity</li>
-    }
-</ul>
+        <div class="d-grid">
+            <button class="btn btn-primary" @onclick="()=>NavToAddVenue()" style="color:#c6605d; background-color:lightpink; padding:10px; justify-content: center; align-items: center; gap: 8px; font-size: 20px; border-radius: 15px; border: none;">
+                Create Venue
+            </button>
+        </div>
 
-<br/>
-<div class="row pt-0 mt-0">
-    <div class="col-xl-4">
-        <BlogCard image="./images/wedding.jpg" label="Wedding" heading="A perfect place to say your 'I do's'" text="Nestled in a picturesque location, our wedding venue is the perfect backdrop for your love story. With romantic gardens, elegant interiors, and breathtaking views, every moment will feel like a fairytale. Whether you're planning an intimate ceremony or a grand celebration, we offer a beautiful, customizable space to make your wedding day truly unforgettable.
+    </RadzenStack>
 
-Let us help you create the wedding of your dreams — because every love story deserves a magical beginning. 💖" actionButtonText="View More " actionButtonEndpoint="/"></BlogCard>
-    </div>
-    <div class="col-xl-4">
-        <BlogCard image="./images/festivalvenue.jpg" label="Festival" heading="Ultimate Festival Playground" text="Welcome to the heart of excitement and celebration! Our festival venue is the perfect space to bring your wildest dreams to life. From live music to art installations, food trucks to colorful performances — everything you need for an unforgettable festival experience is right here. With plenty of open space, vibrant energy, and a location that’s perfect for creating memories, our venue sets the stage for an event like no other.
+    <br />
+    <RadzenDataList WrapItems="true" AllowPaging="false" Data="@venues" TItem="Models.Venue">
+        <Template Context="data">
 
-Get ready to dance, explore, and experience the magic of a festival that will leave you talking about it for years to come. Let's make every moment count! ✨" actionButtonText="View More " actionButtonEndpoint="/"></BlogCard>
-    </div>
-    <div class="col-xl-4">
-        <BlogCard image="./images/galavenue.jpg" label="Corporate" heading="Where corporate meets celebration" text="Our corporate social event venue offers the perfect blend of sophistication and relaxation. Designed to foster networking, collaboration, and enjoyment, it’s ideal for company parties, team-building events, or any occasion that calls for a mix of business and pleasure. With versatile spaces, modern amenities, and a stylish atmosphere, we ensure your event leaves a lasting impression.
+            <RadzenCard class="rz-my-12 rz-mx-auto" Style="max-width: 420px">
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Start" Gap="1rem" class="rz-p-4">
+                    <RadzenImage Path="@data.ImageUrl" AlternateText="@data.ImageUrl" Style="width: 100%; height: auto; border-radius: 5%;" />
+           
+                </RadzenStack>
+                <RadzenCard class="rz-background-color-primary-light rz-shadow-0 rz-border-radius-0 rz-p-8" style="margin: 1rem calc(-1 * var(--rz-card-padding));">
+                    <RadzenText TextStyle="TextStyle.H6" class="rz-color-on-primary-light"><strong>Venue Information</strong></RadzenText>
+                    <RadzenRow RowGap="0">
+                        <RadzenColumn SizeSM="4">
+                            <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Name</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body1" class="rz-color-on-primary-light"><b>@data.VenueName</b></RadzenText>
+                            <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Location</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body1" class="rz-color-on-primary-light"><b>@data.Location</b></RadzenText>
+                        </RadzenColumn>
+                        <RadzenColumn SizeSM="8">
+                            <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Availability Status</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body1" class="rz-color-on-primary-light">@data.AvailabilityStatus</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Capacity</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body1" class="rz-color-on-primary-light"><b>@data.Capacity</b></RadzenText>
+                            @*                  <RadzenText TextStyle="TextStyle.Overline" class="rz-color-on-primary-light rz-display-flex rz-mt-4 rz-mb-0">Freight</RadzenText>
+                            <RadzenText TextStyle="TextStyle.Body1" class="rz-color-on-primary-light"><b>@String.Format(new System.Globalization.CultureInfo("en-US"), "{0:C}", order?.Freight)</b></RadzenText> * *@
+                        </RadzenColumn>
+                    </RadzenRow>
+                </RadzenCard>
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.Center" AlignItems="AlignItems.Center" Wrap="FlexWrap.Wrap" class="rz-p-12">
+                    <RadzenStack Gap="0.5rem">
+                        <RadzenLabel Text="Select Date, bound to DateOnly" Component="DatePickerDateOnlyType" />
+                        <RadzenDatePicker @bind-Value="@FromDate" DateFormat="MM/dd/yyyy" Name="From Date" />
+                    </RadzenStack>
+                    <RadzenStack Gap="0.5rem">
+                        <RadzenLabel Text="Select Time, bound to TimeOnly" Component="DatePickerTimeOnlyType" />
+                        <RadzenDatePicker @bind-Value="@ToDate" DateFormat="MM/dd/yyyy" Name="To Date" />
+                    </RadzenStack>
+                </RadzenStack>
 
-Let us help you create an event that brings colleagues together, sparks meaningful connections, and celebrates success in a setting that’s both professional and memorable." actionButtonText="View More " actionButtonEndpoint="/"></BlogCard>
-    </div>
-</div>
+                <RadzenStack Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End" Gap="0">
+                    <RadzenButton Variant="Variant.Text" class="rz-text-secondary-color" Text="Cancel" />
+                    <RadzenButton Variant="Variant.Text" Click="()=>CheckAvailability(data.VenueId)" Text="Check Availability" />
+                </RadzenStack>
+
+            </RadzenCard>
+
+
+
+        </Template>
+    </RadzenDataList>
+
+
+
+
+
+           <RadzenDataGrid @ref=grid AllowFiltering="true" AllowColumnResize="true"
+                        FilterMode="Radzen.FilterMode.Simple" PageSize="5" AllowPaging="true" AllowSorting="true" Data="@venues" ColumnWidth="300px" FilterPopupRenderMode="Radzen.PopupRenderMode.OnDemand"
+                        FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" LogicalFilterOperator="LogicalFilterOperator.And">
+            <Columns>
+                <RadzenDataGridColumn Property="@nameof(Venue.VenueId)" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="Radzen.TextAlign.Center" />
+                   @*             <RadzenDataGridColumn Title="Photo" Sortable="false" Filterable="false" Width="200px">
+                <Template Context="data">
+                    <RadzenImage Path="@data.Photo" class="rz-gravatar" AlternateText="@(data.FirstName + " " + data.LastName)" />
+                </Template>
+            </RadzenDataGridColumn>   *@
+ *            <RadzenDataGridColumn Property="@nameof(Venue.VenueName)" Filterable="true" Title="Venue Name" />
+                <RadzenDataGridColumn Property="@nameof(Venue.Location)" Filterable="true" Title="Location" />
+                <RadzenDataGridColumn Property="@nameof(Venue.ImageUrl)" Filterable="true" Title="Image Url" />
+                <RadzenDataGridColumn Property="@nameof(Venue.Capacity)" Filterable="true" Title="Capacity">
+
+                </RadzenDataGridColumn>
+
+                <RadzenDataGridColumn Property="@nameof(Venue.AvailabilityStatus)" Filterable="true" Title="Status" />
+                @*          <RadzenDataGridColumn Title="Edit" Frozen="true" Sortable="false" Filterable="false" Width="80px" TextAlign="TextAlign.Center">
+                    <Template Context="data">
+                        <RadzenButton Click="()=>UpdateEventOnClick(data)" class="btn btn-secondary " Text="Edit" />
+                    </Template>
+                </RadzenDataGridColumn>*@
+            @*            <RadzenDataGridColumn Title="Delete" Frozen="true" Sortable="false" Filterable="false" Width="80px" TextAlign="TextAlign.Center"> 
+           <Template Context="data">
+                        <RadzenButton Click="()=>DeleteButtonClick(data)" Style="color:none" Text="Delete"><i class="fas fa-trash-alt" style="color:red"></i></RadzenButton>
+                    </Template>
+
+                </RadzenDataGridColumn>*@
+            </Columns>
+        </RadzenDataGrid>
+  @*   </RadzenStack> *@
+
+
+    <br />
+
+
+
+
+}
+else
+{
+    <RadzenStack JustifyContent="Radzen.JustifyContent.Center" AlignItems="Radzen.AlignItems.Center" class="center-container center-container-c">
+        <RadzenProgressBarCircular ShowValue="true" Mode="ProgressBarMode.Indeterminate" Size="ProgressBarCircularSize.Large" ProgressBarStyle="ProgressBarStyle.Success">
+            <Template>Wait</Template>
+        </RadzenProgressBarCircular>
+    </RadzenStack>
+}
+
 
 @code {
-    public List<Venue> venues = new();
-
+    bool showSpinnerModal = false;
+    DateOnly FromDate = DateOnly.FromDateTime(DateTime.Now);
+    DateOnly ToDate = DateOnly.FromDateTime(DateTime.Now);
+    RadzenDataGrid<Venue> grid;
+    LogicalFilterOperator logicalFilterOperator = LogicalFilterOperator.And;
+    FilterCaseSensitivity filterCaseSensitivity = FilterCaseSensitivity.CaseInsensitive;
+    private List<Venue> venues = new List<Venue>();
 
     protected override async Task OnInitializedAsync()
     {
+        showSpinnerModal = true;
         try
         {
-            // venues =  bookingService.GetVenues();
+            venues = await bookingService.GetVenues();
         }
         catch (Exception)
         {
-            
+
             throw;
         }
+
         await base.OnInitializedAsync();
+        showSpinnerModal = false;
+    }
+    public void NavToAddVenue()
+    {
+        NavigationManager.NavigateTo("/add-venue");
     }
 
+    // private async Task CheckAvailability(int id, DateOnly startDate, DateOnly endDate)
+    private async Task CheckAvailability(int id)
+    {
+
+        try
+        {
+            var result = await venueService.GetVenueAvailability(id, FromDate, ToDate);
+            if (!result)
+            {
+                NotificationService.Notify(new NotificationMessage { Style = "position: absolute; inset-inline-start: -1000px;", Severity = NotificationSeverity.Success, Summary = "Venue Available", Detail = "This venue is available for booking on the selected dates", Duration = 4000 });
+                //NavigationManager.NavigateTo("/add-venue");
+            }
+            else
+            {
+                NotificationService.Notify(new NotificationMessage { Style = "position: absolute; inset-inline-start: -1000px;", Severity = NotificationSeverity.Warning, Summary = "Venue Not Available", Detail = "This venue is not available for booking on the selected dates. Please try alternative selections", Duration = 4000 });
+                //NavigationManager.NavigateTo("/add-venue");
+            }
+
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+
+
+
+    }
 }

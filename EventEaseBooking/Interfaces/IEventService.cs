@@ -8,7 +8,7 @@ namespace EventEaseBooking.Interfaces
         public Task<List<EventType>> GetEventTypes();
         public Task<List<Event>> GetEvents();
         public Task<Event> GetEventById(int eventId);
-
+        public Task<Event> UpdateEvent(Event eventModel);
         public Task<Event> AddEvent(Event eventModel);
 
     }
