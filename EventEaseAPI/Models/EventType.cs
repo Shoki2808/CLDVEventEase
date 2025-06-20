@@ -1,5 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 namespace EventEaseAPI.Models
@@ -11,11 +10,10 @@ namespace EventEaseAPI.Models
 
         [Required]
         [StringLength(100)]
-        public string EventTypeName { get; set; } = null!;
+        public string EventTypeName { get; set; }
 
-        //[JsonIgnore]
-        //public virtual ICollection<Event> Events { get; set; } = new List<Event>();
-        //[JsonIgnore]
-        //public virtual ICollection<Venue> Venues { get; set; } = new List<Venue>();
+        
+        [JsonIgnore]
+        public virtual ICollection<Event> Events { get; set; } = new List<Event>();
     }
 }

@@ -141,10 +141,10 @@
                         Change=@(args => OnChange(args, "FileInput")) Error=@(args => OnError(args, "FileInput")) InputAttributes="@(new Dictionary<string,object>(){ { "aria-label", "select file" }})" />
  *@
                     </RadzenStack>
-                    @if (!string.IsNullOrEmpty(imagePreview))
+                    @*             @if (!string.IsNullOrEmpty(imagePreview))
                     {
                         <img src="@imagePreview" style="max-width: 500px; max-height: 500px;" />
-                    }
+                    } *@
                 </RadzenRow>
                 <RadzenFormField Text="Image Url" Variant="Variant.Outlined">
                     <ChildContent>
@@ -273,28 +273,27 @@
                 // // Create data URL for preview
                 // imagePreview = $"data:{file.ContentType};base64,{Convert.ToBase64String(imageBytes)}";
                 selectedFile = args.Files.FirstOrDefault();
-                if (selectedFile != null)
-                {
-                    // Create preview
-                    var buffer = new byte[selectedFile.Size];
-                    await selectedFile.OpenReadStream().ReadAsync(buffer);
-                    imagePreview = $"data:{selectedFile.ContentType};base64,{Convert.ToBase64String(buffer)}";
-                }
+                // if (selectedFile != null)
+                // {
+                //     // Create preview
+                //     var buffer = new byte[selectedFile.Size];
+                //     await selectedFile.OpenReadStream().ReadAsync(buffer);
+                //     imagePreview = $"data:{selectedFile.ContentType};base64,{Convert.ToBase64String(buffer)}";
+                // }
 
-                if (!string.IsNullOrEmpty(imagePreview))
-                {
-                    // Extract just the Base64 part (remove the data URL prefix)
-                    var base64Data = imagePreview.Split(',')[1];
-                    venueModel.ImageUrl = base64Data;
+                // if (!string.IsNullOrEmpty(imagePreview))
+                // {
+                //     // Extract just the Base64 part (remove the data URL prefix)
+                //     var base64Data = imagePreview.Split(',')[1];
+                //     venueModel.ImageUrl = base64Data;
 
-                }
+                // }
                 //Store the base64 string without prefix for database storage
                 //venueModel.ImageUrl = Convert.ToBase64String(selectedFile);
             }
             catch (Exception ex)
             {
                 // Handle errors (e.g., file too large)
-                // Console.WriteLine($"Error processing file: {ex.Message}");
                 NotificationService.Notify();
             }
         }
@@ -302,7 +301,7 @@
 
     void OnError(UploadErrorEventArgs args, string name)
     {
-        // console.Log($"{args.Message}");
+
     }
     protected async Task FormSubmit()
     {
@@ -310,9 +309,9 @@
 
         try
         {
-            
 
-           // var fileName = $"{Guid.NewGuid()}{Path.GetExtension(selectedFile.Name)}";
+
+            var fileName = $"{Guid.NewGuid()}{Path.GetExtension(selectedFile.Name)}";
 
             // Upload to Azure Blob Storage
             var stream = selectedFile.OpenReadStream();
@@ -322,7 +321,13 @@
 
             // ,
             // selectedFile.ContentType
-            // Show success
+
+            // venueModel.EventTypeId = 5;
+
+            var result = await venueService.AddVenue(venueModel);
+            if(result.VenueId > 0)
+            {
+                    // Show success
             NotificationService.Notify(new NotificationMessage
                 {
                     Severity = NotificationSeverity.Success,
@@ -330,14 +335,7 @@
                     Detail = "Venue saved successfully",
                     Duration = 4000
                 });
-
-            // Reset form
-            // venue = new Venue();
-            // imagePreview = null;
-            // upload.Clear();
-            if(await venueService.AddVenue(venueModel) != null)
-            {
-                ShowSuccess();
+                NavigationManager.NavigateTo("/Venues");
             }
             else
             {

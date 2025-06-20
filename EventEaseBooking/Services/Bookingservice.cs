@@ -26,7 +26,7 @@ namespace EventEaseBooking.Services
             var result = new List<Venue>();
             try
             {
-                    var url = Endpoints.BaseUrl + "api/Admin/GetAllVenues";
+                    var url = Endpoints.BaseUrl + "api/Venue/GetAllVenues";
                     //var request = new HttpRequestMessage(HttpMethod.Get, url);
                     // request.Content = new StringContent(JsonConvert.SerializeObject(login), Encoding.UTF8, "application/json");
 
@@ -51,6 +51,35 @@ namespace EventEaseBooking.Services
          return result;
         }
 
+        //public async Task<Booking> CreateBooking(Booking bookingModel)
+        //{
+        //    Booking? result = new();
+        //    try
+        //    {
+        //        var url = Endpoints.BaseUrl + "api/Booking/CreateBooking";
+        //        var request = new HttpRequestMessage(HttpMethod.Post, url);
+        //        request.Content = new StringContent(JsonConvert.SerializeObject(bookingModel), Encoding.UTF8, "application/json");
+
+        //        //HttpClient client = httpClient.CreateClient();
+        //        HttpClient client = new HttpClient();
+
+        //        client.BaseAddress = new Uri(Endpoints.BaseUrl);
+        //        client.DefaultRequestHeaders.Add("Accept", "application/json");
+        //        HttpResponseMessage response = await client.SendAsync(request);
+
+        //        if (response.IsSuccessStatusCode)
+        //        {
+        //            var responseData = await response.Content.ReadAsStringAsync();
+        //            result = JsonConvert.DeserializeObject<Booking>(responseData);
+        //        }
+        //    }
+        //    catch
+        //    {
+        //        throw new Exception("Request Unsuccessful.");
+        //    }
+        //    return result;
+        //}
+        
         public async Task<Booking> CreateBooking(Booking bookingModel)
         {
             Booking? result = new();
@@ -170,7 +199,8 @@ namespace EventEaseBooking.Services
             try
             {
                 //result =  await httpClient.GetFromJsonAsync<List<Booking>>("api/Booking/GetAllBookings") ?? new List<Booking>();
-                var url = "https://eventeaseapi-a7h4b6f9a6fxhjfb.southafricanorth-01.azurewebsites.net/api/Booking/GetAllBookings";
+                //var url = "https://eventeaseapi-a7h4b6f9a6fxhjfb.southafricanorth-01.azurewebsites.net/api/Booking/GetAllBookings"; 
+                var url = Endpoints.BaseUrl + "api/Booking/GetAllBookings";
                 var request = new HttpRequestMessage(HttpMethod.Get, url);
                 // request.Content = new StringContent(JsonConvert.SerializeObject(login), Encoding.UTF8, "application/json");
 

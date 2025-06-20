@@ -107,6 +107,38 @@ namespace EventEaseBooking.Services
             return result ?? throw new Exception("Booking data is null.");
         }
 
+        
+        public async Task<bool> GetVenueAvailability(int id, DateOnly startDate, DateOnly endDate)
+        {
+            bool result = false;
+            try
+            {
+                var url = Endpoints.BaseUrl + $"api/Venue/GetVenueStatus";
+                var request = new HttpRequestMessage(HttpMethod.Get, url);
+
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(Endpoints.BaseUrl);
+                client.DefaultRequestHeaders.Add("Accept", "application/json");
+
+                HttpResponseMessage response = await client.GetAsync(url + "?id=" + id + "?startDate=" + startDate + "?endDate=" + endDate);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseData = await response.Content.ReadAsStringAsync();
+                    result = JsonConvert.DeserializeObject<bool>(responseData);
+                }
+                //else if (response.StatusCode == HttpStatusCode.NotFound)
+                //{
+
+                //}
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Failed to fetch booking: {ex.Message}");
+            }
+            return result;
+        }
+
 
         public async Task<Venue> UpdateVenue(Venue venueModel)
         {

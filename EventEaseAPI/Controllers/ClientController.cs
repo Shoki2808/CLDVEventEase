@@ -1,182 +1,67 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using EventEaseAPI.Interfaces;
+using EventEaseAPI.DTOs.Client;
 
 namespace EventEaseAPI.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class ClientController : ControllerBase
     {
-        private readonly ApplicationDbContext context;
+        private readonly IClientService _clientService;
 
-        public ClientController(ApplicationDbContext context)
+        public ClientController(IClientService clientService)
         {
-            this.context = context;
+            _clientService = clientService;
         }
 
-
-
-        // GET: Client/Get all clients
         [HttpGet]
         [Route("GetAllClients")]
-        public async Task<ActionResult<IEnumerable<Client>>> GetAllClients()
+        public async Task<ActionResult<IEnumerable<ClientReadDto>>> GetAllClients()
         {
-            var client = await context.Clients.Where(c => c.IsActive).ToListAsync();
-
-            if (client.Count == 0)
-            {
-                return NotFound();
-            }
-            return Ok(client);
+            var clients = await _clientService.GetAllAsync();
+            return Ok(clients);
         }
-
 
         [HttpGet]
         [Route("GetClientById")]
-        public async Task<ActionResult<Client>> GetClientById(int id)
+        public async Task<ActionResult<ClientReadDto>> GetClientById(int id)
         {
-            try
-            {
-                var client = await context.Clients.FirstOrDefaultAsync(e => e.ClientId == id);
-
-                if (!await ClientExists(id))
-                {
-                    return NotFound($"The Client with Client ID {id} does not exist");
-                }
-                else if (!client.IsActive)
-                {
-                    return NotFound($"No active clients found for Client ID {id}");
-                }
-
-
-                return Ok(client);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, $"An error occurred while fetching the event specified. Client ID {id}\n{e.Message}");
-            }
-
+            var client = await _clientService.GetByIdAsync(id);
+            if (client == null) return NotFound(new { message = $"Client with ID {id} not found." });
+            return Ok(client);
         }
 
-        // POST: Client/Create Client
         [HttpPost]
         [Route("CreateClient")]
-        public async Task<ActionResult<Client>> CreateClient([FromBody] Client client)
+        public async Task<ActionResult<ClientReadDto>> CreateClient([FromBody] ClientCreateDto dto)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            try
-            {
-                if (!ModelState.IsValid) return BadRequest(ModelState);
-
-         
-
-                client.IsActive = true;
-                context.Clients.Add(client);
-                await context.SaveChangesAsync();
-
-                return CreatedAtAction(nameof(GetClientById), new { id = client.ClientId }, client);
-            }
-            catch (DbUpdateException dbue)
-            {
-                // Logs can be added here
-                return StatusCode(500, $"An error occurred while saving the event to the database.\n{dbue.Message}");
-            }
-            catch (Exception e)
-            {
-                // Logs can be added here
-                return StatusCode(500, $"An unexpected error occurred. Please try again later.\n{e.Message}");
-            }
+            var createdClient = await _clientService.CreateAsync(dto);
+            return CreatedAtAction(nameof(GetClientById), new { id = createdClient.ClientId }, createdClient);
         }
-
 
         [HttpPut]
         [Route("UpdateClient")]
-        public async Task<IActionResult> UpdateClient(int id, [FromBody] Client client)
+        public async Task<IActionResult> UpdateClient(int id, [FromBody] ClientUpdateDto dto)
         {
-            try
-            {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-                if (id != client.ClientId)
-                {
-                    return BadRequest("ClientID mismatch.");
-                }
-                else if (!await ClientExists(id))
-                {
-                    return NotFound($"The Client ID specified does not exist. Client ID: {id}");
-                }
-                else if (!client.IsActive)
-                {
-                    return NotFound($"No Active Clients found for ID: {id}");
-                }
-               
-
-                context.Entry(client).State = EntityState.Modified;
-                await context.SaveChangesAsync();
-
-                var updatedClient = await context.Clients.FindAsync(id);
-
-                return Ok(updatedClient);
-
-            }
-            catch (DbUpdateConcurrencyException dbce)
-            {
-                return StatusCode(500, $"Concurrency error while updating.\n{dbce.Message}");
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, $"An unxpcected error occurred.\n{e.Message}");
-            }
-
+            var success = await _clientService.UpdateAsync(id, dto);
+            if (!success) return NotFound(new { message = $"Client with ID {id} not found." });
+            return NoContent();
         }
 
-
-
-        // POST: Client/Delete
         [HttpDelete]
         [Route("DeleteClient")]
         public async Task<IActionResult> DeleteClient(int id)
         {
-            try
-            {
-                var client = await context.Clients.FindAsync(id);
-                bool hasBookings = await context.Bookings.AnyAsync(b => b.ClientId == id);
-
-                if (!await ClientExists(id) || client == null)
-                {
-                    return NotFound($"The Client ID specified does not exist. Client ID: {id}");
-                }
-                else if (!client.IsActive)
-                {
-                    return NotFound($"No Active Clients found for ID: {id}");
-                }
-                else if (hasBookings)
-                {
-                    return BadRequest("Cannot delete client with existing bookings.");
-                }
-
-                client.IsActive = false;
-                context.Update(client);
-                await context.SaveChangesAsync();
-
-                return NoContent();
-            }
-            catch (DbUpdateConcurrencyException dbce)
-            {
-                return StatusCode(500, $"Concurrency error while updating.\n{dbce.Message}");
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, $"An unxpcected error occurred.\n{e.Message}");
-
-            }
+            var success = await _clientService.DeleteAsync(id);
+            if (!success) return NotFound(new { message = $"Client with ID {id} not found." });
+            return NoContent();
         }
-
-        private async Task<bool> ClientExists(int id)
-        {
-            return await context.Clients.AnyAsync(e => e.ClientId == id);
-        }
-
     }
-
 }

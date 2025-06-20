@@ -2,7 +2,9 @@
 using EventEaseBooking.Interfaces;
 using EventEaseBooking.Models;
 using EventEaseBooking.Static;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Radzen;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -104,10 +106,32 @@ namespace EventEaseBooking.Services
                     var responseData = await response.Content.ReadAsStringAsync();
                     result = JsonConvert.DeserializeObject<Event?>(responseData);
                 }
+                //else
+                //{
+                //    // Handle different error cases
+                //    var errorResponse = await response.Content.ReadFromJsonAsync<ProblemDetails>();
+                //    var errorMessage = errorResponse?.Title ?? "An error occurred";
+
+                //    switch (response.StatusCode)
+                //    {
+                //        case HttpStatusCode.BadRequest:
+                //            if (errorResponse.Extensions.TryGetValue("message", out var messageObj))
+                //            {
+                //                errorMessage = messageObj.ToString();
+                //            }
+                //            throw new ApplicationException(errorMessage);
+
+                //            break;
+
+                //        default:
+                    
+                //            break;
+                //    }
+                //}
             }
-            catch
+            catch(Exception ex)
             {
-                throw new Exception("Request Unsuccessful.");
+                throw new ApplicationException("Failed to create event", ex);
             }
             return result ?? new Event();
         }

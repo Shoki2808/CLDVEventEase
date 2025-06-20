@@ -13,68 +13,99 @@
 
 @if (showSpinnerModal)
 {
-    <SpinnerModal />
+            <SpinnerModal />
 }
 
-@if(showConfmodal)
+@if (showConfmodal)
 {
     showSpinnerModal = false;
-    <ConfirmationDialog OnClose="OnConfirmationChange" Confirmed="OnConfirmationChange" />
+            <ConfirmationDialog OnClose="OnConfirmationChange" Confirmed="OnConfirmationChange" />
 }
 
 
 
 
 
-
-<div class="row">
-    <h1> Bookings</h1>
-    <br />
-
-
-</div>
-
-<center>
-    <div class="d-grid gap-2 col-3">
-        <button class="btn btn-primary" @onclick="()=>NavToAddBooking()" style="color:#c6605d; background-color:lightpink; padding:10px; justify-content: center; align-items: center; gap: 8px; font-size: 20px; border-radius: 15px; border: none;">
-            Make booking
-        </button>
-    </div>
-</center>
-<RadzenStack >
-
-    <RadzenCard Variant="Radzen.Variant.Outlined">
-
-        <RadzenStack Orientation="Radzen.Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="1.5rem;" Wrap="FlexWrap.Wrap">
-            <RadzenStack Orientation="Radzen.Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="0.5rem;">
-                <RadzenLabel Text="Logical filter operator:" Component="operator" />
-                <RadzenDropDown @bind-Value="@logicalFilterOperator" TextProperty="Text" ValueProperty="Value" Name="operator" Change=@(args => grid.Reload())
-                Data="@(Enum.GetValues(typeof(LogicalFilterOperator)).Cast<LogicalFilterOperator>().Select(t => new { Text = $"{t}", Value = t }))" />
-            </RadzenStack>
-            <RadzenStack Orientation="Radzen.Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="0.5rem;">
-                <RadzenLabel Text="Filter case sensitivity:" Component="caseSensitivity" />
-                <RadzenDropDown @bind-Value="@filterCaseSensitivity" TextProperty="Text" ValueProperty="Value" Name="caseSensitivity" Change=@(args => grid.Reload())
-                Data="@(Enum.GetValues(typeof(FilterCaseSensitivity)).Cast<FilterCaseSensitivity>().Select(t => new { Text = $"{t}", Value = t }))" />
-            </RadzenStack>
-        </RadzenStack>
+@if (!showSpinnerModal)
+{
+            <div class="row">
+                <h1> Bookings</h1>
+                <br />
 
 
-    </RadzenCard>
+            </div>
 
+            <center>
+                <div class="d-grid gap-2 col-3">
+                    <button class="btn btn-primary" @onclick="()=>NavToAddBooking()" style="color:#c6605d; background-color:lightpink; padding:10px; justify-content: center; align-items: center; gap: 8px; font-size: 20px; border-radius: 15px; border: none;">
+                        Make booking
+                    </button>
+                </div>
+            </center>
 
-    <RadzenDataGrid @ref=grid AllowFiltering="true" AllowColumnResize="true"
-    FilterMode="Radzen.FilterMode.Simple" PageSize="5" AllowPaging="true" AllowSorting="true" Data="@bookings" ColumnWidth="300px" FilterPopupRenderMode="Radzen.PopupRenderMode.OnDemand"
-    FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" LogicalFilterOperator="LogicalFilterOperator.And">
-        <Columns>
-            <RadzenDataGridColumn Property="@nameof(Booking.BookingId)" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="Radzen.TextAlign.Center" />
-            @*               <RadzenDataGridColumn Title="Photo" Sortable="false" Filterable="false" Width="200px">
+            <br/>
+
+            <RadzenStack>
+
+        @*     <RadzenCard Variant="Radzen.Variant.Outlined">
+
+                <RadzenStack Orientation="Radzen.Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="1.5rem;" Wrap="FlexWrap.Wrap">
+                    <RadzenStack Orientation="Radzen.Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="0.5rem;">
+                        <RadzenLabel Text="Logical filter operator:" Component="operator" />
+                        <RadzenDropDown @bind-Value="@logicalFilterOperator" TextProperty="Text" ValueProperty="Value" Name="operator" Change=@(args => grid.Reload())
+                                        Data="@(Enum.GetValues(typeof(LogicalFilterOperator)).Cast<LogicalFilterOperator>().Select(t => new { Text = $"{t}", Value = t }))" />
+                    </RadzenStack>
+                    <RadzenStack Orientation="Radzen.Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="0.5rem;">
+                        <RadzenLabel Text="Filter case sensitivity:" Component="caseSensitivity" />
+                        <RadzenDropDown @bind-Value="@filterCaseSensitivity" TextProperty="Text" ValueProperty="Value" Name="caseSensitivity" Change=@(args => grid.Reload())
+                                        Data="@(Enum.GetValues(typeof(FilterCaseSensitivity)).Cast<FilterCaseSensitivity>().Select(t => new { Text = $"{t}", Value = t }))" />
+                    </RadzenStack>
+                </RadzenStack>
+
+            </RadzenCard> *@
+                              <RadzenStack Orientation="Orientation.Horizontal">
+
+                    </RadzenStack>
+                        <RadzenTextBox Placeholder="Search ..." style="display: block; width: 100%" @oninput="@Search" aria-label="Search by all string columns" />
+
+        @*                       <div class="row mb-3">
+        <div class="col-md-12">
+            <form method="get">
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <label>From Date</label>
+                        <RadzenDatePicker @bind-Value="@Model.StartDate" DateFormat="yyyy-MM-dd" />
+                    </div>
+                    <div class="col-md-3">
+                        <label>To Date</label>
+                        <RadzenDatePicker @bind-Value="@Model.EndDate" DateFormat="yyyy-MM-dd" />
+                    </div>
+                    <div class="col-md-2 align-self-end">
+                        <RadzenButton ButtonType="ButtonType.Submit" Text="Filter" Icon="filter_list" />
+                        <RadzenButton ButtonType="ButtonType.Button" Text="Clear" Click="@(() => { Model.StartDate = null; Model.EndDate = null; })" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> *@
+
+                <RadzenDataGrid @ref=grid AllowFiltering="true" AllowColumnResize="true"
+                                FilterMode="Radzen.FilterMode.Advanced" PageSize="5" AllowPaging="true" AllowSorting="true" Data="@bookings" ColumnWidth="200px" FilterPopupRenderMode="Radzen.PopupRenderMode.OnDemand"
+                                FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" LogicalFilterOperator="LogicalFilterOperator.And">
+                    <Columns>
+                        <RadzenDataGridColumn Property="@nameof(Booking.BookingId)" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="Radzen.TextAlign.Center" />
+                @*               <RadzenDataGridColumn Title="Photo" Sortable="false" Filterable="false" Width="200px">
                 <Template Context="data">
                     <RadzenImage Path="@data.Photo" class="rz-gravatar" AlternateText="@(data.FirstName + " " + data.LastName)" />
                 </Template>
             </RadzenDataGridColumn>  
  *@            <RadzenDataGridColumn Property="@nameof(Booking.BookingDate)" Filterable="true" Title="BookingDate" FormatString="{0:d}" />
-            <RadzenDataGridColumn Property="@nameof(Booking.BookingTime)" Filterable="false" Title="BookingTime" FormatString="{0:t}" />
-            <RadzenDataGridColumn Property="@nameof(Booking.EventId)"  Filterable="true" Title="Event">
+                        <RadzenDataGridColumn Property="@nameof(Booking.BookingTime)" Filterable="false" Title="BookingTime" Width="150px" FormatString="{0:t}" />
+                            <RadzenDataGridColumn Property="@nameof(Booking.StartTime)" Filterable="false" Title="Event Start Time" Width="150px" FormatString="{0:t}" />
+                            <RadzenDataGridColumn Property="@nameof(Booking.EndTime)" Filterable="false" Title="Event End Time" Width="150px" FormatString="{0:t}" />
+
+
+                @*         <RadzenDataGridColumn Property="@nameof(Booking.EventId)"  Filterable="true" Title="Event">
                 <Template Context="data">
                     @GetEventName(data.EventId)
                 </Template>
@@ -88,25 +119,36 @@
                 <Template Context="data">
                     @GetClientName(data.ClientId)
                 </Template>
-            </RadzenDataGridColumn>
-            <RadzenDataGridColumn Property="@nameof(Booking.IsActive)" Filterable="true" Title="Status" />
-            <RadzenDataGridColumn Title="Edit" Frozen="true" Sortable="false" Filterable="false" Width="80px" TextAlign="TextAlign.Center">
-                <Template Context="data">
-                    <RadzenButton Click="()=>EditButtonClick(data)" class="btn btn-secondary " Text="Edit" />
-                </Template>
-            </RadzenDataGridColumn>
-            <RadzenDataGridColumn Title="Delete" Frozen="true" Sortable="false" Filterable="false" Width="80px" TextAlign="TextAlign.Center">
-                <Template Context="data">
-                    <RadzenButton Click="()=>DeleteButtonClick(data)" Style="color:none" Text="Delete"><i class="fas fa-trash-alt" style="color:red"></i></RadzenButton>
-                </Template>
+            </RadzenDataGridColumn> *@
 
-            </RadzenDataGridColumn>
-        </Columns>
-    </RadzenDataGrid>
-</RadzenStack>
+                        <RadzenDataGridColumn Property="@nameof(Booking.EventName)" Filterable="true" Title="Event">
 
+                        </RadzenDataGridColumn>
 
+                        <RadzenDataGridColumn Property="@nameof(Booking.EventTypeName)" Filterable="true" Title="Event Type">
 
+                        </RadzenDataGridColumn>
+                        <RadzenDataGridColumn Property="@nameof(Booking.VenueName)" Filterable="true" Title="Venue">
+                       </RadzenDataGridColumn>
+                        <RadzenDataGridColumn Property="@nameof(Booking.ClientName)" Filterable="true" Title="Client">
+
+                        </RadzenDataGridColumn>
+                        <RadzenDataGridColumn Property="@nameof(Booking.AvailabilityStatus)" Filterable="true" Title="Status" />
+                        <RadzenDataGridColumn Title="Edit" Frozen="true" Sortable="false" Filterable="false" Width="80px" TextAlign="TextAlign.Center">
+                            <Template Context="data">
+                                <RadzenButton Click="()=>EditButtonClick(data)" class="btn btn-secondary " Text="Edit" />
+                            </Template>
+                        </RadzenDataGridColumn>
+                        <RadzenDataGridColumn Title="Delete" Frozen="true" Sortable="false" Filterable="false" Width="80px" TextAlign="TextAlign.Center">
+                            <Template Context="data">
+                                <RadzenButton Click="()=>DeleteButtonClick(data)" Style="color:none" Text="Delete"><i class="fas fa-trash-alt" style="color:red"></i></RadzenButton>
+                            </Template>
+
+                        </RadzenDataGridColumn>
+                    </Columns>
+                </RadzenDataGrid>
+            </RadzenStack>
+}
 
 
 
@@ -139,7 +181,7 @@
     private Venue v = new Venue();
     private Client c = new Client();
     private Event e = new Event();
-    private Booking bookingModel = new ();
+    private Booking bookingModel = new();
     string? venue;
 
     private int selectedRowNumber = -1;
@@ -148,10 +190,26 @@
     bool showConfmodal = false;
     bool success = false;
 
+    protected string search = "";
 
+    protected async Task Search(ChangeEventArgs args)
+    {
+        search = $"{args.Value}";
+
+        // await grid.GoToPage(0);
+
+        // bookings = await EventEaseDbService.GetBookings(new Query { Expand = "Event,Client" });
+    }
 
     protected override async Task OnInitializedAsync()
     {
+        NotificationService.Notify(new NotificationMessage
+            {
+                Severity = NotificationSeverity.Error,
+                Summary = "Error",
+                Detail = "errorMessage",
+                Duration = 20000
+            });
         // employees = dbContext.Employees;
         showSpinnerModal = true;
         try
@@ -191,7 +249,7 @@
     {
         try
         {
-            venues =  await bookingService.GetVenues();
+            venues = await bookingService.GetVenues();
         }
         catch (Exception)
         {
@@ -269,7 +327,7 @@
     //     }
     // }
 
-    private  void DeleteButtonClick(Booking booking)
+    private void DeleteButtonClick(Booking booking)
     {
         // Show the dialog
         // await confirmationDialog.Show();
@@ -297,7 +355,7 @@
         showConfmodal = false;
         showSpinnerModal = true;
         try
-        { 
+        {
             var deleteResult = await bookingService.DeleteBooking(booking.BookingId);
 
             if (deleteResult)
@@ -325,14 +383,14 @@
     }
 
 
-    private  void EditButtonClick(Booking booking)
+    private void EditButtonClick(Booking booking)
     {
         try
         {
             globalParameters.bookingModel = booking;
             NavigationManager.NavigateTo($"/EditBooking/{booking.BookingId}");
 
-               
+
         }
         catch (Exception ex)
         {
@@ -383,7 +441,7 @@
                 Severity = NotificationSeverity.Warning,
                 Duration = 40000,
                 SummaryContent = ns =>@<RadzenText TextStyle="TextStyle.H6">Custom summary: <br /> @DateTime.Now</RadzenText>,
-        DetailContent = ns => @<RadzenButton Text="Clear" Click="@(args => ns.Messages.Clear())" />
+                DetailContent = ns => @<RadzenButton Text="Clear" Click="@(args => ns.Messages.Clear())" />
         });
     }
 }

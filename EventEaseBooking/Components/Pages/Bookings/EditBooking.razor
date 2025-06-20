@@ -215,7 +215,7 @@
             if (e.Value != null)
             {
                 int Venue = Int32.Parse(e.Value.ToString());
-                bookingModel.VenueId = Venue;
+               // bookingModel.VenueId = Venue;
                 eventModel.VenueId = Venue;
             }
         }
@@ -247,9 +247,9 @@
     {
         try
         {
-            eventModel = await eventService.GetEventById(bookingModel.EventId);
+          //  eventModel = await eventService.GetEventById(bookingModel.EventId);
             // venueModel = await venueService.GetVenueById(bookingModel.VenueId);
-            clientModel = await clientService.GetClientById(bookingModel.ClientId);
+           // clientModel = await clientService.GetClientById(bookingModel.ClientId);
         }
         catch (Exception)
         {

@@ -1,5 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
@@ -16,6 +15,12 @@ namespace EventEaseAPI.Models
 
         [Required]
         public DateOnly EventDate { get; set; }
+        [Required]
+
+        public TimeOnly StartTime { get; set; } = new TimeOnly();
+        [Required]
+
+        public TimeOnly EndTime { get; set; } = new TimeOnly();
 
         public string? EventDescription { get; set; }
 
@@ -24,17 +29,21 @@ namespace EventEaseAPI.Models
 
         [Required]
         public int EventTypeId { get; set; }
-        //[JsonIgnore]
-        //public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
-        //[JsonIgnore]
-        //public virtual ICollection<Client> Clients { get; set; } = new List<Client>();
-        //[JsonIgnore]
-        //[ForeignKey("EventTypeId")]
-        //public virtual EventType? EventType { get; set; } = null!;
+
+        
         [JsonIgnore]
-        public virtual ICollection<EventVendor> EventVendors { get; set; } = new List<EventVendor>();
-        //[JsonIgnore]
-        //[ForeignKey("VenueId")]
-        //public virtual Venue? Venue { get; set; } = null!;
+        public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
+
+        
+        [JsonIgnore]
+        [ForeignKey("EventTypeId")]
+        public virtual EventType? EventType { get; set; }
+
+        
+        [JsonIgnore]
+        [ForeignKey("VenueId")]
+        public virtual Venue? Venue { get; set; }
+
+        
     }
 }

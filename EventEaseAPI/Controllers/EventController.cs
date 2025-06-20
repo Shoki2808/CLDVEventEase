@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
+using EventEaseAPI.Interfaces;
+using EventEaseAPI.Enums;
+using EventEaseAPI.DTOs.Event;
 
 namespace EventEaseAPI.Controllers
 {
@@ -8,211 +9,67 @@ namespace EventEaseAPI.Controllers
     [Route("api/[controller]")]
     public class EventController : ControllerBase
     {
-        private readonly ApplicationDbContext context;
+        private readonly IEventService _eventService;
 
-        public EventController(ApplicationDbContext context)
+        public EventController(IEventService eventService)
         {
-            this.context = context;
+            _eventService = eventService;
         }
-
 
         [HttpGet]
         [Route("GetAllEvents")]
-        public async Task<ActionResult<IEnumerable<Event>>> GetAllEvents()
+        public async Task<ActionResult<IEnumerable<EventReadDto>>> GetAllEvents()
         {
-            try
-            {
-                var events = await context.Events.Where(e => e.IsActive).ToListAsync();
-                if (events.Count == 0)
-                {
-                    return NotFound("No active events found.");
-                }
-
-                return Ok(events);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, $"An error occurred while fetching events.\n{e.Message}");
-            }
-
+            var events = await _eventService.GetAllAsync();
+            return Ok(events);
         }
-
 
         [HttpGet]
         [Route("GetEventById")]
-        public async Task<ActionResult<Event>> GetEventById(int id)
+        public async Task<ActionResult<EventReadDto>> GetEventById(int id)
         {
-            try
-            {
-                var eventItem = await context.Events.FirstOrDefaultAsync(e => e.EventId == id);
-
-                if (!await EventExists(id))
-                {
-                    return NotFound($"The Event with Event ID {id} does not exist");
-                }
-                else if (!eventItem.IsActive)
-                {
-                    return NotFound($"No active events found for Event ID {id}");
-                }
-
-
-                return Ok(eventItem);
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, $"An error occurred while fetching the event specified. Event ID {id}\n{e.Message}");
-            }
-
+            var ev = await _eventService.GetByIdAsync(id);
+            if (ev == null) return NotFound(new { message = $"Event with ID {id} not found." });
+            return Ok(ev);
         }
 
         [HttpPost]
         [Route("CreateEvent")]
-        public async Task<ActionResult<Event>> CreateEvent(Event eventItem)
+        public async Task<IActionResult> CreateEvent([FromBody] EventCreateDto dto)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            try
+            var (result, data) = await _eventService.CreateAsync(dto);
+
+            return result switch
             {
-                if (!ModelState.IsValid) return BadRequest(ModelState);
-
-                var venueExists = await context.Venues.AnyAsync(v => v.VenueId == eventItem.VenueId && v.IsActive);
-                var eventTypeExists = await context.EventTypes.AnyAsync(e => e.EventTypeId == eventItem.EventTypeId && e.IsActive);
-
-                if (!venueExists && !eventTypeExists)
-                {
-                    return BadRequest($"The Event Type ID ({eventItem.EventTypeId}) and the Venue ID ({eventItem.VenueId}) specified do not exist.");
-                }
-                else if (!venueExists)
-                {
-                    return BadRequest($"The specified venue with ID ({eventItem.VenueId}) does not exist.");
-                }
-                else if (!eventTypeExists)
-                {
-                    return BadRequest($"The specified event type with ID ({eventItem.EventTypeId}) does not exist.");
-                }
-
-                eventItem.IsActive = true;
-                context.Events.Add(eventItem);
-                await context.SaveChangesAsync();
-
-                return CreatedAtAction(nameof(GetEventById), new { id = eventItem.EventId }, eventItem);
-            }
-            catch (DbUpdateException dbue)
-            {
-                // Logs can be added here
-                return StatusCode(500, $"An error occurred while saving the event to the database.\n{dbue.Message}");
-            }
-            catch (Exception e)
-            {
-                // Logs can be added here
-                return StatusCode(500, $"An unexpected error occurred. Please try again later.\n{e.Message}");
-            }
+                CreateEventResult.Success => CreatedAtAction(nameof(GetEventById), new { id = data.EventId }, data),
+                CreateEventResult.VenueNotActive => BadRequest(new { message = "The selected venue is Booked." }),
+                CreateEventResult.VenueAlreadyBooked => BadRequest(new { message = "The venue is already booked." }),
+                _ => StatusCode(500, new { message = "An unexpected error occurred." })
+            };
         }
-
-
 
         [HttpPut]
         [Route("UpdateEvent")]
-        public async Task<ActionResult> UpdateEvent(int id, [FromBody] Event eventItem)
+        public async Task<IActionResult> UpdateEvent(int id, [FromBody] EventUpdateDto dto)
         {
-            //bool? result = false;
-            try
-            {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-                if (id != eventItem.EventId)
-                {
-                    return BadRequest("Event ID mismatch.");
-                }
-                else if (!await EventExists(id))
-                {
-                    return NotFound($"The Event ID specified does not exist. Event ID: {id}");
-                }
-                else if (!eventItem.IsActive)
-                {
-                    return NotFound($"No Active Events found for ID: {id}");
-                }
-
-                var venueExists = await context.Venues.AnyAsync(v => v.VenueId == eventItem.VenueId && v.IsActive);
-                var eventTypeExists = await context.EventTypes.AnyAsync(e => e.EventTypeId == eventItem.EventTypeId && e.IsActive);
-
-                if (!venueExists && !eventTypeExists)
-                {
-                    return BadRequest($"The Event Type ID ({eventItem.EventTypeId}) and the Venue ID ({eventItem.VenueId}) specified do not exist.");
-                }
-                else if (!venueExists)
-                {
-                    return BadRequest($"The specified venue with ID ({eventItem.VenueId}) does not exist.");
-                }
-                else if (!eventTypeExists)
-                {
-                    return BadRequest($"The specified event type with ID ({eventItem.EventTypeId}) does not exist.");
-                }
-
-
-                context.Entry(eventItem).State = EntityState.Modified;
-                if(await context.SaveChangesAsync() > 0)
-                {
-                    //result = true;
-                }
-
-            }
-            catch (DbUpdateConcurrencyException dbce)
-            {
-                return StatusCode(500, $"Concurrency error while updating.\n{dbce.Message}");
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, $"An unxpcected error occurred.\n{e.Message}");
-            }
-
-                return CreatedAtAction(nameof(GetEventById), new { id = eventItem.EventId }, eventItem);
-
+            var success = await _eventService.UpdateAsync(id, dto);
+            if (!success) return NotFound(new { message = $"Event with ID {id} not found." });
+            return NoContent();
         }
 
-        //Soft Delete
         [HttpDelete]
         [Route("DeleteEvent")]
         public async Task<IActionResult> DeleteEvent(int id)
         {
-            try
-            {
-                var eventItem = await context.Events.FindAsync(id);
-                bool hasBookings = await context.Bookings.AnyAsync(b => b.EventId == id);
-
-                if (!await EventExists(id) || eventItem == null)
-                {
-                    return NotFound($"The Event ID specified does not exist. Event ID: {id}");
-                }
-                else if (!eventItem.IsActive)
-                {
-                    return NotFound($"No Active Events found for ID: {id}");
-                }
-                else if (hasBookings)
-                {
-                    return BadRequest("Cannot delete event with existing bookings.");
-                }
-
-                eventItem.IsActive = false;
-                context.Update(eventItem);
-                await context.SaveChangesAsync();
-
-                return NoContent();
-            }
-            catch (DbUpdateConcurrencyException dbce)
-            {
-                return StatusCode(500, $"Concurrency error while updating.\n{dbce.Message}");
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500, $"An unxpcected error occurred.\n{e.Message}");
-
-            }
-        }
-
-
-        private async Task<bool> EventExists(int id)
-        {
-            var eventItem = await context.Events.AnyAsync(e => e.EventId == id);
-            return eventItem;
+            var success = await _eventService.DeleteAsync(id);
+            if (!success) return NotFound(new { message = $"Event with ID {id} not found." });
+            return NoContent();
         }
     }
 }

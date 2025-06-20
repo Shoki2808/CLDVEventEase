@@ -5,10 +5,16 @@
 @using Radzen
 @inject NavigationManager navMan
 @inject IEventService eventService
+@inject IBookingService bookingService
+@inject IClientService clientService
 
 
 
 <PageTitle>Events</PageTitle>
+@if (showSpinnerModal)
+{
+    <SpinnerModal />
+}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-k6RqeWeci5ZR/Lv4MR0sA0FfDOM9Z38gH5dQ0I6MK9Y1D/cLtHww5iEjaMUToTdeh1kD92r8un18PjGTeRv8g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
     .table-container {
@@ -110,24 +116,81 @@
     }
 </style>
 
-<br />
 
-<div class="row">
-    <div class="col-3">
+
+@if (!showSpinnerModal)
+{
+    <div class="row">
+        <h1> Events Management</h1>
+        <br />
+
+
     </div>
-    <div class="col-6">
-        <center>
-            <h1>Events Management</h1>
-            <br />
-        </center>
-    </div>
-    <div class="col-3">
-    </div>
-</div>
 
 
+    <RadzenStack>
 
-<div class="table-container">
+        <RadzenCard Variant="Radzen.Variant.Outlined">
+
+            <RadzenStack Orientation="Radzen.Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="1.5rem;" Wrap="FlexWrap.Wrap">
+                <RadzenStack Orientation="Radzen.Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="0.5rem;">
+                    <RadzenLabel Text="Logical filter operator:" Component="operator" />
+                    <RadzenDropDown @bind-Value="@logicalFilterOperator" TextProperty="Text" ValueProperty="Value" Name="operator" Change=@(args => grid.Reload())
+                    Data="@(Enum.GetValues(typeof(LogicalFilterOperator)).Cast<LogicalFilterOperator>().Select(t => new { Text = $"{t}", Value = t }))" />
+                </RadzenStack>
+                <RadzenStack Orientation="Radzen.Orientation.Horizontal" AlignItems="Radzen.AlignItems.Center" Gap="0.5rem;">
+                    <RadzenLabel Text="Filter case sensitivity:" Component="caseSensitivity" />
+                    <RadzenDropDown @bind-Value="@filterCaseSensitivity" TextProperty="Text" ValueProperty="Value" Name="caseSensitivity" Change=@(args => grid.Reload())
+                    Data="@(Enum.GetValues(typeof(FilterCaseSensitivity)).Cast<FilterCaseSensitivity>().Select(t => new { Text = $"{t}", Value = t }))" />
+                </RadzenStack>
+            </RadzenStack>
+
+
+        </RadzenCard>
+
+
+        <RadzenDataGrid @ref=grid AllowFiltering="true" AllowColumnResize="true"
+        FilterMode="Radzen.FilterMode.Simple" PageSize="5" AllowPaging="true" AllowSorting="true" Data="@events" ColumnWidth="300px" FilterPopupRenderMode="Radzen.PopupRenderMode.OnDemand"
+        FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" LogicalFilterOperator="LogicalFilterOperator.And">
+            <Columns>
+                <RadzenDataGridColumn Property="@nameof(Event.EventId)" Filterable="false" Title="ID" Frozen="true" Width="80px" TextAlign="Radzen.TextAlign.Center" />
+                @*               <RadzenDataGridColumn Title="Photo" Sortable="false" Filterable="false" Width="200px">
+                <Template Context="data">
+                    <RadzenImage Path="@data.Photo" class="rz-gravatar" AlternateText="@(data.FirstName + " " + data.LastName)" />
+                </Template>
+            </RadzenDataGridColumn>  
+ *@            <RadzenDataGridColumn Property="@nameof(Event.EventDate)" Filterable="true" Title="Event Date" FormatString="{0:d}" />
+                <RadzenDataGridColumn Property="@nameof(Event.EventName)" Filterable="true" Title="Event Name" />
+                <RadzenDataGridColumn Property="@nameof(Event.EventDescription)" Filterable="true" Title="Description">
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn Property="@nameof(Event.VenueName)" Filterable="true" Title="Venue">
+
+                </RadzenDataGridColumn>
+                @*           <RadzenDataGridColumn Property="@nameof(Event.ClientId)" Filterable="true" Title="Client">
+                    <Template Context="data">
+                        @GetClientName(data.ClientId)
+                    </Template>
+                </RadzenDataGridColumn> *@
+                <RadzenDataGridColumn Property="@nameof(Event.Status)" Filterable="true" Title="Status" />
+                <RadzenDataGridColumn Title="Edit" Frozen="true" Sortable="false" Filterable="false" Width="80px" TextAlign="TextAlign.Center">
+                    <Template Context="data">
+                        <RadzenButton Click="()=>UpdateEventOnClick(data)" class="btn btn-secondary " Text="Edit" />
+                    </Template>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn Title="Delete" Frozen="true" Sortable="false" Filterable="false" Width="80px" TextAlign="TextAlign.Center">
+                    @*          <Template Context="data">
+                        <RadzenButton Click="()=>DeleteButtonClick(data)" Style="color:none" Text="Delete"><i class="fas fa-trash-alt" style="color:red"></i></RadzenButton>
+                    </Template> *@
+
+                </RadzenDataGridColumn>
+            </Columns>
+        </RadzenDataGrid>
+    </RadzenStack>
+}
+
+<br/>
+
+@* <div class="table-container">
     <table>
         <tr>
             <th>Event Id</th>
@@ -218,13 +281,13 @@
                     <i class="fas fa-trash-alt"></i>
                 </button>
             </td>
-        </tr> *@
+        </tr> *
 
 
 
     </table>
 </div>
-
+ *@
 <h2>Add New Event</h2>
 
 <div class="form-container">
@@ -257,21 +320,64 @@
 </footer>
 
 @code {
+
+    bool showSpinnerModal = false;
+
     private bool _hidePosition;
     private bool _loading;
     private List<Event> events = new List<Event>();
+    RadzenDataGrid<Event> grid;
+    LogicalFilterOperator logicalFilterOperator = LogicalFilterOperator.And;
+    FilterCaseSensitivity filterCaseSensitivity = FilterCaseSensitivity.CaseInsensitive;
+    private List<Venue> venues = new List<Venue>();
+    private List<Client> clients = new List<Client>();
 
     protected override async Task OnInitializedAsync()
     {
+        showSpinnerModal = true;
+        try
+        {
         // Elements = await httpClient.GetFromJsonAsync<List<Element>>("webapi/periodictable");
 
         await GetEvents();
+        venues = await bookingService.GetVenues();
+        clients = await clientService.GetClients();
+        }
+        catch (Exception)
+        {
+            
+            throw;
+        }
+        showSpinnerModal = false;
+
+
     }
 
 
     private async Task GetEvents()
     {
         events = await eventService.GetEvents();
+    }
+
+    private string GetVenueName(int venueId)
+    {
+        // Find venue in the preloaded list
+        var venue = venues.FirstOrDefault(v => v.VenueId == venueId);
+        return venue?.VenueName ?? "Unknown Venue";
+    }
+
+    private string GetEventName(int eventId)
+    {
+        // Find venue in the preloaded list
+        var eventt = events.FirstOrDefault(v => v.EventId == eventId);
+        return eventt?.EventName ?? "Unknown Event";
+    }
+
+    private string GetClientName(int clientId)
+    {
+        // Find client in the preloaded list
+        var client = clients.FirstOrDefault(c => c.ClientId == clientId);
+        return client?.ClientName ?? "Unknown Client";
     }
 
     private async Task UpdateEventOnClick(Event eventModel)

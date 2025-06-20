@@ -12,7 +12,7 @@ public partial class Venue : BaseModel
 
     public string? ImageUrl { get; set; } = string.Empty;
 
-    public int EventTypeId { get; set; } = 0;
+    public string AvailabilityStatus { get; set; } = "Booked";
 
     //public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
 

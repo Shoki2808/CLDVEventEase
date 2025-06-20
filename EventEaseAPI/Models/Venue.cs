@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace EventEaseAPI.Models
@@ -10,26 +9,20 @@ namespace EventEaseAPI.Models
         public int VenueId { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "Venue name cannot exceed 100 characters.")]
+        [StringLength(100)]
         public string VenueName { get; set; } = null!;
 
         [Required]
-        [StringLength(200, ErrorMessage = "Location cannot exceed 200 characters.")]
+        [StringLength(200)]
         public string Location { get; set; } = null!;
 
         [Required]
-        [Range(1, int.MaxValue, ErrorMessage = "Capacity must be greater than zero.")]
+        [Range(1, int.MaxValue)]
         public int Capacity { get; set; }
 
         public string? ImageUrl { get; set; }
+        
 
-        [Required]
-        public int EventTypeId { get; set; }
-
-        [JsonIgnore]
-        public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
-        [JsonIgnore]
-        public virtual ICollection<Client> Clients { get; set; } = new List<Client>();
         [JsonIgnore]
         public virtual ICollection<Event> Events { get; set; } = new List<Event>();
     }
